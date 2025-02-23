@@ -1,0 +1,382 @@
+/*** 
+
+====================================================================
+    	Training Section 
+====================================================================
+
+***/
+
+.training-section{
+    position: relative;
+    padding: 120px 0;
+    .sec-title{
+        padding-left: 300px;
+        padding-right: 200px;
+        .theme-btn{
+            position: absolute;
+            right: 0;
+            top: 45px;
+            box-shadow: 0 5px 30px rgba(0,0,0,.10);
+        }
+        @include for-lg{
+            padding-left: 0;
+        }
+        @include for-sm{
+            padding-right: 0;
+            .theme-btn{
+                position: relative;
+                top: 0;
+                margin-top: 30px;
+            }
+        }
+    }
+    .bg-image{
+        max-width: 31.4%;
+        top: 120px;
+        bottom: 0;
+        height: auto;
+        @include for-xxl{
+            width: 28%;
+        }
+        @include for-xl{
+            width: 25%;
+        }
+        @include for-lg {
+            display: none;
+        }
+    }
+}
+
+.training-block{
+    position: relative;
+    .inner-box{
+        position: relative;
+        background-color: #ffffff;
+        overflow: hidden;
+        &:hover{
+            .overlay{
+                @include fade-in;
+                left: 0;
+                width: 100%;
+                .read-more{
+                    @include fade-in;
+                    transition-delay: 300ms;
+                    top: 0;
+                }
+            }
+            .lower-content{
+                .read-more{
+                    @include fade-out;
+                    right: 0px;
+                }
+            }
+        }
+    }
+    .image-box{
+        position: relative;
+        .image {
+           position: relative;
+           border-bottom: 4px solid var(--border-theme-color2);
+           margin-bottom: 0;
+        }
+        .overlay{
+            @include overlay;
+            @include flex-center;
+            transition: all 300ms ease;
+            left: 50%;
+            width: 0;
+            &::before{
+                @include overlay;
+                background-color: var(--bg-theme-color2);
+                opacity: .9;
+                content: "";
+            }
+            .read-more{
+                position: relative;
+                @include flex-center;
+                top: 20px;
+                height: 52px;
+                width: 52px;
+                border-radius: 50%;
+                overflow: hidden;
+                color: var(--theme-color1);
+                background-color: #fff;
+                @include fade-out;
+            }
+        }
+    }
+    .lower-content{
+        position: relative;
+        padding: 25px 40px 30px;
+        .read-more {
+            position: absolute;
+            right: 30px;
+            top: -28px;
+            @include flex-center;
+            height: 52px;
+            width: 52px;
+            border-radius: 50%;
+            overflow: hidden;
+            color: #ffffff;
+            background-color: var(--bg-theme-color2);
+            transition: all 300ms ease;
+        }
+        .title{
+            letter-spacing: -.04em;
+            margin-bottom: 15px;
+            a:hover{
+                color: var(--theme-color3);
+            }
+        }
+    }
+}
+
+
+/*** 
+
+====================================================================
+    	Training Section TWO
+====================================================================
+
+***/
+
+.training-section-two{
+    position: relative;
+    padding: 120px 0 0;
+    .bg{
+        max-width: 54.5%;
+        bottom: 120px;
+        height: auto;
+        @include for-lg{
+            bottom: 0;
+        }
+        @include for-md{
+            max-width: 100%;
+        }
+    }
+
+    .title-column{
+        .inner-column{
+            padding-right: 100px;
+            @include for-lg{
+                padding-right: 50px;
+            }
+            @include for-sm{
+                padding-right: 0;
+            }
+        }
+    }
+    
+    .content-column{
+        .inner-column{
+            margin-right: -490px;
+            margin-left: -100px;
+            @include for-lg{
+                margin-left: 0;
+            }
+            @include for-md{
+                margin-right: 0px;
+                padding-bottom: 120px;
+            }
+        }
+    }
+
+    .sec-title{
+        .sub-title{color: #aad5ff;}
+        h2:before{
+            background: linear-gradient(to left, transparent, #fff);
+        }
+        .text{
+            color: #aad5ff;
+            margin-top: 40px;
+        }
+        .theme-btn{
+            position: absolute;
+            left: 100%;
+            margin-left: 520px;
+            top: -120px;
+            @include for-lg{
+                display: none;
+            }
+        }
+    }
+
+
+    .owl-dots{
+        position: absolute;
+        left: -385px;
+        bottom: 0;
+        display: inline-flex;
+        @include for-lg{
+            display: none;
+        }
+        &:before{
+            position: absolute;
+            top: 50%;
+            margin-top: -2px;
+            height: 3px;
+            left: -110px;
+            right: -110px;
+            background: linear-gradient(to left, transparent, #dadfe9, transparent);
+            content: "";
+            @include for-sm{
+                left: -30px;
+                right: -30px;
+                height: 2px;
+                margin-top: -1px;
+            }
+        }
+        .owl-dot{
+            position: relative;
+            height: 20px;
+            width: 20px;
+            background-color: #dadfe9;
+            border-radius: 50%;
+            margin: 0 5px;
+            transition: all 300ms ease;
+            @include for-sm{
+                height: 15px;
+                width: 15px;
+            }
+            &.active{
+                background-color: var(--bg-theme-color3);
+            }
+        }
+    }
+    
+}
+
+.training-block-two{
+    position: relative;
+    .inner-box{
+        position: relative;
+        background-color: #ffffff;
+        overflow: hidden;
+        border-radius: 5px;
+        &:hover{
+            .image-box{
+                .read-more{
+                    transform: scale(.6);
+                    opacity: 0;
+                }
+            }
+            .overlay-content{
+                .inner{
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+    .image-box{
+        position: relative;
+        .image {
+           position: relative;
+           overflow: hidden;
+           border-radius: 5px;
+           margin-bottom: 0;
+           &:before{
+                @include overlay;
+                background: linear-gradient(to top, var(--bg-theme-color1), transparent);
+                z-index: 1;
+                content: "";
+           }
+        }
+        .read-more{
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            @include flex-center;
+            height: 52px;
+            width: 52px;
+            border-radius: 50%;
+            overflow: hidden;
+            color: #ffffff;
+            background-color: var(--bg-theme-color3);
+            z-index: 2;
+            &:hover{
+                background-color: #ffffff;
+                color: var(--theme-color3);
+            }
+        }
+        .title{
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            padding: 20px 40px 40px;
+            color: #fff;
+            z-index: 2;
+            margin-bottom: 0;
+        }
+    }
+    .overlay-content{
+        position: absolute;
+        padding-top: 30px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        overflow: hidden;
+        z-index: 3;
+        .inner{
+            position: relative;
+            background-color: #ffffff;
+            padding: 40px 30px 20px;
+            border-radius: 5px;
+            transform: translateY(120%);
+            transition: all 300ms ease;
+        }
+        .read-more {
+            position: absolute;
+            right: 30px;
+            top: -28px;
+            @include flex-center;
+            height: 52px;
+            width: 52px;
+            border-radius: 50%;
+            overflow: hidden;
+            color: #ffffff;
+            background-color: var(--bg-theme-color3);
+            transition: all 300ms ease;
+            &:hover{
+                color: #ffffff;
+                background-color: var(--bg-theme-color2);
+            }
+        }
+        .title{
+            margin-bottom: 15px;
+            a:hover{
+                color: var(--theme-color3);
+            }
+        }
+        .text{
+        }
+    }
+}
+
+
+/*** 
+
+====================================================================
+    Training Section Three
+====================================================================
+
+***/
+
+.training-section-three{
+    position: relative;
+    padding: 120px 0;
+    .carousel-outer{
+        margin: 0 -200px;
+        @include for-xxl{
+            margin: 0 -100px;
+        }
+        @include for-lg{
+            margin: 0 -50px;
+        }
+        @include for-md {
+            margin: 0;
+        }
+    }
+}
+
+
+

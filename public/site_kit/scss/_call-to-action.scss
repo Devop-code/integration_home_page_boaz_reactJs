@@ -1,0 +1,74 @@
+/*** 
+
+====================================================================
+		Call To Action
+====================================================================
+
+***/
+
+.call-to-action{
+    position: relative;
+    z-index: 2;
+    padding: 90px 0 100px;
+    background-color: var(--bg-theme-color2);
+    .left-shape{
+        @include overlay;
+        max-width: 48.8%;
+        background-color: var(--bg-theme-color3);
+        background-image: url(../images/icons/map2.png);
+        background-repeat: no-repeat;
+        background-position: top left;
+        clip-path: polygon(84% 0, 100% 48%, 82% 100%, 0% 100%, 0% 0%);
+        @include for-lg{
+            max-width: 100%;
+            clip-path: none;
+        }
+        img{
+            position: absolute;
+            left: 4%;
+            top: 0;
+            @include for-xxl{
+                display: none
+            }
+        }
+    }
+    .right-shape{
+        @include overlay;
+        @include background;
+        left: auto;
+        right: 0;
+        max-width: 50.8%;
+        background-color: var(--bg-theme-color3);
+        clip-path: polygon(20% 0, 100% 0%, 100% 100%, 10% 100%, 0 67%);
+        @include for-md{
+            display: none;
+        }
+    }
+
+    .title-column{
+        .inner-column{
+            position: relative;
+        }
+    }
+    .sec-title{
+        margin-bottom: 15px;
+        h2:before{
+            display: none;
+        }
+    }
+    .list-style-two{
+        margin-bottom: 35px;
+        li{
+            color: #fff;
+            i{
+                color: #fff;
+            }
+        }
+    }
+    .badge{
+        position: absolute;
+        right: -170px;
+        top: -30px;
+        @include for-md{display: none;}
+    }
+}

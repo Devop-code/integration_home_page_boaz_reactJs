@@ -1,0 +1,184 @@
+/*** 
+
+====================================================================
+	Testimonial Section 
+====================================================================
+
+***/
+
+.testimonial-section{
+    position: relative;
+    padding: 120px 0 90px;
+    &.pull-down{
+        padding: 120px 0 150px
+    }
+    .bg-image{
+        @include overlay;
+        &:before{
+            @include overlay;
+            background-color: var(--bg-theme-color1);
+            opacity: .9;
+            content: "";
+        }
+    }
+
+    .owl-dots{
+        position: relative;
+        display: inline-flex;
+        left: 50%;
+        margin-top: 40px;
+        transform: translateX(-50%);
+        &:before{
+            position: absolute;
+            top: 50%;
+            margin-top: -2px;
+            height: 3px;
+            left: -110px;
+            right: -110px;
+            background: linear-gradient(to left, transparent, #ffffff, transparent);
+            content: "";
+            @include for-sm{
+                left: -30px;
+                right: -30px;
+                height: 2px;
+                margin-top: -1px;
+            }
+        }
+        .owl-dot{
+            position: relative;
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 0 5px;
+            transition: all 300ms ease;
+            @include for-sm{
+                height: 15px;
+                width: 15px;
+            }
+            &.active{
+                background-color: var(--bg-theme-color3);
+            }
+        }
+    }
+}
+
+.testimonial-block{
+    position: relative;
+    .inner-box{
+        position: relative;
+        overflow: hidden;
+        &:hover{
+            .content-box{
+                background-color: var(--bg-theme-color2);
+                &:before{
+                    border-top-color: var(--border-theme-color2);
+                }
+                .text{
+                    color: #ffffff;
+                }
+                .icon{
+                    background-color: var(--bg-theme-color3);
+                }
+            }
+        }
+    }
+    .content-box{
+        position: relative;
+        background-color: #fff;
+        padding: 40px 40px 40px;
+        transition: all 300ms ease;
+        border-radius: 10px;
+        &:before {
+            position: absolute;
+            top: 100%;
+            left: 45px;
+            border-right: 30px solid transparent;
+            border-left: 30px solid transparent;
+            border-top: 30px solid #fff;
+            transition: all 300ms ease;
+            content: "";
+            @include for-xxs{
+                left: 20px;
+                border-left-width: 15px;
+                border-right-width: 15px;
+                border-top-width: 10px;
+            }
+        }        
+        .rating {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--theme-color3);
+            margin-bottom: 12px;
+            transition: all 300ms ease;
+            i {margin-right: 2px;}
+        }
+        .icon{
+            position: absolute;
+            right: -25px;
+            top: -60px;
+            height: 125px;
+            width: 120px;
+            color: #fff;
+            font-size: 32px;
+            display: flex;
+            align-items: flex-end;
+            line-height: 1em;
+            padding-left: 40px;
+            padding-bottom: 25px;
+            border-radius: 50%;
+            background-color: var(--bg-theme-color2);
+            transition: all 300ms ease;
+        }
+        .text {
+            position: relative;
+            font-size: 18px;
+            line-height: 36px;
+            color: #73787d;
+            margin-bottom: 20px;
+            transition: all 300ms ease;
+        }
+    }
+    .info-box{
+        position: relative;
+        margin-left: 105px;
+        padding-left: 80px;
+        min-height: 68px;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include for-xxs{
+            margin-left: 0;
+        }
+        .thumb{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 68px;
+            width: 68px;
+            padding: 5px;
+            border: 1px solid var(--border-theme-color2);
+            border-radius: 50%;
+            img{
+                border-radius: 50%;
+            }
+        }
+        .name {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        .designation {
+            position: relative;
+            display: block;
+            font-size: 13px;
+            line-height: 22px;
+            color: #7b87a1;
+            font-weight: 500;
+        }
+    }
+}

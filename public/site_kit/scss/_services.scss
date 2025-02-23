@@ -1,0 +1,400 @@
+/*** 
+
+====================================================================
+    Services Section
+====================================================================
+
+***/
+
+.services-section {
+    position: relative;
+    padding: 120px 0 90px;
+    z-index: 2;
+    .sec-title{
+        margin-bottom: 30px;
+    }
+}
+
+.service-block{
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+    .inner-box {
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        transition: all 300ms ease;
+        &:hover {
+            .image-box{
+                .title{
+                    @include fade-out;
+                }
+                .icon{transform: rotate(180deg) scale(-1)}
+            }
+            .content-box{
+                @include fade-in;
+                transform: translateY(0);
+            }
+        }
+    }
+    .image-box{
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        .image{
+            margin-bottom: 0;
+            &:before{
+                @include overlay;
+                background: linear-gradient(to top, var(--bg-theme-color1), transparent);
+                content: "";
+                border-radius: 5px;
+            }
+            img{
+                width: 100%;
+                min-height: 248px;    
+                object-fit: cover;
+            }
+        }
+        .icon{
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            height: 57px;
+            width: 57px;
+            color: #fff;
+            @include flex-center;
+            background-color: var(--bg-theme-color3);
+            border-radius: 50%;
+            font-size: 20px;
+            z-index: 9;
+            transition: all 300ms ease;
+            &:after{
+                position: absolute;
+                left: -6px;
+                top: -6px;
+                right: -6px;
+                bottom: -6px;
+                border: 1px solid rgba(255, 255, 255, .2);
+                border-radius: 50%;
+                content: "";
+            }
+        }
+        .title{
+            position: absolute;
+            left: 30px;
+            bottom: 25px;
+            color: #fff;
+            margin-bottom: 0;
+            transition: all 300ms ease;
+        }
+    }
+
+    .content-box{
+        position: absolute;
+        right: 15px;
+        left: 15px;
+        bottom: 15px;
+        background-color: #ffffff;
+        padding: 16px 20px 15px;
+        border-radius: 5px;
+        @include fade-out;
+        transform: translateY(10px);
+        .title{
+            margin-bottom: 8px;
+        }
+        .text{
+            font-size: 13px;
+            line-height: 26px;
+            margin-bottom: 10px;
+            @include for-lg{
+                line-height: 20px;
+            }
+        }
+        .read-more{
+            font-size: 13px;
+            line-height: 18px;
+            color: var(--theme-color1);
+            text-transform: uppercase;
+            letter-spacing: .01em;
+            font-weight: 800;
+            i{
+                font-size: 14px;
+                color: var(--theme-color2);
+                display: inline-block;
+                margin-left: 3px;
+            }
+        }
+    }
+}
+
+.cta-block{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        background-color: var(--bg-theme-color2);
+        padding: 40px 50px 50px;
+        height: 100%;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include for-lg{
+            padding: 40px 40px;
+        }
+        &:before{
+            @include overlay;
+            background-image: url(../images/icons/shape-2.png);
+            @include background;
+            content: "";
+        }
+    }
+    .title{
+        color: #fff;
+    }
+}
+
+/*** 
+
+====================================================================
+    Services Section Two
+====================================================================
+
+***/
+
+.services-section-two{
+    position: relative;
+    padding: 120px 0 90px;
+    z-index: 2;
+    .bg{
+        &:before{
+            @include overlay;
+            background-color: var(--bg-theme-color1);
+            opacity: .9;
+            content: "";
+        }
+    }
+    &.pull-down{
+        .bg{
+            bottom: -100px;
+            top: 0;
+            height: auto;
+        }
+    }
+}
+
+.service-block-two{
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+    .inner-box {
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        transition: all 300ms ease;
+
+        &:hover {
+            .image-box {
+                .image{
+                    img{
+                        transform: scale(1.1)
+                    }
+                }
+                .icon{
+                    background-color: var(--bg-theme-color3);
+                }
+            }
+
+            .lower-content{
+                background-color: var(--bg-theme-color2);
+                .text,
+                .title{
+                    color: #fff;
+                }
+                &:before{
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .image-box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+
+        .image {
+            margin-bottom: 0;
+            background-color: var(--bg-theme-color1);
+            img {
+                width: 100%;
+                transition: all 300ms ease;
+            }
+        }
+
+        .icon {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 70px;
+            width: 70px;
+            color: #fff;
+            @include flex-center;
+            background-color: var(--bg-theme-color2);
+            font-size: 20px;
+            z-index: 9;
+            transition: all 300ms ease;
+            &:hover{
+                background-color: var(--bg-theme-color3);
+                color: #fff;
+            }
+        }
+    }
+
+    .lower-content{
+        position: relative;
+        background-color: #ffffff;
+        padding: 16px 30px 15px;
+        transition: all 300ms ease;
+        &:before{
+            @include overlay;
+            height: 0;
+            background-image: url(../images/icons/shape-4.png);
+            transition: all 300ms ease;
+            content: "";
+        }
+        .title {
+            margin-bottom: 8px;
+        }
+
+        .text {
+            position: relative;
+            font-size: 15px;
+            line-height: 26px;
+            margin-bottom: 10px;
+            transition: all 300ms ease;
+        }
+
+    }
+}
+
+
+
+/*** 
+
+====================================================================
+    Services Section Three
+====================================================================
+
+***/
+
+.services-section-three{
+    position: relative;
+    padding: 120px 0 90px;    
+}
+
+.service-block-three{
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+    .inner-box {
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+        transition: all 300ms ease;
+        &:hover {
+            .image-box{
+                .image{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .overlay-content {
+                .icon{
+                    transform: scale(-1) rotate(180deg);
+                    background-color: var(--bg-theme-color2);
+                }
+            }
+        }
+    }
+
+    .image-box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        .image {
+            margin-bottom: 0;
+            background-color: var(--bg-theme-color1);
+            img {
+                width: 100%;
+                min-height: 200px;
+                object-fit: cover;
+                transition: all 300ms ease;
+            }
+        }
+    }
+
+    .overlay-content{
+        @include overlay;
+        padding: 30px 30px 15px;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: all 300ms ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &:before{
+            @include overlay;
+            background-color: var(--bg-theme-color1);
+            opacity: .8;
+            transition: all 300ms ease;
+            content: "";
+        }
+        .icon {
+            position: relative;
+            display: inline-block;
+            height: 58px;
+            width: 58px;
+            @include flex-center;
+            background-color: var(--bg-theme-color3);
+            font-size: 20px;
+            color: #fff;
+            border-radius: 50%;
+            z-index: 1;
+            margin-bottom: 20px;
+            transition: all 300ms ease;
+            &:after {
+                position: absolute;
+                left: -6px;
+                top: -6px;
+                right: -6px;
+                bottom: -6px;
+                border: 1px solid rgba(255, 255, 255, .2);
+                border-radius: 50%;
+                content: "";
+            }
+            &:hover {
+                background-color: var(--bg-theme-color2);
+                color: #fff;
+            }
+        }
+        .title {
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .text {
+            position: relative;
+            font-size: 15px;
+            line-height: 26px;
+            color: #fff;
+            opacity: .60;
+            margin-bottom: 0px;
+            transition: all 300ms ease;
+        }
+
+    }
+}

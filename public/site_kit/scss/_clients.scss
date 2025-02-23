@@ -1,0 +1,73 @@
+/*** 
+
+====================================================================
+    Clients Section
+====================================================================
+
+***/
+
+.clients-section{
+    position: relative;
+    z-index: 1;
+}
+
+.clients-carousel{
+    position: relative;
+    border-top: 1px solid #dfe8ee;
+    padding: 60px 0;
+}
+
+.clients-carousel .slide-item{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.3s ease;
+    a {
+        position: relative;
+        display: block;
+        transition: all 300ms ease;
+        padding: 35px 0;
+        &:hover{
+            background-color: #ebeef5;
+            img{
+                opacity: 1;
+            }
+        }
+    }
+    img {
+        display: inline-block;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        transition: all 0.3s ease;
+        opacity: .2
+    }
+}
+
+.clients-carousel .owl-nav{
+    @include absolute;
+    @include flex-center;
+    padding: 0 25px;
+    background-color: #ffffff;
+    max-width: 110px;
+    right: 0;
+    margin: -13px auto 0;
+    .owl-prev,
+    .owl-next{
+        @include flex-center;
+        height: 26px;
+        width: 26px;
+        background-color: var(--bg-theme-color4);
+        color: #7c858c;
+        font-size: 14px;
+        margin: 0 3px;
+        transition: all 300ms ease;
+        &:hover{
+            background-color: var(--bg-theme-color2);
+            color: #ffffff;
+        }
+    }
+}
+.clients-carousel .owl-dots{
+    display: none;
+}

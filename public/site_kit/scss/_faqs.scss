@@ -1,0 +1,172 @@
+/*** 
+
+====================================================================
+		FAQ's Sectiom
+====================================================================
+
+***/
+
+.faqs-section {
+    position: relative;
+    padding: 120px 0 70px;
+    &.pull-up{
+        margin-top: -70px;
+        padding-top: 190px;
+    }
+    .image-column{
+        position: relative;
+        @include for-md{
+            order: 2;
+        }
+        .image-box{
+            position: relative;
+            padding-bottom: 35px;
+            .sub-title{
+                position: absolute;
+                left: 100px;
+                top: -50px;
+                background-image: url(../images/main-slider/shape-2.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                min-height: 93px;
+                width: 235px;
+                padding: 20px 30px 0;
+                font-size: 18px;
+                color: #ffffff;
+                font-weight: 700;
+                @include for-lg{
+                    position: relative;
+                    display: inline-block;
+                    top: 0;
+                    margin-top: 20px;
+                }
+                @include for-sm{
+                    left: 20px;
+                }
+                .txt{
+                    display: block;
+                    position: relative;
+                    transform: rotate(2deg);
+                    transform: left center;
+                }
+            }
+            .image-1{
+                position: relative;
+                margin-left: -160px;
+                margin-bottom: 0;
+                @include for-lg{margin-left: 0;}
+            }
+            .image-2{
+                position: absolute;
+                right: -60px;
+                bottom: 85px;
+                height: 240px;
+                width: 240px;
+                border-radius: 50%;
+                z-index: 2;
+                margin-bottom: 0;
+                @include for-lg{display: none;}
+                img{
+                    border-radius: 50%;
+                    height: 100%;
+                    width: 100%;
+                }
+                &:before{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 64px;
+                    width: 64px;
+                    background-color: var(--bg-theme-color2);
+                    border-radius: 50%;
+                    content: "";
+                }
+            }
+            .plane-icon{
+                position: absolute;
+                left:-65px;
+                bottom:-120px;
+                @include for-lg{display: none;}
+            }
+        }
+    }
+
+    .faq-column{
+        margin-bottom: 50px;
+        .sec-title{
+            margin-bottom: 50px;
+            @include for-lg{
+                br{
+                    display: none;
+                }
+            }
+        }
+        .accordion-box{
+            margin-left: 70px;
+            @include for-lg{margin-left: 0;}
+        }
+    }
+}
+
+
+.accordion-box {
+    position: relative;
+    .block {
+        position: relative;
+        background-color: #ffffff;
+        margin-bottom: 10px;
+        &.active-block{
+            box-shadow: 0 10px 20px rgba(0,0,0,.05);
+        }
+        .acc-btn {
+            position: relative;
+            font-size: 18px;
+            line-height: 30px;
+            color: var(--theme-color1);
+            font-weight: 700;
+            cursor: pointer;
+            padding: 15px 30px;
+            padding-right: 50px;
+            border-radius: 5px;
+            transition: all 500ms ease;
+            .icon {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                height: 60px;
+                width: 60px;
+                font-size: 14px;
+                line-height: 60px;
+                text-align: center;
+                color: var(--theme-color1);
+                font-weight: 900;
+                transition: all 500ms ease;
+            }
+            &.active {
+                .icon {
+                    color: var(--bg-theme-color3);
+                    &:before {
+                        content: "\f107";
+                    }
+                }
+            }
+        }
+        .acc-content {
+            position: relative;
+            display: none;
+            .content {
+                position: relative;
+                padding: 0px 30px 35px;
+                .text {
+                    display: block;
+                    font-size: 15px;
+                    line-height: 26px;
+                    margin-bottom: 0;
+                }
+            }
+            &.current {
+                display: block;
+            }
+        }
+    }
+}

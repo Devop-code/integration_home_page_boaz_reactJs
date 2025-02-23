@@ -1,0 +1,23 @@
+/*** 
+
+====================================================================
+    Map Section
+====================================================================
+
+***/
+
+.map-section{
+    position: relative;
+    z-index: 1;
+    .map{
+        position: relative;
+        min-height: 430px;
+        width: 100%;
+        display: block;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        @include for-lg{
+            min-height: 400px;
+        }
+    }
+}

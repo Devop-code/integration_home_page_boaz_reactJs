@@ -1,0 +1,287 @@
+/*** 
+
+====================================================================
+	Projects Section
+====================================================================
+
+***/
+
+.projects-section{
+    position: relative;
+    z-index: 1;
+    .upper-box{
+        position: relative;
+        padding: 120px 0 50px;
+        background-color: #f6f6f6;
+        .sec-title{
+            margin-bottom: 0;
+        }
+    }
+    .owl-nav{
+        position: absolute;
+        top: -120px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 0 15px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        @include for-sm{
+            display: none;
+        }
+    }
+}
+
+.project-block{
+    position: relative;
+    overflow: hidden;
+
+    .image-box {
+        position: relative;
+        overflow: hidden;
+
+        .image {
+            position: relative;
+            margin-bottom: 0;
+
+            &:after,
+            &:before {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                background-image: linear-gradient(transparent, var(--bg-theme-color1));
+                z-index: 1;
+                content: "";
+                pointer-events: none;
+                transition: all 300ms ease;
+            }
+
+            &:after {
+                background-image: linear-gradient(transparent, var(--bg-theme-color2));
+                height: 0;
+                z-index: 1;
+            }
+
+            img {
+                display: inline-block;
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+                transition: all 0.3s ease;
+                min-height: 300px;
+                object-fit: cover;
+            }
+
+            a {
+                position: relative;
+                display: block;
+            }
+        }
+    }
+
+    &:hover {
+        img {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .image::before {
+            height: 0%;
+        }
+
+        .image::after {
+            height: 100%;
+        }
+    }
+
+    .caption-box {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 40px 40px;
+        width: 100%;
+        text-align: left;
+        z-index: 2;
+
+        .title {
+            margin-bottom: 0;
+            color: #ffffff;
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Projects Section Two
+====================================================================
+
+***/
+
+.projects-section-two{
+    position: relative;
+    padding: 120px 0 90px;
+    .carousel-outer{
+        margin: 0 -200px;
+        @include for-xxl{
+            margin: 0 -100px;
+        }
+        @include for-xl{
+            margin: 0;
+        }
+    }
+    .owl-nav{
+        position: absolute;
+        top: -120px;
+        max-width: 1200px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        >div{
+            background-color: #f6f6f6;
+        }
+        @include for-md{
+            position: relative;
+            top: 0;
+            margin-top: 0px;
+            justify-content: center;
+        }
+    }
+}
+
+.project-block-two{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box {
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            .image-box .image {
+                img {
+                    transform: scale(1.1);
+                }
+                a{
+                    &::before{
+                        background: linear-gradient(to top, var(--theme-color2), transparent);
+                    }
+                    &:after{
+                        opacity: .2;
+                    }
+                }
+
+            }
+
+            .read-more{
+                top: 20px;
+            }
+
+            .overlay-content {
+                transform: translate(0);
+            }
+        }
+    }
+
+    .image-box {
+        position: relative;
+        transition: all 300ms ease;
+        .image {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0;
+            img {
+                min-height: 300px;
+                width: 100%;
+                transition: all 300ms ease;
+            }
+            a:after {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                background: linear-gradient(to top, var(--theme-color1), transparent);
+                z-index: 1;
+                content: "";
+                transition: all 200ms linear;
+            }
+            a:before {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                pointer-events: none;
+                height: 0;
+                background: linear-gradient(to top, var(--theme-color2), transparent);
+                z-index: 1;
+                content: "";
+                transition: all 200ms linear;
+            }
+        }
+    }
+
+    .read-more {
+        position: absolute;
+        @include flex-center;
+        right: 20px;
+        top: -70px;
+        height: 52px;
+        width: 52px;
+        font-size: 18px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        transition: all 300ms ease;
+        z-index: 3;
+        &:hover {
+            background-color: var(--bg-theme-color2);
+            color: #fff;
+        }
+    }
+
+    .info-box {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        padding: 40px 40px 35px;
+        transition: all 300ms ease;
+        z-index: 1;
+        .title {
+            color: #ffffff;
+            font-weight: 700;
+            line-height: 35px;
+            margin-bottom: 0;
+        }
+    }
+
+    .overlay-content {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        z-index: 8;
+        background-color: var(--bg-theme-color2);
+        transform: translateY(120%);
+        transition: all 300ms ease;
+        .info-box {
+            position: relative;
+            left: 0;
+            padding: 20px 25px 20px;
+            .title {
+                color: var(--theme-color1);
+                margin-bottom: 5px;
+                color: #ffffff;
+            }
+            .text{
+                color: #ffffff;
+                line-height: 24px;
+            }
+        }
+    }
+}

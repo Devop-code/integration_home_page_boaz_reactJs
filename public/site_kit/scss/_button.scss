@@ -1,0 +1,155 @@
+
+.theme-btn{
+    display:inline-flex;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    transition:all 0.3s ease;
+    .btn-title {
+        position: relative;
+    }
+}
+
+/*Btn Style One*/
+.btn-style-one {
+    position: relative;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 10px 40px;
+    font-weight: 700;
+    overflow: hidden;
+    color: #ffffff;
+    z-index: 1;
+    border-radius: 50px;
+    background: var(--bg-theme-color2);
+    transition: all 500ms ease;    
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        background-color: var(--bg-theme-color3);
+        clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+        transition: all 500ms ease;
+        z-index: -1;
+    }
+    &:hover:before {
+        clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+    }
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+/*Btn Style two*/
+.btn-style-two{
+    position: relative;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 10px 40px;
+    font-weight: 700;
+    overflow: hidden;
+    color: var(--theme-color1);
+    border-radius: 50px;
+    z-index: 1;
+    background: #ffffff;
+    transition: all 500ms ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        background-color: var(--bg-theme-color2);
+        clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+        transition: all 500ms ease;
+        z-index: -1;
+    }
+    &:hover:before {
+        clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+    }
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+
+/*Btn Style Three*/
+.btn-style-three{
+    position: relative;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 10px 40px;
+    font-weight: 700;
+    overflow: hidden;
+    color: #ffffff;
+    border-radius: 50px;
+    z-index: 1;
+    background: var(--bg-theme-color3);
+    transition: all 500ms ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        background-color: #ffffff;
+        clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+        transition: all 500ms ease;
+        z-index: -1;
+    }
+    &:hover:before {
+        clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+    }
+    &:hover {
+        color: var(--theme-color1);
+    }
+}
+
+/*Btn Style Four*/
+.btn-style-four{
+    position: relative;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 10px 40px;
+    font-weight: 700;
+    overflow: hidden;
+    color: #ffffff;
+    background: var(--bg-theme-color1);
+    border-radius: 50px;
+    z-index: 1;
+    transition: all 500ms ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        background-color:var(--theme-color2);
+        clip-path: polygon(50% 0, 50% 0, 50% 50%, 50% 100%, 50% 100%, 50% 50%);
+        transition: all 500ms ease;
+        z-index: -1;
+    }
+    &:hover:before {
+        clip-path: polygon(25% -70%, 75% -70%, 120% 50%, 75% 170%, 25% 170%, -20% 50%);
+    }
+    &:hover {
+        color: #ffffff;
+    }
+}
+
+.theme-btn.small{
+    padding: 10px 30px;
+    font-size: 14px;
+    line-height: 20px;
+}

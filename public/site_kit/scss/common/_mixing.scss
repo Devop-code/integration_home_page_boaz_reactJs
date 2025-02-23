@@ -1,0 +1,145 @@
+// stylelint-disable property-disallowed-list
+@mixin transition($transition...) {
+  @if length($transition) == 0 {
+    $transition: $transition-base;
+  }
+
+  @if length($transition) > 1 {
+    @each $value in $transition {
+      @if $value == null or $value == none {
+        @warn "The keyword 'none' or 'null' must be used as a single argument.";
+      }
+    }
+  }
+
+  @if nth($transition, 1) != null {
+    transition: $transition;
+  }
+}
+
+@mixin text-font {
+    font-family: var(--text-font);
+}
+
+@mixin title-font {
+  font-family: var(--title-font);
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin vertical-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@mixin absolute {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@mixin absolute-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@mixin absolute-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@mixin absolute-bottom-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin background {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin Shadow {
+  box-shadow: 0 10px 60px rgba(0, 0, 0, .07);
+}
+
+@mixin text-gradient {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin fade-out{
+  opacity: 0;
+  visibility: hidden;
+  transition: all 300ms ease;
+}
+
+@mixin fade-in {
+  opacity: 1;
+  visibility: visible;
+}
+
+@mixin for-xxl {
+  @media only screen and (max-width: 1700px) {
+    @content;
+  }
+}
+
+@mixin for-xl {
+  @media only screen and (max-width: 1439px) {
+    @content;
+  }
+}
+
+@mixin for-lg {
+  @media only screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin for-md {
+  @media only screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin for-sm{
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin for-xs {
+  @media only screen and (max-width: 599px) {
+    @content;
+  }
+}
+
+@mixin for-xxs {
+  @media only screen and (max-width: 424px) {
+    @content;
+  }
+}

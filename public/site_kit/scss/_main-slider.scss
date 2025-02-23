@@ -1,0 +1,82 @@
+/*** 
+
+====================================================================
+  Main Slider
+====================================================================
+
+***/
+
+.main-slider {
+  position: relative;
+  background-color: var(--bg-theme-color1);  
+  h1{
+    position: relative;
+    display: block;
+    font-size: 90px;
+    line-height: 90px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    @include for-lg{
+      font-size: 72px;
+      line-height: 1.1em;
+    }
+    @include for-md{
+      font-size: 68px;
+      line-height: 1.1em;
+    }
+    @include for-sm{
+      font-size: 52px;
+    }
+    @include for-xs {
+      font-size: 48px;
+    }
+    @include for-xxs{
+      font-size: 38px;
+      line-height: 1.1em;
+    }
+  }
+  .text{
+    font-size: 18px;
+    line-height: 26px;
+    color: rgba(255,255,255,1);
+    @include for-sm{
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  .btn-box {
+    position: relative;
+    .theme-btn{
+      display: inline-block;
+      margin-right: 10px;
+      @include for-sm{
+        font-size: 14px;
+        padding: 15px 40px;
+        line-height: 20px;
+      }
+      @include for-xs{
+        font-size: 14px;
+        padding: 10px 20px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.tp-dottedoverlay {
+  background-color: rgba(13,26,54,.40);
+  &:before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 53%;
+    background: linear-gradient(to right, transparent, var(--bg-theme-color1));
+    content: "";
+  }
+}
+
+.tp-bannertimer {
+  display: none;
+}

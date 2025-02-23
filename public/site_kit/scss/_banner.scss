@@ -1,0 +1,359 @@
+/*** 
+
+====================================================================
+    Banner Section
+====================================================================
+
+***/
+
+.banner-section {
+    position: relative;
+    overflow: hidden;
+    
+    .slide-item {
+        position: relative;
+        min-height: 770px;
+        @include for-md{
+            min-height: auto
+        }
+        .bg-image {
+            @include overlay;
+            @include background;
+            &:after,
+            &:before {
+                @include overlay;
+                background-color: var(--bg-theme-color1);
+                opacity: .6;
+                content: "";
+            }
+            &::after{
+                background:linear-gradient(to right, var(--theme-color2),transparent, var(--theme-color3));
+                opacity: .3;
+            }
+        }
+    }
+    .content-box {
+        position: relative;
+        padding: 220px 0 120px;
+        @include for-md{
+            padding: 180px 0;
+            text-align: center;
+        }
+        @include for-sm{
+            padding: 120px 0;
+        }
+        .sub-title{
+            position: absolute;
+            left: 340px;
+            top: 200px;
+            background-image: url(../images/main-slider/shape-2.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 93px;
+            width: 235px;
+            padding: 20px 30px 0;
+            font-size: 18px;
+            color: #ffffff;
+            font-weight: 700;
+            .txt{
+                display: block;
+                position: relative;
+                transform: rotate(2deg);
+                transform: left center;
+            }
+            @include for-md{
+                position: relative;
+                display: inline-block;
+                left: 50px;
+                top: 0;
+                margin-bottom: 20px;
+            }
+            @include for-sm{
+                display: none;
+            }
+        }
+        .title{
+            font-size: 90px;
+            line-height: 1em;
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            @include for-lg{
+                font-size: 80px;
+            }
+            @include for-md{
+                font-size: 70px;
+            }
+            @include for-sm{
+                font-size: 48px;
+                line-height: 1em;
+            }
+        }
+        .text{
+            font-size: 24px;
+            color: rgba(255,255,255,.70);
+            font-weight: 400;
+            @include title-font;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        .btn-box{
+            display: flex;
+            align-items: center;
+            @include for-md{
+                justify-content: center;
+            }
+            .theme-btn{
+                margin-right: 10px;
+                @include for-sm{
+                    font-size: 14px;
+                    padding: 10px 30px;
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}
+
+/* Animate 1 */
+.owl-carousel{
+    .animate-7,
+    .animate-6,
+    .animate-5,
+    .animate-4,
+    .animate-3,
+    .animate-2,
+    .animate-1{
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 500ms ease;
+    }
+    .animate-x {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 500ms ease;
+    }
+    
+    .active{
+        .animate-7,
+        .animate-6,
+        .animate-5,
+        .animate-4,
+        .animate-3,
+        .animate-2,
+        .animate-1 {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .animate-2 {
+            transition-delay: 300ms;
+        }
+        .animate-3 {
+            transition-delay: 600ms;
+        }
+        .animate-4 {
+            transition-delay: 900ms;
+        }
+        .animate-5 {
+            transition-delay: 1200ms;
+        }
+        .animate-6 {
+            transition-delay: 1500ms;
+        }
+        .animate-7 {
+            transition-delay: 1800ms;
+        }
+    }
+}
+
+
+.banner-carousel .owl-nav {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 50%;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    transform: translateY(-50%);
+    pointer-events: none;
+    @include for-md{
+        display: none;
+    }
+    .owl-next,
+    .owl-prev {
+        display: block;
+        margin: 5px 0;
+        height: 50px;
+        width: 50px;
+        color: var(--theme-color1);
+        border-radius: 50%;
+        background-color: #ffffff;
+        font-size: 16px;
+        line-height: 50px;
+        font-weight: 300;
+        text-align: center;
+        pointer-events: all;
+        transition: all 500ms ease;
+        opacity: .2;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Banner Section Two
+====================================================================
+
+***/
+
+.banner-section-two{
+    position: relative;
+    z-index: 9;
+    .slide-item {
+        position: relative;
+        .bg-image {
+            @include overlay;
+            @include background;
+            &:before{
+                @include overlay;
+                background-color: var(--bg-theme-color1);
+                opacity: .6;
+                content: '';
+            }
+        }
+    }
+    .content-box {
+        position: relative;
+        z-index: 4;
+        padding: 320px 0 260px;
+        @include for-md{
+            text-align: center;
+            padding: 180px 0 260px;
+        }
+        .number{
+            font-size: 80px;
+            line-height: 1em;
+            display: block;
+            font-weight: 800;
+            color: var(--theme-color3);
+            @include for-sm{
+                font-size: 42px;
+                margin-bottom: 20px;
+            }
+        }
+        .title {
+            color: #ffffff;
+            font-size: 80px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            @include for-lg {
+                font-size: 72px;
+            }
+            @include for-md{
+                font-size: 68px;
+            }
+            @include for-sm{
+                font-size: 54px;
+                br{display: none;}
+            }
+            @include for-xs{
+                font-size: 42px;
+                line-height: 1.2em;
+            }
+        }
+        .theme-btn{
+            margin-right: 10px;
+            &:last-child{margin-right: 0;}
+            @include for-sm{
+                font-size: 14px;
+                line-height: 20px;
+                padding: 10px 20px;
+            }
+        }
+    }
+
+    .icon-arrow-up{
+        position: absolute;
+    }
+
+    .bottom-box{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 8;
+        &:before {
+            position: absolute;
+            left: -30px;
+            top: 0px;
+            width: 622px;
+            height: 607px;
+            background-image: url(../images/icons/shape-11.png);
+            content: "";
+            z-index: 2;
+            @include for-xl{
+                display: none;
+            }
+        }
+        .content{
+            display: flex;
+            .inner{
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 30px 0 0;
+                padding-right: 20px;
+                &:before{
+                    position: absolute;
+                    right: -85px;
+                    top: 0;
+                    height: 100%;
+                    width: 1000%;
+                    background-color: #ffffff;
+                    content: "";
+                    transform: skew(60deg);
+                    border-right: 30px solid var(--theme-color3);
+                }
+            }
+        }
+        .icon{
+            position: absolute;
+            left: 60px;
+            top: -95px;
+        }
+        .images{
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            img{
+                border-radius: 50%;
+                border: 2px solid #ffffff;
+                box-shadow: 0 5px 15px rgba(0,0,0,.15);
+                margin-left: -15px;
+                z-index: 2;
+                min-width: 36px;
+                height: 36px;
+                &:first-child{
+                    margin-left: 0;
+                }
+            }
+        }
+        .text{
+            position: relative;
+            font-size: 18px;
+            color: #6a6f78;
+            strong{font-weight: 900;}
+        }
+    }
+
+}

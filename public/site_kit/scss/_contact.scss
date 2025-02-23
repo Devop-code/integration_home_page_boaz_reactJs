@@ -1,0 +1,166 @@
+/***
+
+====================================================================
+    Contact Section
+====================================================================
+
+***/
+
+.contact-section{
+    position: relative;
+    padding-bottom: 50px;
+    .outer-box{
+        position: relative;
+        border-radius: 5px;
+        background-color: #ffffff;
+        margin: 0 auto;
+        max-width: 1370px;
+        margin-top: -60px;
+    }
+    .title-column{
+        position: relative;
+        .inner-column{
+            position: relative;
+            padding: 100px 0 70px;
+            padding-right: 180px;
+            @include for-sm{
+                padding-right: 0;
+            }
+        }
+        .sec-title{
+            margin-bottom: 35px;
+        }
+    }
+
+    .ceo-info{
+        position: absolute;
+        right: 20px;
+        bottom: 70px;
+        @include for-sm{
+            display: none;
+        }
+        .thumb{
+            height: 90px;
+            width: 90px;
+            border: 2px solid var(--bg-theme-color3);
+            border-radius: 50%;
+            overflow: hidden;
+            padding: 8px;
+            background-color: var(--bg-theme-color4);
+            margin-bottom: 25px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+        .name{
+            margin-bottom: 0;
+        }
+        .designation{
+            font-size: 13px;
+            color: #6a6f78;
+        }
+    }
+
+    .form-column{
+        .inner-column{
+            padding-top: 100px;
+            padding-left: 15px;
+            @include for-md{
+                padding-left: 0;
+                padding-top: 0;
+            }
+        }
+        .form-outer{
+            position: relative;
+            &:before {
+                position: absolute;
+                left: 30px;
+                right: -20px;
+                top: -20px;
+                height: 395px;
+                background-image: url(../images/icons/lines.png);
+                content: "";
+            }
+            margin-bottom: -50px;
+        }
+    }
+}
+
+.contact-form {
+    position: relative;
+    background-color: #ffffff;
+    padding: 50px 50px 50px;
+    background-color: var(--bg-theme-color2);
+    @include for-sm{
+        padding: 30px 30px;
+    }
+    &::before{
+        @include overlay;
+        @include background;
+        background-image: url(../images/icons/shape-8.png);
+        content: "";
+    }
+    .form-group {
+        position: relative;
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        label {
+            font-size: 16px;
+            line-height: 20px;
+            color: #ffffff;
+            font-weight: 500;
+            display: block;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            &.error {
+                display: block;
+                font-weight: 500;
+                font-size: 12px;
+                text-transform: capitalize;
+                line-height: 24px;
+                color: #ff0000;
+                margin-bottom: 0;
+            }
+        }
+        .select2-container--default .select2-selection--single,
+        input:not([type="submit"]),
+        textarea,
+        select {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 50px;
+            padding: 10px 30px;
+            line-height: 30px;
+            font-size: 13px;
+            color: #6a6f78;
+            font-weight: 500;
+            background-color: #ffffff;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            margin-bottom: 0;
+            transition: all 300ms ease;
+        }
+        ::-webkit-input-placeholder {color: #6a6f78;}
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--border-theme-color3);
+        }
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+        input[type="submit"],
+        button {
+            @include for-sm{
+                width: 100%;
+            }
+        }
+    }
+}

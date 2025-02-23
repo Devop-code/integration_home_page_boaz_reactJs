@@ -1,0 +1,169 @@
+/***
+
+====================================================================
+    Countries Section
+====================================================================
+
+***/
+
+.countries-section{
+    position: relative;
+    padding: 120px 0;
+}
+
+.country-block{
+    position: relative;
+    .inner-box {
+        padding: 20px 10px;
+        position: relative;
+        text-align: center;
+        &:before{
+          @include overlay;
+          @include background;
+          background-image: url(../images/icons/shape-3.jpg);
+          border-radius: 10px;
+          content: "";
+          @include fade-out;
+        }
+        &:hover {
+          &:before{
+            @include fade-in;
+          }
+          .theme-btn{
+            background-color: #fff;
+          }
+          .flag{
+            transform: rotate(360deg);
+          }
+        }
+    }
+    .flag {
+        position: relative;
+        display: block;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: all 300ms ease;
+        margin: 0 auto 20px;
+        z-index: 2;
+        &:hover {
+            background-color: var(--bg-theme-color1);
+            color: var(--theme-color2);
+        }
+    }
+    .theme-btn{
+      position: relative;
+      font-size: 18px;
+      line-height: 30px;
+      padding: 10px 30px;
+      text-align: center;
+      background-color: #ebeef5;
+      display: inline-block;
+      font-weight: 800;
+      border-radius: 50px;
+      &:hover{
+        color: var(--theme-color1);
+      }
+    }
+}
+
+
+/***
+
+====================================================================
+    Countries Section Two
+====================================================================
+
+***/
+
+.countries-section-two{
+    position: relative;
+    .outer-box{
+      position: relative;
+      max-width: 1370px;
+      background-color: #fff;
+      margin: 0 auto;
+      z-index: 2;
+      padding: 100px 85px 70px;
+      @include for-lg{
+        padding: 100px 50px 70px;
+      }
+      @include for-md{
+        padding: 100px 0px 70px;
+      }
+    }
+    .title-column{
+      margin-bottom: 50px;
+      .inner-column{
+        padding-right: 100px;
+        @include for-lg{
+          padding-right: 0;
+        }
+      }
+      .sec-title{
+        margin-bottom: 30px;
+        h2{
+          br{
+            display: none;
+          }
+        }
+      }
+    }
+}
+
+.country-block-two{
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box {
+        padding: 20px 10px 25px;
+        position: relative;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #d4d9e6;
+        &:before{
+          @include overlay;
+          @include background;
+          background-image: url(../images/icons/shape-3.jpg);
+          border-radius: 10px;
+          content: "";
+          @include fade-out;
+        }
+        &:hover {
+          &:before{
+            @include fade-in;
+          }
+          .title{
+            color: #fff;
+          }
+          .flag{
+            transform: rotate(360deg);
+          }
+        }
+    }
+    .flag {
+        position: relative;
+        display: block;
+        height: 78px;
+        width: 78px;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: all 300ms ease;
+        margin: 0 auto 13px;
+        z-index: 2;
+        &:hover {
+            background-color: var(--bg-theme-color1);
+            color: var(--theme-color2);
+        }
+    }
+    .title{
+      position: relative;
+      font-size: 18px;
+      line-height: 30px;
+      transition: all 300ms ease;
+      margin-bottom: 0;
+      &:hover{
+        color: #fff;
+      }
+    }
+}

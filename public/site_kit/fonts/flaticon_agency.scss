@@ -1,0 +1,141 @@
+$flaticon_agency-font: "flaticon_agency";
+
+@font-face {
+    font-family: $flaticon_agency-font;
+    src: url("./flaticon_agency.ttf?3581862556140a29e55ac9d815ff2570") format("truetype"),
+url("./flaticon_agency.woff?3581862556140a29e55ac9d815ff2570") format("woff"),
+url("./flaticon_agency.woff2?3581862556140a29e55ac9d815ff2570") format("woff2"),
+url("./flaticon_agency.eot?3581862556140a29e55ac9d815ff2570#iefix") format("embedded-opentype"),
+url("./flaticon_agency.svg?3581862556140a29e55ac9d815ff2570#flaticon_agency") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_agency !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_agency-map: (
+    "digital-services": "\f101",
+    "graphic-design": "\f102",
+    "technology": "\f103",
+    "mobile-app": "\f104",
+    "rocket": "\f105",
+    "experience": "\f106",
+    "team": "\f107",
+    "customer-satisfaction": "\f108",
+    "design-thinking": "\f109",
+    "artificial-intelligence": "\f10a",
+    "ai": "\f10b",
+    "checking": "\f10c",
+    "recommend": "\f10d",
+    "consulting": "\f10e",
+    "mission": "\f10f",
+    "team-1": "\f110",
+    "customer-support": "\f111",
+    "design": "\f112",
+    "research-and-development": "\f113",
+    "sharing": "\f114",
+    "content-creator": "\f115",
+    "ux-design": "\f116",
+    "innovation": "\f117",
+    "cyber-security": "\f118",
+    "webpage": "\f119",
+    "development": "\f11a",
+    "social-media": "\f11b",
+    "marketing": "\f11c",
+    "wealth": "\f11d",
+);
+
+.flaticon-digital-services:before {
+    content: map-get($flaticon_agency-map, "digital-services");
+}
+.flaticon-graphic-design:before {
+    content: map-get($flaticon_agency-map, "graphic-design");
+}
+.flaticon-technology:before {
+    content: map-get($flaticon_agency-map, "technology");
+}
+.flaticon-mobile-app:before {
+    content: map-get($flaticon_agency-map, "mobile-app");
+}
+.flaticon-rocket:before {
+    content: map-get($flaticon_agency-map, "rocket");
+}
+.flaticon-experience:before {
+    content: map-get($flaticon_agency-map, "experience");
+}
+.flaticon-team:before {
+    content: map-get($flaticon_agency-map, "team");
+}
+.flaticon-customer-satisfaction:before {
+    content: map-get($flaticon_agency-map, "customer-satisfaction");
+}
+.flaticon-design-thinking:before {
+    content: map-get($flaticon_agency-map, "design-thinking");
+}
+.flaticon-artificial-intelligence:before {
+    content: map-get($flaticon_agency-map, "artificial-intelligence");
+}
+.flaticon-ai:before {
+    content: map-get($flaticon_agency-map, "ai");
+}
+.flaticon-checking:before {
+    content: map-get($flaticon_agency-map, "checking");
+}
+.flaticon-recommend:before {
+    content: map-get($flaticon_agency-map, "recommend");
+}
+.flaticon-consulting:before {
+    content: map-get($flaticon_agency-map, "consulting");
+}
+.flaticon-mission:before {
+    content: map-get($flaticon_agency-map, "mission");
+}
+.flaticon-team-1:before {
+    content: map-get($flaticon_agency-map, "team-1");
+}
+.flaticon-customer-support:before {
+    content: map-get($flaticon_agency-map, "customer-support");
+}
+.flaticon-design:before {
+    content: map-get($flaticon_agency-map, "design");
+}
+.flaticon-research-and-development:before {
+    content: map-get($flaticon_agency-map, "research-and-development");
+}
+.flaticon-sharing:before {
+    content: map-get($flaticon_agency-map, "sharing");
+}
+.flaticon-content-creator:before {
+    content: map-get($flaticon_agency-map, "content-creator");
+}
+.flaticon-ux-design:before {
+    content: map-get($flaticon_agency-map, "ux-design");
+}
+.flaticon-innovation:before {
+    content: map-get($flaticon_agency-map, "innovation");
+}
+.flaticon-cyber-security:before {
+    content: map-get($flaticon_agency-map, "cyber-security");
+}
+.flaticon-webpage:before {
+    content: map-get($flaticon_agency-map, "webpage");
+}
+.flaticon-development:before {
+    content: map-get($flaticon_agency-map, "development");
+}
+.flaticon-social-media:before {
+    content: map-get($flaticon_agency-map, "social-media");
+}
+.flaticon-marketing:before {
+    content: map-get($flaticon_agency-map, "marketing");
+}
+.flaticon-wealth:before {
+    content: map-get($flaticon_agency-map, "wealth");
+}

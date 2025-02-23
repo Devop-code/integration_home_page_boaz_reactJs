@@ -1,0 +1,417 @@
+/*** 
+
+====================================================================
+		Work Section
+====================================================================
+
+***/
+
+.work-section {
+    position: relative;
+    background-color: #f6f4f9;
+    padding-bottom: 10px;
+    .bg-pattern-9{
+        top: 660px;
+        height: auto;
+        bottom: 0;
+    }
+    .upper-box{
+        position: relative;
+        padding: 120px 0 220px;
+        background-color: var(--bg-theme-color1);
+        .icon{
+            position: relative;
+            @include flex-center;
+            display: inline-flex;
+            height: 120px;
+            width: 120px;
+            font-size: 64px;
+            color: #fff;
+            background-color: var(--bg-theme-color2);
+            border-radius: 5px;
+            margin-bottom: 40px;
+        }
+
+        .sec-title{
+            margin-bottom: 0;
+            h1{
+                color: #fff;
+                font-size: 70px;
+                line-height: 1.2em;
+                margin-bottom: 0;
+                @include for-md{
+                    font-size: 42px;
+                }
+                .highlighted{
+                    position: relative;
+                    display: inline-block;
+                    &::before{
+                        position: absolute;
+                        left: 50%;
+                        height: 90px;
+                        width: 216px;
+                        background-image: url(../images/icons/highlighted.png);
+                        transform: translateX(-50%);
+                        content: "";
+                    }
+                    @include for-md{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }    
+
+    .bottom-box {
+        position: relative;
+        text-align: center;
+        font-size: 16px;
+        line-height: 30px;
+        text-transform: uppercase;
+        @include title-font;
+        color: #726d7b;
+        letter-spacing: .01em;
+        padding: 50px 0;
+        border-top: 1px solid #e2e0e5;
+    }
+
+    .blocks-column{
+        .inner-column{
+            position: relative;
+            padding-right: 60px;
+            border-right: 1px solid #e2e0e5;
+            margin-right: 45px;
+            @include for-lg{
+                padding-right: 0;
+                border-right: 0;
+            }
+            @include for-md{
+                margin-right: 0;
+            }
+        }
+    }
+
+    .image-column{
+        position: relative;
+        margin-bottom: 50px;
+        .inner-column{
+            position: relative;
+            padding-left: 160px;
+            @include for-md{
+                padding-left: 0;
+                text-align: center;
+            }
+        }
+        .image{
+            position: relative;
+            margin-bottom: 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .info-box{
+            position: absolute;
+            left: -10px;
+            top: 0;
+            max-width: 140px;
+            @include for-md{
+                position: relative;
+                left: 0;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+    .info-box{
+        position: relative;
+        .icon{
+            display: block;
+            font-size: 64px;
+            color: var(--theme-color2);
+            margin-bottom: 25px;
+        }
+        .title{
+            font-size: 30px;
+            font-weight: 400;
+            margin-bottom: 25px;
+        }
+        .read-more{
+            font-size: 14px;
+            @include title-font;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: .05em;
+            &:hover{
+                color: var(--theme-color2);
+            }
+        }
+    }
+}
+
+.work-tabs{
+    position: relative;
+    margin-bottom: 60px;
+    .tab-buttons{
+        position: relative;
+        margin-top: -115px;
+        display: flex;
+        align-items: center;
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+        @include for-md{
+            margin-top: -60px;
+        }
+        @include for-sm{
+            flex-wrap: wrap;
+        }
+        .tab-btn{
+            position: relative;
+            font-size: 24px;
+            width: 100%;
+            color: #fff;
+            line-height: 35px;
+            padding: 40px 40px;
+            background-color: var(--bg-theme-color2);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: .01em;
+            @include title-font;
+            cursor: pointer;
+            @include for-md{
+                font-size: 20px;
+                padding: 15px 30px;
+                line-height: 30px;
+            }
+            @include for-sm{
+                width: 100%;
+            }
+            &.active-btn{
+                background-color: #fff;
+                color: var(--theme-color2);
+            }
+        }
+    }
+    .tabs-content{
+        position: relative;
+        background-color: #fff;
+        padding: 80px 80px 30px;
+        box-shadow: 0 10px 30px rgba(0,0,0,.05);
+        border-top: 1px solid #ebebec;
+        @include for-lg{
+            padding: 40px 40px 10px;
+        }
+    }
+}
+
+.work-block{
+    position: relative;
+    &:last-child{
+        .inner-box{
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+    .inner-box{
+        position: relative;
+        padding-left: 80px;
+        padding-bottom: 35px;
+        border-bottom: 1px solid #e2e0e5;
+        margin-bottom: 35px;
+        &:hover{
+            .icon{
+                background-color: var(--bg-theme-color2);
+                color: var(--theme-color1);
+                transform: scale(-1) rotate(-180deg);
+            }
+        }
+        @include for-md{
+            text-align: center;
+            padding-left: 0;
+        }
+    }
+    .icon{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 60px;
+        width: 60px;
+        @include flex-center;
+        color: var(--theme-color2);
+        background-color: var(--bg-theme-color1);
+        font-size: 24px;
+        border-radius: 50%;
+        transition: all 300ms ease;
+        @include for-md{
+            position: relative;
+            display: inline-flex;
+            margin-bottom: 20px;
+        }
+    }
+    .title{
+        position: relative;
+        margin-bottom: 30px;
+        @include for-md{
+            margin-bottom: 10px;
+        }
+    }
+    .text{
+        font-size: 16px;
+        line-height: 30px;
+        color: #717070;
+    }
+}
+
+/*** 
+
+====================================================================
+		Work Section Two
+====================================================================
+
+***/
+
+.work-section-two{
+    position: relative;
+    padding: 120px 0;
+    background-color: var(--bg-theme-color1);
+    background-image: url(../images/icons/shape-5.jpg);
+    background-position: center left;
+    background-repeat: no-repeat;
+    .bg-outer{
+        @include overlay;
+        left: auto;
+        right: 0;
+        max-width: 50%;
+        .bg{
+            left: 145px;
+            right: 0;
+        }
+        @include for-md{
+            display: none;
+        }
+    }
+
+    .sec-title{
+        margin-bottom: 40px;
+    }
+
+    .content-column{
+        .inner-column{
+            padding-right: 60px;
+            @include for-lg{
+                padding-right: 0;
+            }
+        }
+    }
+
+    .image-column{
+        position: relative;
+        @include for-md{
+            margin-top: 50px;
+        }
+    }
+
+    .features-list{
+        position: relative;
+        display: flex;
+        @include for-sm{
+            flex-wrap: wrap;
+        }
+        li{
+            position: relative;
+            padding-left: 80px;
+            padding-right: 20px;
+            font-size: 20px;
+            line-height: 1.2em;
+            padding-top: 5px;
+            width: 50%;
+            min-height: 60px;
+            @include title-font;
+            color: #fff;
+            text-transform: uppercase;
+            &:hover{
+                .count{
+                    background-color: var(--bg-theme-color2);
+                }
+            }
+            @include for-sm{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .count{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 60px;
+                width: 60px;
+                font-size: 20px;
+                color: #fff;
+                @include flex-center;
+                @include title-font;
+                border: 2px solid var(--border-theme-color2);
+                border-radius: 50%;
+                transition: all 300ms ease;
+            }
+        }
+    }
+
+    .graph-box{
+        position: relative;
+        background-color: var(--bg-theme-color2);
+        margin-left: 5px;
+        margin-right: 40px;
+        @include for-lg{
+            margin-right: 0;
+        }
+        &:before{
+            position: absolute;
+            left: 0px;
+            bottom: -90px;
+            border-right: 128px solid #262626;
+            border-bottom: 90px solid transparent;
+            content: "";
+            @include for-md{
+                display: none;
+            }
+        }
+    }
+}
+
+
+.pie-graph {
+    position: relative;
+    .inner{
+        position: relative;
+        text-align: center;
+        padding: 60px 20px;
+        @include for-sm{
+            padding: 30px 20px;
+        }
+        &:before{
+            position: absolute;
+            right: 0;
+            top: 60px;
+            bottom: 60px;
+            border-right: 2px solid rgba(255,255,255,.2);
+            content: "";
+        }
+    }
+    .graph-outer {
+        position: relative;
+        @include flex-center;
+        margin-bottom: 15px;
+        .inner-text {
+            @include overlay;
+            @include flex-center;
+            font-size: 30px;
+            color: #fff;
+            font-weight: 500;
+            line-height: 1em;
+        }
+    }
+    .title {
+        font-size: 20px;
+        color: #fff;
+        line-height: 1.2em;
+        margin-bottom: 0;
+    }
+}

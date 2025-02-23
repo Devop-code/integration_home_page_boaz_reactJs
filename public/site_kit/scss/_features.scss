@@ -1,0 +1,194 @@
+/*** 
+
+====================================================================
+    Features Section
+====================================================================
+
+***/
+
+.features-section {
+    position: relative;
+    padding: 120px 0 90px;
+    z-index: 2;
+}
+
+.feature-block-two{
+    position: relative;
+    margin-bottom: 30px;
+    z-index: 1;
+    .inner-box {
+        position: relative;
+        z-index: 2;
+        transition: all 300ms ease;
+        margin-bottom: 20px;
+        &:hover {
+            .step{
+                @include fade-out;
+            }
+            .overlay-content{
+                @include fade-in;
+                transform: scale(1);
+                .read-more{
+                    @include fade-in;
+                    bottom: -20px;
+                }
+            }
+        }
+    }
+    .image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        margin-bottom: 0;
+        img {
+            width: 100%;
+            min-height: 260px;
+            object-fit: cover;
+        }
+    }
+    .step{
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        font-size: 20px;
+        letter-spacing: -.04em;
+    }
+    .overlay-content{
+        @include overlay;
+        padding: 55px 40px 40px;
+        @include fade-out;
+        transform: scale(.7);
+        &::before{
+            @include overlay;
+            background-color: var(--bg-theme-color1);
+            opacity: .85;
+            content: "";
+        }
+        @include for-xxs{
+            padding: 40px 30px 30px;
+        }
+        .title-box{
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .icon{
+            position: relative;
+            font-size: 58px;
+            margin-right: 10px;
+            color: var(--theme-color3);
+            @include for-xxs{
+                display: none;
+            }
+        }
+        .title {
+            color: #fff;
+            margin-bottom: 0px;
+            transition: all 300ms ease;
+        }
+        .text{
+            position: relative;
+            font-size: 15px;
+            line-height: 26px;
+            color: rgba(255,255,255,.7);
+        }
+        .read-more{
+            position: absolute;
+            right: 30px;
+            bottom: 10px;
+            line-height: 20px;
+            padding: 10px 30px;
+            font-size: 14px;
+            @include fade-out;
+        }
+    }
+}
+
+
+/*** 
+
+====================================================================
+    Features Section Two
+====================================================================
+
+***/
+
+.features-section-two{
+    position: relative;
+    z-index: 3;
+    .outer-box{
+        background-image: url(../images/icons/map3.png);
+        background-color: var(--bg-theme-color2);
+        border-radius: 5px;
+    }
+    .title-column{
+        .inner-column{
+            padding: 75px 60px 0;
+            @include for-sm{
+                padding: 60px 30px 0;
+            }
+        }
+        .sec-title{
+            .sub-title{
+                color: #aad5ff;
+            }
+        }
+    }
+    .features-column{
+        .inner-column{
+            position: relative;
+            margin-left: -75px;
+            padding: 75px 0 0;
+            padding-right: 30px;
+            height: 100%;
+            @include for-lg{
+                margin-left: 0;
+            }
+            @include for-md{
+                padding: 0 60px 55px;
+            }
+            @include for-sm{
+                padding: 0 30px 40px;
+            }
+        }
+        .list-style-two{
+            li i,
+            li{color: #ffffff;}
+        }
+        .image{
+            position: absolute;
+            top: -58px;
+            right: -33px;
+            margin-bottom: 0;
+            @include for-lg{
+                display: none;
+            }
+        }
+    }
+}
+
+.features-list{
+    position: relative;
+    li{
+        position: relative;
+        padding-left: 25px;
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 10px;
+        color: #ffffff;
+        &:before{
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 14px;
+            line-height: 26px;
+            color: var(--theme-color2);
+            content: "\f0a9";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+    }
+}
+
