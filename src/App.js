@@ -8,6 +8,7 @@ import Connexion from "./pages/connexion";
 
 function App() {
   return (
+<<<<<<< HEAD
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,6 +19,11 @@ function App() {
         <Route path="/connexion" element={<Connexion/>} />
       </Routes>
     </BrowserRouter>
+=======
+    <div className="App">
+      
+    </div>
+>>>>>>> 5ad81656b4d54666b73faaed68031f127f8d320f
   );
 }
 

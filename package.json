@@ -12,7 +12,10 @@
     "i18next-http-backend": "^3.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+<<<<<<< HEAD
     "react-i18next": "^15.4.1",
+=======
+>>>>>>> 5ad81656b4d54666b73faaed68031f127f8d320f
     "react-router-dom": "^7.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
@@ -44,6 +47,10 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.3",
+<<<<<<< HEAD
     "tailwindcss": "^4.0.9"
+=======
+    "tailwindcss": "^4.0.8"
+>>>>>>> 5ad81656b4d54666b73faaed68031f127f8d320f
   }
 }
