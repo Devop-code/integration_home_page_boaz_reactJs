@@ -1,116 +1,29 @@
+import servicesData from "../data/servicesData";
+import { useTranslation } from "react-i18next";
 import React from "react";
 import MainBox from "../components/mainBoxHeaderTop";
 import Footer from "../components/Footer";
-const Home = () => {
-  
+import MobileMenu from "../components/MobileMenu";
 
+const Home = () => {
   return (
     <>
       <div className="page-wrapper">
         {/* Preloader */}
         <div className="preloader" />
+
         {/* Main Header*/}
         <header className="main-header header-style-one">
           {/* Header Top */}
-          <MainBox/>
+
+          <MainBox />
+
           {/* End Header Lower */}
           {/* Mobile Menu  */}
-          <div className="mobile-menu">
-            <div className="menu-backdrop" />
-            {/*Here Menu Will Come Automatically Via Javascript / Same Menu as in Header*/}
-            <nav className="menu-box">
-              <div className="upper-box">
-                <div className="nav-logo">
-                  <a href="index.html">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/BOAZ  B-05.png`}
-                      alt=""
-                      title=""
-                    />
-                  </a>
-                </div>
-                <div className="close-btn">
-                  <i className="icon fa fa-times" />
-                </div>
-              </div>
-              <ul className="navigation clearfix">
-                {/*Keep This Empty / Menu will come through Javascript*/}
-              </ul>
-              <ul className="contact-list-one">
-                <li>
-                  {/* Contact Info Box */}
-                  <div className="contact-info-box">
-                    <i className="icon lnr-icon-phone-handset" />
-                    <span className="title">Call Now</span>
-                    <a href="tel:+92880098670">+92 (8800) - 98670</a>
-                  </div>
-                </li>
-                <li>
-                  {/* Contact Info Box */}
-                  <div className="contact-info-box">
-                    <span className="icon lnr-icon-envelope1" />
-                    <span className="title">Send Email</span>
-                    <a href="mailto:help@company.com">info@boaz-study.com</a>
-                  </div>
-                </li>
-                <li>
-                  {/* Contact Info Box */}
-                  <div className="contact-info-box">
-                    <span className="icon lnr-icon-clock" />
-                    <span className="title">Send Email</span>
-                    Mon - Sat 8:00 - 6:30, Sunday - CLOSED
-                  </div>
-                </li>
-              </ul>
-              <ul className="social-links">
-                <li>
-                  <a href="#">
-                    <i className="fab fa-twitter" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fab fa-facebook-f" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fab fa-pinterest" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fab fa-instagram" />
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+          <MobileMenu />
           {/* End Mobile Menu */}
           {/* Header Search */}
-          <div className="search-popup">
-            <span className="search-back-drop" />
-            <button className="close-search">
-              <span className="fa fa-times" />
-            </button>
-            <div className="search-inner">
-              <form method="post" action="index.html">
-                <div className="form-group">
-                  <input
-                    type="search"
-                    name="search-field"
-                    defaultValue=""
-                    placeholder="Search..."
-                    required=""
-                  />
-                  <button type="submit">
-                    <i className="fa fa-search" />
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-          {/* End Header Search */}
+
           {/* Sticky Header  */}
           <div className="sticky-header">
             <div className="auto-container">
@@ -119,7 +32,7 @@ const Home = () => {
                 <div className="logo">
                   <a href="index.html" title="">
                     <img
-                      src={`${process.env.PUBLIC_URL}/boaz studies sans back.png`}
+                      src={`${process.env.PUBLIC_URL}/logo refais.png`}
                       alt=""
                       title=""
                     />
@@ -131,7 +44,27 @@ const Home = () => {
                   <nav className="main-menu">
                     <div className="navbar-collapse show collapse clearfix">
                       <ul className="navigation clearfix">
-                        {/*Keep This Empty / Menu will come through Javascript*/}
+                        <li>
+                          <a href="/"> Home</a>
+                        </li>
+                        <li>
+                          <a href="/about">About</a>
+                        </li>
+                        <li>
+                          <a href="/contact">Contact</a>
+                        </li>
+                        <li>
+                          <a href="/services">Services</a>
+                        </li>
+                        <li>
+                          <a href="/blog">Blog</a>
+                        </li>
+                        <li>
+                          <a href="/connexion"> Connexion</a>
+                        </li>
+                        <li>
+                          <a href="/inscription">Inscription</a>
+                        </li>
                       </ul>
                     </div>
                   </nav>
@@ -186,13 +119,29 @@ const Home = () => {
                     data-textalign="['top','top','top','top']"
                     data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
                   >
-                    <h1>
-                    Boaz-Study : Votre <br />
-                    Partenaire pour une 
-                    mobilité internationale 
-                    <br />
-                      
-                    </h1>
+                    <h3 className="fs-1 font-size-30 text-white responsive-text font-weight  fw-bolder mb-3" >
+                      Boaz-Study , <small className="text-white"> Votre Partenaire pour une mobilité
+                      internationale réussie</small>
+                      <br />
+                      </h3>
+                      <p className="letter-space-3 fs-1 md-0 text-white responsive-text fw-normal text-md-center text-left font-size-15">
+                        Découvrez nos services complets pour faciliter votre
+                        installation et vos études en France.
+                        Confiez-nous votre projet dès aujourd'hui
+                      </p>
+                      <div className="btn-box fs-3 responsive-text text-light">
+                        <a href="/about" className="theme-btn btn-style-one ">
+                          <span className="btn-title letter-space-4 text-light">
+                            Voir nos services
+                          </span>
+                        </a>
+                        <a href="/contact" className="theme-btn btn-style-two bg-transparent border border-light text-white">
+                          <span className="btn-title letter-space-4">
+                            Contacter Nous
+                          </span>
+                        </a>
+                      </div>
+                  
                   </div>
                   <div
                     className="tp-caption"
@@ -211,9 +160,7 @@ const Home = () => {
                     data-y="['middle','middle','middle','middle']"
                     data-textalign="['top','top','top','top']"
                     data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                  >
-                  
-                  </div>
+                  ></div>
                   <div
                     className="tp-caption"
                     data-paddingbottom="[0,0,0,0]"
@@ -231,22 +178,7 @@ const Home = () => {
                     data-y="['middle','middle','middle','middle']"
                     data-textalign="['top','top','top','top']"
                     data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                  >
-                    <div className="btn-box">
-                      <a
-                        href="page-about.html"
-                        className="theme-btn btn-style-one"
-                      >
-                        <span className="btn-title">Explore More</span>
-                      </a>
-                      <a
-                        href="page-contact.html"
-                        className="theme-btn btn-style-two"
-                      >
-                        <span className="btn-title">Contact Now</span>
-                      </a>
-                    </div>
-                  </div>
+                  ></div>
                 </li>
               </ul>
             </div>
@@ -263,17 +195,20 @@ const Home = () => {
               >
                 <div className="inner-column">
                   <div className="sec-title">
-                    <span className="sub-title">about the company</span>
+                    <span className="sub-title">
+                      À propos de l'étude chez Boaz-study
+                    </span>
                     <h2>
-                      Providing the best immigration{" "}
-                      <span className="color3">services</span>
+                      Offrant les meilleurs services{" "}
+                      <span className="color3">D'etude en france</span>
                     </h2>
-                    <h4>Canada based immigration consultant agency.</h4>
+                    <h4>Agence de conseil en voyage base au cameroun.</h4>
                     <div className="text">
-                      Web designing in a powerful way of just not an only
-                      professions, however, in a passion for our Company. We
-                      have to a tendency to believe the idea that smart looking
-                      of any website is the first impression on visitors.
+                      L'accompagnement des étudiants est bien plus qu'un simple
+                      service, c'est une véritable passion pour notre
+                      entreprise. Nous croyons fermement que guider les
+                      étudiants avec professionnalisme et expertise est la clé
+                      de leur réussite en France.
                     </div>
                   </div>
                   <div className="row">
@@ -281,26 +216,27 @@ const Home = () => {
                       <div className="inner">
                         <i className="icon flaticon-passport-16" />
                         <h6 className="title">
-                          Best Immigration
-                          <br /> Services
+                          meilleurs service
+                          <br /> d'etude
+                          <br /> en France
                         </h6>
                       </div>
                     </div>
                     <div className="text-block col-lg-6 col-md-6">
                       <div className="inner">
                         <div className="text">
-                          We have to a tendency to believe the idea that smart
-                          looking.
+                          Venez découvrir nos services et nos offres pour une
+                          mobilité internationale réussie.
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="btm-box">
                     <a
-                      href="page-about.html"
+                      href="http://www.boaz-study.com/register"
                       className="theme-btn btn-style-one"
                     >
-                      <span className="btn-title">Discover More</span>
+                      <span className="btn-title">Prendre rendez vous</span>
                     </a>
                   </div>
                 </div>
@@ -319,13 +255,13 @@ const Home = () => {
                         </figure>
                         <figure className="image-1 overlay-anim wow fadeInUp">
                           <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/resource/about-1.jpg`}
+                            src={`${process.env.PUBLIC_URL}/site_kit/images/about/about-1.jpg`}
                             alt=""
                           />
                         </figure>
                         <figure className="image-2 overlay-anim wow fadeInRight">
                           <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/resource/about-2.jpg`}
+                            src={`${process.env.PUBLIC_URL}/site_kit/images/about/about-2.jpg`}
                             alt=""
                           />
                         </figure>
@@ -333,9 +269,9 @@ const Home = () => {
                     </div>
                     <div className="column col-lg-6 col-md-6">
                       <div className="image-box">
-                                                <figure className="image-3 overlay-anim wow fadeInLeft">
+                        <figure className="image-3 overlay-anim wow fadeInLeft">
                           <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/resource/about-3.jpg`}
+                            src={`${process.env.PUBLIC_URL}/site_kit/images/about/people-office-work-day.jpg`}
                             alt=""
                           />
                         </figure>
@@ -343,7 +279,7 @@ const Home = () => {
                           <div className="inner">
                             <i className="icon flaticon-loyalty" />
                             <div className="text">
-                              <strong>3800</strong> Satisfied Clients
+                              <strong>3800</strong> clients satisfaits
                             </div>
                           </div>
                         </div>
@@ -357,240 +293,105 @@ const Home = () => {
         </section>
         {/*Emd About Section */}
         {/* Why Choose US */}
-        <section className="why-choose-us pt-0">
-          <div className="bg bg-pattern-1" />
-          <div className="auto-container">
-            <div className="sec-title text-center">
-              <span className="sub-title">countries you can visit</span>
-              <h2>
-                Few reasons to choose <br />
-                our visa <span className="color3">company</span>
-              </h2>
-            </div>
-            <div className="row">
-              {/* Features Block */}
-              <div className="feature-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
-                <div className="inner-box">
-                  <i className="icon flaticon-interview" />
-                  <span className="cat">The eget mattis</span>
-                  <h6 className="title">
-                    <a href="page-about.html">Direct Interviews</a>
-                  </h6>
+        <>
+          <section className="why-choose-us-two">
+            <div
+              className="bg bg-image"
+              style={{ backgroundImage: "url(./images/background/3.jpg)" }}
+            />
+            <div className="bg bg-pattern-5" />
+            <div className="auto-container">
+              <div className="row g-0">
+                {/* Colonne du titre */}
+                <div className="title-column col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                  <div className="inner-column wow fadeInLeft">
+                    <div className="sec-title light">
+                      <h2>
+                        Pourquoi <br />
+                        choisir notre expertise pour vos études en France ?
+                      </h2>
+                    </div>
+                   
+                  </div>
                 </div>
-              </div>
-              {/* Features Block */}
-              <div
-                className="feature-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <div className="inner-box">
-                  <div className="content">
-                    <i className="icon flaticon-low-cost" />
-                    <span className="cat">The eget mattis</span>
-                    <h6 className="title">
-                      <a href="page-about.html">Cost Effective</a>
-                    </h6>
+                {/* Colonne du contenu */}
+                <div className="content-column col-xl-8 col-lg-12 col-ms-12 col-sm-12">
+                  <div className="row g-0">
+                    {/* Bloc Caractéristique */}
+                    <div className="feature-block-three col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                      <div className="inner-box">
+                        <i className="icon flaticon-interview" />
+                        <i className="bg-icon flaticon-interview" />
+                        <h6 className="title">
+                          <a href="page-about.html">
+                            Accompagnement personnalisé
+                          </a>
+                        </h6>
+                        <div className="text">
+                          Nous vous guidons à chaque étape, de la candidature à
+                          l'inscription dans une université en France.
+                        </div>
+                      </div>
+                    </div>
+                    {/* Bloc Caractéristique */}
+                    <div
+                      className="feature-block-three col-lg-6 col-md-6 col-sm-12 wow fadeInUp"
+                      data-wow-delay="300ms"
+                    >
+                      <div className="inner-box">
+                        <i className="icon flaticon-low-cost" />
+                        <i className="bg-icon flaticon-low-cost" />
+                        <h6 className="title">
+                          <a href="page-about.html">Solutions abordables</a>
+                        </h6>
+                        <div className="text">
+                          Nos services sont conçus pour être accessibles à tous,
+                          avec des solutions adaptées à votre budget.
+                        </div>
+                      </div>
+                    </div>
+                    {/* Bloc Caractéristique */}
+                    <div className="feature-block-three col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                      <div className="inner-box">
+                        <i className="icon flaticon-loyalty" />
+                        <i className="bg-icon flaticon-loyalty" />
+                        <h6 className="title">
+                          <a href="page-about.html">Satisfaction garantie</a>
+                        </h6>
+                        <div className="text">
+                          Des centaines d'étudiants nous ont déjà fait confiance
+                          pour réussir leur projet d'études en France.
+                        </div>
+                      </div>
+                    </div>
+                    {/* Bloc Caractéristique */}
+                    <div
+                      className="feature-block-three col-lg-6 col-md-6 col-sm-12 wow fadeInUp"
+                      data-wow-delay="300ms"
+                    >
+                      <div className="inner-box">
+                        <i className="icon flaticon-online-support" />
+                        <i className="bg-icon flaticon-online-support" />
+                        <h6 className="title">
+                          <a href="page-about.html">Assistance 24/7</a>
+                        </h6>
+                        <div className="text">
+                          Nous restons disponibles à tout moment pour répondre à
+                          vos questions et vous accompagner efficacement.
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              {/* Features Block */}
-              <div
-                className="feature-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="600ms"
-              >
-                <div className="inner-box">
-                  <div className="content">
-                    <i className="icon flaticon-loyalty" />
-                    <span className="cat">The eget mattis</span>
-                    <h6 className="title">
-                      <a href="page-about.html">Trusted Customers</a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-              {/* Features Block */}
-              <div
-                className="feature-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="900ms"
-              >
-                <div className="inner-box">
-                  <div className="content">
-                    <i className="icon flaticon-online-support" />
-                    <span className="cat">The eget mattis</span>
-                    <h6 className="title">
-                      <a href="page-about.html">Support Team</a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div className="bottom-text">
-              Top rated by customers &amp; immigration firms with 100% success
-              rate.{" "}
-              <a href="page-service.html" className="theme-btn btn-style-two">
-                Discover More
-              </a>
-            </div>
-          </div>
-        </section>
+          </section>
+          {/* Fin Pourquoi Nous Choisir */}
+        </>
+
         {/*Emd Why Choose US */}
         {/* Training Section */}
-        <section className="training-section">
-          <div className="bg bg-pattern-2" />
-                    <div
-            className="bg bg-image"
-            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/site_kit/images/resource/image-1.jpg)` }}
-          />
-          <div className="auto-container">
-            <div className="sec-title">
-              <span className="sub-title">Training &amp; Certification</span>
-              <h2>
-                Get the Immigration <br /> Trainings you{" "}
-                <span className="color3">Deserve</span>
-              </h2>
-              <a href="#" className="theme-btn btn-style-two">
-                Discover More
-              </a>
-            </div>
-            <div className="carousel-outer">
-              <div className="training-carousel owl-carousel owl-theme">
-                {/* Training Block */}
-                <div className="training-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                                            <figure className="image">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/training-1.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <div className="overlay">
-                        <a
-                          href="page-course-details.html"
-                          className="read-more"
-                        >
-                          <i className="fa fa-long-arrow-alt-right" />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="lower-content">
-                      <a href="page-course-details.html" className="read-more">
-                        <i className="fa fa-long-arrow-alt-right" />
-                      </a>
-                      <h5 className="title">
-                        <a href="page-course-details.html">Citizenship Test</a>
-                      </h5>
-                      <div className="text">
-                        There are many variations of passages of available, but
-                        the majority have suffered freedom alteration.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Training Block */}
-                <div className="training-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                                            <figure className="image">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/training-2.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      
-                      <div className="overlay">
-                        <a
-                          href="page-course-details.html"
-                          className="read-more"
-                        >
-                          <i className="fa fa-long-arrow-alt-right" />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="lower-content">
-                      <a href="page-course-details.html" className="read-more">
-                        <i className="fa fa-long-arrow-alt-right" />
-                      </a>
-                      <h5 className="title">
-                        <a href="page-course-details.html">Take IELTS</a>
-                      </h5>
-                      <div className="text">
-                        There are many variations of passages of available, but
-                        the majority have suffered freedom alteration.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Training Block */}
-                <div className="training-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <figure className="image">
-                                               <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/training-3.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <div className="overlay">
-                        <a
-                          href="page-course-details.html"
-                          className="read-more"
-                        >
-                          <i className="fa fa-long-arrow-alt-right" />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="lower-content">
-                      <a href="page-course-details.html" className="read-more">
-                        <i className="fa fa-long-arrow-alt-right" />
-                      </a>
-                      <h5 className="title">
-                        <a href="page-course-details.html">PTE Coaching</a>
-                      </h5>
-                      <div className="text">
-                        There are many variations of passages of available, but
-                        the majority have suffered freedom alteration.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Training Block */}
-                <div className="training-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <figure className="image">
-                                                <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/training-1.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <div className="overlay">
-                        <a
-                          href="page-course-details.html"
-                          className="read-more"
-                        >
-                          <i className="fa fa-long-arrow-alt-right" />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="lower-content">
-                      <a href="page-course-details.html" className="read-more">
-                        <i className="fa fa-long-arrow-alt-right" />
-                      </a>
-                      <h5 className="title">
-                        <a href="page-course-details.html">Citizenship Test</a>
-                      </h5>
-                      <div className="text">
-                        There are many variations of passages of available, but
-                        the majority have suffered freedom alteration.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
         {/* End Training Section */}
         {/* Services Section */}
         <section className="services-section">
@@ -598,191 +399,46 @@ const Home = () => {
             <div className="row">
               <div className="col-lg-6">
                 <div className="sec-title">
-                  <span className="sub-title">What do we offer</span>
+                  <span className="sub-title">Ce que nous offrons</span>
                   <h2>
-                    Outstanding immigration visa{" "}
-                    <span className="color3">services.</span>
+                    Des prix exceptionnels pour les services de qualité{" "}
+                    <span className="color3">!</span>
                   </h2>
                   <div className="text">
-                    Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                    Aenean sollicitudin, lorem is simply free text quis
-                    bibendum.
+                    Obtenez les meilleurs services et tarifs de notre part pour
+                    réaliser votre rêve
                   </div>
                 </div>
               </div>
+
               {/* Service Block */}
-              <div className="service-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                <div className="inner-box">
-                  <div className="image-box">
-                    <figure className="image">
-                      <a href="page-service-details.html">
-                                               <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/service-1.jpg`}
-                          alt=""
-                        />
-                      </a>
-                    </figure>
-                    <i className="icon fa fa-graduation-cap" />
-                    <h6 className="title">Student Visa</h6>
-                  </div>
-                  <div className="content-box">
-                    <h6 className="title">
-                      <a href="page-service-details.html">Student Visa</a>
-                    </h6>
-                    <div className="text">
-                      We have to a tendency to believe the idea that smart
-                      looking of any website.
+              {servicesData.map((service) => (
+                <div
+                  key={service.id}
+                  className="service-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
+                >
+                  <div className="inner-box">
+                    <div className="image-box">
+                      <figure className="image">
+                        <a href={service.readMoreLink}>
+                          <img src={service.image} alt={service.title} />
+                        </a>
+                      </figure>
+                      <i className={`icon ${service.icon}`} />
+                      <h6 className="title">{service.title}</h6>
                     </div>
-                    <a href="page-service-details.html" className="read-more">
-                      More <i className="fa fa-long-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* Service Block */}
-              <div
-                className="service-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="200ms"
-              >
-                <div className="inner-box">
-                  <div className="image-box">
-                    <figure className="image">
-                      <a href="page-service-details.html">
-                                                <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/service-2.jpg`}
-                          alt=""
-                        />
+                    <div className="content-box">
+                      <h6 className="title">
+                        <a href={service.readMoreLink}></a>
+                      </h6>
+                      <div className="text">{service.description}</div>
+                      <a href={service.readMoreLink} className="read-more">
+                        More <i className="fa fa-long-arrow-right" />
                       </a>
-                    </figure>
-                    <i className="icon fa fa-briefcase" />
-                    <h6 className="title">Business Visa</h6>
-                  </div>
-                  <div className="content-box">
-                    <h6 className="title">
-                      <a href="page-service-details.html">Business Visa</a>
-                    </h6>
-                    <div className="text">
-                      We have to a tendency to believe the idea that smart
-                      looking of any website.
                     </div>
-                    <a href="page-service-details.html" className="read-more">
-                      More <i className="fa fa-long-arrow-right" />
-                    </a>
                   </div>
                 </div>
-              </div>
-              {/* Service Block */}
-              <div className="service-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                <div className="inner-box">
-                  <div className="image-box">
-                    <figure className="image">
-                      <a href="page-service-details.html">
-                                                <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/service-3.jpg`}
-                          alt=""
-                        />
-                      </a>
-                    </figure>
-                    <i className="icon fa fa-family" />
-                    <h6 className="title">Family Visa</h6>
-                  </div>
-                  <div className="content-box">
-                    <h6 className="title">
-                      <a href="page-service-details.html">Family Visa</a>
-                    </h6>
-                    <div className="text">
-                      We have to a tendency to believe the idea that smart
-                      looking of any website.
-                    </div>
-                    <a href="page-service-details.html" className="read-more">
-                      More <i className="fa fa-long-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* Service Block */}
-              <div
-                className="service-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="200ms"
-              >
-                <div className="inner-box">
-                  <div className="image-box">
-                    <figure className="image">
-                      <a href="page-service-details.html">
-                                                <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/service-4.jpg`}
-                          alt=""
-                        />
-                      </a>
-                    </figure>
-                    <i className="icon fa fa-camera" />
-                    <h6 className="title">Tourist Visa</h6>
-                  </div>
-                  <div className="content-box">
-                    <h6 className="title">
-                      <a href="page-service-details.html">Tourist Visa</a>
-                    </h6>
-                    <div className="text">
-                      We have to a tendency to believe the idea that smart
-                      looking of any website.
-                    </div>
-                    <a href="page-service-details.html" className="read-more">
-                      More <i className="fa fa-long-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* Service Block */}
-              <div
-                className="service-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="400ms"
-              >
-                <div className="inner-box">
-                  <div className="image-box">
-                    <figure className="image">
-                      <a href="page-service-details.html">
-                                               <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/service-5.jpg`}
-                          alt=""
-                        />
-                      </a>
-                    </figure>
-                    <i className="icon fa fa-home" />
-                    <h6 className="title">Residence Visa</h6>
-                  </div>
-                  <div className="content-box">
-                    <h6 className="title">
-                      <a href="page-service-details.html">Residence Visa</a>
-                    </h6>
-                    <div className="text">
-                      We have to a tendency to believe the idea that smart
-                      looking of any website.
-                    </div>
-                    <a href="page-service-details.html" className="read-more">
-                      More <i className="fa fa-long-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* CTA Block */}
-              <div
-                className="cta-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="600ms"
-              >
-                <div className="inner-box">
-                  <h4 className="title">
-                    <a href="page-service.html">
-                      Get visa with 100% success rate
-                    </a>
-                  </h4>
-                  <a
-                    href="page-service.html"
-                    className="theme-btn btn-style-three small"
-                  >
-                    Apply Now
-                  </a>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -804,10 +460,10 @@ const Home = () => {
                 <div className="country-block">
                   <div className="inner-box">
                     <div className="flag">
-                    <img
-        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-1.png`}
-        alt=""
-      />
+                      <img
+                        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-1.png`}
+                        alt=""
+                      />
                     </div>
                     <a href="page-country-details.html" className="theme-btn">
                       Australia
@@ -818,10 +474,10 @@ const Home = () => {
                 <div className="country-block">
                   <div className="inner-box">
                     <div className="flag">
-                    <img
-        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-2.png`}
-        alt=""
-      />
+                      <img
+                        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-2.png`}
+                        alt=""
+                      />
                     </div>
                     <a href="page-country-details.html" className="theme-btn">
                       Germany
@@ -832,10 +488,10 @@ const Home = () => {
                 <div className="country-block">
                   <div className="inner-box">
                     <div className="flag">
-                    <img
-        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-3.png`}
-        alt=""
-      />
+                      <img
+                        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-3.png`}
+                        alt=""
+                      />
                     </div>
                     <a href="page-country-details.html" className="theme-btn">
                       Brazil
@@ -846,10 +502,10 @@ const Home = () => {
                 <div className="country-block">
                   <div className="inner-box">
                     <div className="flag">
-                    <img
-        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-4.png`}
-        alt=""
-      />
+                      <img
+                        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-4.png`}
+                        alt=""
+                      />
                     </div>
                     <a href="page-country-details.html" className="theme-btn">
                       Russia
@@ -860,10 +516,10 @@ const Home = () => {
                 <div className="country-block">
                   <div className="inner-box">
                     <div className="flag">
-                    <img
-        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-5.png`}
-        alt=""
-      />
+                      <img
+                        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-5.png`}
+                        alt=""
+                      />
                     </div>
                     <a href="page-country-details.html" className="theme-btn">
                       England
@@ -874,10 +530,10 @@ const Home = () => {
                 <div className="country-block">
                   <div className="inner-box">
                     <div className="flag">
-                    <img
-        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-6.png`}
-        alt=""
-      />
+                      <img
+                        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-6.png`}
+                        alt=""
+                      />
                     </div>
                     <a href="page-country-details.html" className="theme-btn">
                       India
@@ -899,64 +555,64 @@ const Home = () => {
                 <li className="slide-item">
                   {" "}
                   <a href="#">
-                  <img
-              src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
-              alt=""
-            />
+                    <img
+                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
+                      alt=""
+                    />
                   </a>{" "}
                 </li>
                 <li className="slide-item">
                   {" "}
                   <a href="#">
-                  <img
-              src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
-              alt=""
-            />
+                    <img
+                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
+                      alt=""
+                    />
                   </a>{" "}
                 </li>
                 <li className="slide-item">
                   {" "}
                   <a href="#">
-                  <img
-              src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
-              alt=""
-            />
+                    <img
+                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
+                      alt=""
+                    />
                   </a>{" "}
                 </li>
                 <li className="slide-item">
                   {" "}
                   <a href="#">
-                  <img
-              src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
-              alt=""
-            />
+                    <img
+                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
+                      alt=""
+                    />
                   </a>{" "}
                 </li>
                 <li className="slide-item">
                   {" "}
                   <a href="#">
-                  <img
-              src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
-              alt=""
-            />
+                    <img
+                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
+                      alt=""
+                    />
                   </a>{" "}
                 </li>
                 <li className="slide-item">
                   {" "}
                   <a href="#">
-                  <img
-              src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
-              alt=""
-            />
+                    <img
+                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
+                      alt=""
+                    />
                   </a>{" "}
                 </li>
                 <li className="slide-item">
                   {" "}
                   <a href="#">
-                  <img
-              src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
-              alt=""
-            />
+                    <img
+                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
+                      alt=""
+                    />
                   </a>{" "}
                 </li>
               </ul>
@@ -983,50 +639,50 @@ const Home = () => {
                 <li className="gallery-item">
                   {" "}
                   <a
-            href={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-1.jpg`}
-            className="lightbox-image"
-          >
-                     <img
-              src={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-1.jpg`}
-              alt=""
-            />
+                    href={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-1.jpg`}
+                    className="lightbox-image"
+                  >
+                    <img
+                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-1.jpg`}
+                      alt=""
+                    />
                   </a>{" "}
                 </li>
                 <li className="gallery-item">
                   {" "}
                   <a
-            href={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-2.jpg`}
-            className="lightbox-image"
-          >
-            <img
-              src={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-2.jpg`}
-              alt=""
-            />
-          </a>
+                    href={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-2.jpg`}
+                    className="lightbox-image"
+                  >
+                    <img
+                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-2.jpg`}
+                      alt=""
+                    />
+                  </a>
                 </li>
                 <li className="gallery-item">
                   {" "}
                   <a
-            href={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-3.jpg`}
-            className="lightbox-image"
-          >
-            <img
-              src={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-3.jpg`}
-              alt=""
-            />
-          </a>{" "}
+                    href={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-3.jpg`}
+                    className="lightbox-image"
+                  >
+                    <img
+                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-3.jpg`}
+                      alt=""
+                    />
+                  </a>{" "}
                 </li>
                 <li className="gallery-item">
                   {" "}
                   <a
-            href={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-4.jpg`}
-            className="lightbox-image"
-          >
-            <img
-              src={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-4.jpg`}
-              alt=""
-            />
-          </a>
+                    href={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-4.jpg`}
+                    className="lightbox-image"
+                  >
+                    <img
+                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/gallery-4.jpg`}
+                      alt=""
+                    />
+                  </a>
                 </li>
               </ul>
             </div>
@@ -1037,7 +693,9 @@ const Home = () => {
         <section className="testimonial-section pull-down">
           <div
             className="bg-image"
-            style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/background/1.jpg` }}
+            style={{
+              backgroundImage: `url(${process.env.PUBLIC_URL}/images/background/1.jpg`,
+            }}
           />
           <div className="anim-icons">
             <span className="icon icon-wide-map" />
@@ -1133,7 +791,7 @@ const Home = () => {
                     </div>
                     <div className="info-box">
                       <figure className="thumb">
-                      <img
+                        <img
                           src={`${process.env.PUBLIC_URL}/site_kit/images/resource/testi-thumb-3.jpg`}
                           alt=""
                         />
@@ -1223,7 +881,7 @@ const Home = () => {
                     </div>
                     <div className="info-box">
                       <figure className="thumb">
-                      <img
+                        <img
                           src={`${process.env.PUBLIC_URL}/site_kit/images/resource/testi-thumb-3.jpg`}
                           alt=""
                         />
@@ -1253,7 +911,7 @@ const Home = () => {
                     </div>
                     <div className="info-box">
                       <figure className="thumb">
-                      <img
+                        <img
                           src={`${process.env.PUBLIC_URL}/site_kit/images/resource/testi-thumb-1.jpg`}
                           alt=""
                         />
@@ -1283,7 +941,7 @@ const Home = () => {
                     </div>
                     <div className="info-box">
                       <figure className="thumb">
-                      <img
+                        <img
                           src={`${process.env.PUBLIC_URL}/site_kit/images/resource/testi-thumb-2.jpg`}
                           alt=""
                         />
@@ -1343,22 +1001,25 @@ const Home = () => {
                         Book your <span className="color3">consultation</span>
                       </h2>
                       <div className="text">
-                        There cursus massa at urnaaculis estie. Sed aliquamellus
-                        vitae ultrs condmentum leo massa mollis.
+                        Vous avez des Questions sur comments etudier en
+                        France??? Contactez nous pour plus d'information
                       </div>
                     </div>
                     <ul className="list-style-two">
                       <li>
-                        <i className="fa fa-check-circle" /> Making this the
-                        first true generator on the Internet
+                        <i className="fa fa-check-circle" />
+                        Vous souhaitez savoir si vous ete admissible a pouvoir
+                        etudier en France ??
                       </li>
                       <li>
-                        <i className="fa fa-check-circle" /> Lorem Ipsum is not
-                        simply random text
+                        <i className="fa fa-check-circle" />
+                        vous avez des Questions sur le processus de voyage,et
+                        les delais de traitement???
                       </li>
                       <li>
-                        <i className="fa fa-check-circle" /> If you are going to
-                        use a passage
+                        <i className="fa fa-check-circle" />
+                        Vous chercher a Obtenir des conseils sur la maniere de
+                        preparer votre demande??
                       </li>
                     </ul>
                     <div className="ceo-info">
@@ -1429,7 +1090,7 @@ const Home = () => {
         <section className="news-section">
           <div className="auto-container">
             <div className="sec-title text-center">
-              <span className="sub-title">News &amp; Updates</span>
+              <span className="sub-title">Notre &amp; Blog</span>
               <h2>
                 Latest news directly <br /> from the{" "}
                 <span className="color3">blog</span>
@@ -1442,14 +1103,14 @@ const Home = () => {
                   <div className="image-box">
                     <figure className="image">
                       <a href="news-details.html">
-                      <img
-                              src={`${process.env.PUBLIC_URL}/site_kit/images/resource/news-1.jpg`}
-                              alt=""
-                            />
+                        <img
+                          src={`${process.env.PUBLIC_URL}/site_kit/images/blog-1.jpg`}
+                          alt=""
+                        />
                       </a>
                     </figure>
                     <span className="date">
-                      30 <span className="month">March</span>
+                      12 <span className="month">April</span>
                     </span>
                   </div>
                   <div className="lower-content">
@@ -1459,38 +1120,38 @@ const Home = () => {
                         Admin
                       </li>
                       <li>
-                        <i className="fa fa-comments" /> 2 Comments
+                        <i className="fa fa-comments" /> 3 Comments
                       </li>
                     </ul>
                     <h4 className="title">
                       <a href="news-details.html">
-                        Top 9 most demand jobs in canada
+                        Comment réussir votre entretien Campus France ?
                       </a>
                     </h4>
                     <div className="text">
-                      There are not many of passages of lorem ipsum available
-                      alteration in some form.
+                      Vous envisagez poursuivre vos études en France et vous
+                      avez besoin d’un visa. Pour cela, vous devrez passer un
+                      entretien avec Campus France, un organisme qui s’occupe de
+                      la promotion de l’enseignement supérieur en France.
+                      L’entretien est une étape importante pour...
                     </div>
                   </div>
                 </div>
               </div>
               {/* News Block */}
-              <div
-                className="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="300ms"
-              >
+              <div className="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
                 <div className="inner-box">
                   <div className="image-box">
                     <figure className="image">
                       <a href="news-details.html">
-                      <img
-                              src={`${process.env.PUBLIC_URL}/site_kit/images/resource/news-2.jpg`}
-                              alt=""
-                            />
+                        <img
+                          src={`${process.env.PUBLIC_URL}/site_kit/images/boaz-2.jpg`}
+                          alt=""
+                        />
                       </a>
                     </figure>
                     <span className="date">
-                      30 <span className="month">March</span>
+                      18 <span className="month">January</span>
                     </span>
                   </div>
                   <div className="lower-content">
@@ -1500,38 +1161,38 @@ const Home = () => {
                         Admin
                       </li>
                       <li>
-                        <i className="fa fa-comments" /> 2 Comments
+                        <i className="fa fa-comments" /> 5 Comments
                       </li>
                     </ul>
                     <h4 className="title">
                       <a href="news-details.html">
-                        Top 9 most demand jobs in canada
+                        Lettre de motivation : comment s’y prendre ??
                       </a>
                     </h4>
                     <div className="text">
-                      There are not many of passages of lorem ipsum available
-                      alteration in some form.
+                      La lettre de motivation également appelée lettre de
+                      candidature ou lettre d’accompagnement, est un document
+                      d’une page maximum qui met en avant les compétences et les
+                      qualités du candidat nécessaires à la réussite de son
+                      projet professionnel. Elle a pour but de donner...
                     </div>
                   </div>
                 </div>
               </div>
-              {/* News Block */}
-              <div
-                className="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="600ms"
-              >
+
+              <div className="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
                 <div className="inner-box">
                   <div className="image-box">
                     <figure className="image">
                       <a href="news-details.html">
-                      <img
-                              src={`${process.env.PUBLIC_URL}/site_kit/images/resource/news-3.jpg`}
-                              alt=""
-                            />
+                        <img
+                          src={`${process.env.PUBLIC_URL}/site_kit/images/boaz-3.png`}
+                          alt=""
+                        />
                       </a>
                     </figure>
                     <span className="date">
-                      30 <span className="month">March</span>
+                      10 <span className="month">January</span>
                     </span>
                   </div>
                   <div className="lower-content">
@@ -1541,17 +1202,20 @@ const Home = () => {
                         Admin
                       </li>
                       <li>
-                        <i className="fa fa-comments" /> 2 Comments
+                        <i className="fa fa-comments" /> 4 Comments
                       </li>
                     </ul>
                     <h4 className="title">
                       <a href="news-details.html">
-                        Top 9 most demand jobs in canada
+                        Comment rédiger son projet professionnel ?
                       </a>
                     </h4>
                     <div className="text">
-                      There are not many of passages of lorem ipsum available
-                      alteration in some form.
+                      Le projet professionnel consiste à réfléchir au métier ou
+                      au domaine dans lequel on souhaiterait travailler. Un
+                      projet d’étude est le parcours académique que vous décidez
+                      d’embrasser dans l’optique de la réussite de votre projet
+                      professionnel. Ce dernier est donc le...
                     </div>
                   </div>
                 </div>
@@ -1561,13 +1225,15 @@ const Home = () => {
         </section>
         {/*End News Section */}
         {/* Main Footer */}
-        <Footer/>
+        <Footer />
         {/*End Main Footer */}
       </div>
       {/* End Page Wrapper */}
       {/* Scroll To Top */}
       <div className="scroll-to-top scroll-to-target" data-target="html">
-      <a href='#'><span className="fa fa-angle-up" /></a>
+        <a href="#">
+          <span className="fa fa-angle-up" />
+        </a>
       </div>
     </>
   );

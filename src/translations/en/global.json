@@ -1,0 +1,9 @@
+
+{
+    "header":{
+        "message":"welcomme to Boaz-study"
+    },
+    "home":{
+        "body": "this is your internationalized travel home" 
+    }
+}

@@ -20,7 +20,7 @@ const Contact = () => {
               <div className="upper-box">
                 <div className="nav-logo">
                   <a href="index.html">
-                    <img src="images/logo.png" alt="" title="" />
+                    <img src={`${process.env.PUBLIC_URL}/logo refais.png`} alt="" title="" />
                   </a>
                 </div>
                 <div className="close-btn">
@@ -112,7 +112,7 @@ const Contact = () => {
                 {/*Logo*/}
                 <div className="logo">
                   <a href="index.html" title="">
-                    <img src="images/logo-3.png" alt="" title="" />
+                    <img src={`${process.env.PUBLIC_URL}/logo refais.png`} alt="" title="" />
                   </a>
                 </div>
                 {/*Right Col*/}
@@ -122,6 +122,24 @@ const Contact = () => {
                     <div className="navbar-collapse show collapse clearfix">
                       <ul className="navigation clearfix">
                         {/*Keep This Empty / Menu will come through Javascript*/}
+                        <li >
+                      <a href="/"> Home</a>
+                    </li>
+                    <li>
+                      <a href="/about">About</a>
+                    </li>
+                    <li >
+                      <a href="/contact">Contact</a>
+                    </li>
+                    <li >
+                      <a href="/services">Services</a>
+                    </li>
+                    <li >
+                      <a href="/connexion"> Connexion</a>
+                    </li>
+                    <li >
+                      <a href="/inscription">Inscription</a>
+                    </li>
                       </ul>
                     </div>
                   </nav>
@@ -140,7 +158,7 @@ const Contact = () => {
         {/* Start main-content */}
         <section
           className="page-title"
-          style={{ backgroundImage: "url(images/background/page-title.jpg)" }}
+          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/site_kit/images/background/page-title.jpg)` }}
         >
           <div className="auto-container">
             <div className="title-outer">

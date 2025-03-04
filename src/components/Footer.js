@@ -52,7 +52,7 @@ export default function Footer() {
                     <h6 className="widget-title">Links</h6>
                     <ul className="user-links">
                       <li>
-                        <a href="#">About</a>
+                        <a href="/about">About</a>
                       </li>
                       <li>
                         <a href="#">Meet Team</a>
@@ -64,7 +64,7 @@ export default function Footer() {
                         <a href="#">Our Projects</a>
                       </li>
                       <li>
-                        <a href="#">Contact</a>
+                        <a href="/contact">Contact</a>
                       </li>
                     </ul>
                   </div>
