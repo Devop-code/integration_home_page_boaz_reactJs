@@ -28,15 +28,26 @@ const MainBox = () => {
             </div>
             <div className="top-right">
               <ul className="social-icon-one">
-                <li><a href="#"><span className="fab fa-twitter" /></a></li>
-                <li><a href="#"><span className="fab fa-facebook-f" /></a></li>
-                <li><a href="#"><span className="fab fa-pinterest-p" /></a></li>
-                <li><a href="#"><span className="fab fa-instagram" /></a></li>
+              <li>
+                      <a href="https://twitter.com/boazstudy">
+                        <i className="fab fa-twitter" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.facebook.com/boazstudy">
+                        <i className="fab fa-facebook" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/boazstudy/">
+                        <i className="fab fa-instagram" />
+                      </a>
+                    </li>
               </ul>
               <ul className="useful-links">
                 <li><a href="#">Aide</a></li>
                 <li><a href="#">Support</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Contacter</a></li>
               </ul>
             </div>
           </div>

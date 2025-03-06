@@ -15,6 +15,7 @@ import ServiceFinFrance from "./pages/services/servicefinfran";
 import ServiceFinance from "./pages/services/servicefinance"
 import { Blog } from "./pages/blog";
 import Test from "./pages/Test";
+import PricingSection from "./pages/PriceTest";
 function App() {
   // useEffect(()=>{
   //   const script = document.createElement('script')
@@ -52,6 +53,7 @@ function App() {
         <Route path="/blog" element={<Blog/>} />
         <Route path="*" element={<HomePage />} />
         <Route path="/test" element={<Test/>} />
+        <Route path="/price" element={<PricingSection/>} />
       </Routes>
     </BrowserRouter>
  

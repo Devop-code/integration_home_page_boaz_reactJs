@@ -4,6 +4,7 @@ import React from "react";
 import MainBox from "../components/mainBoxHeaderTop";
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
+import PricingSection from "./PriceTest";
 
 const Home = () => {
   return (
@@ -119,29 +120,39 @@ const Home = () => {
                     data-textalign="['top','top','top','top']"
                     data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
                   >
-                    <h3 className="fs-1 font-size-30 text-white responsive-text font-weight  fw-bolder mb-3" >
-                      Boaz-Study , <small className="text-white"> Votre Partenaire pour une mobilité
-                      internationale réussie</small>
+                    <section className="section-about">
+                    <div className='auto-container'>
+                    <h3 className="fs-1 font-size-30 text-white responsive-text font-weight  fw-bolder mb-3 ">
+                      Boaz-Study ,{" "}
+                      <small className="text-white">
+                        {" "}
+                        Votre Partenaire pour une mobilité internationale
+                        réussie
+                      </small>
                       <br />
-                      </h3>
-                      <p className="letter-space-3 fs-1 md-0 text-white responsive-text fw-normal text-md-center text-left font-size-15">
-                        Découvrez nos services complets pour faciliter votre
-                        installation et vos études en France.
-                        Confiez-nous votre projet dès aujourd'hui
-                      </p>
-                      <div className="btn-box fs-3 responsive-text text-light">
-                        <a href="/about" className="theme-btn btn-style-one ">
-                          <span className="btn-title letter-space-4 text-light">
-                            Voir nos services
-                          </span>
-                        </a>
-                        <a href="/contact" className="theme-btn btn-style-two bg-transparent border border-light text-white">
-                          <span className="btn-title letter-space-4">
-                            Contacter Nous
-                          </span>
-                        </a>
-                      </div>
-                  
+                    </h3>
+                    <p className="letter-space-3  md-0 text-white responsive-text fw-normal text-md-center text-left font-size-15 text">
+                      Découvrez nos services complets pour faciliter votre
+                      installation et vos études en France. Confiez-nous votre
+                      projet dès aujourd'hui
+                    </p>
+                    </div>
+                    <div className="btn-box fs-3 responsive-text text-light">
+                      <a href="/services" className="theme-btn btn-style-one ">
+                        <span className="btn-title letter-space-4 text-light">
+                          Voir nos services
+                        </span>
+                      </a>
+                      <a
+                        href="/contact"
+                        className="theme-btn btn-style-two bg-transparent border border-light text-white"
+                      >
+                        <span className="btn-title letter-space-4 ">
+                          Contacter Nous
+                        </span>
+                      </a>
+                    </div>
+                    </section>
                   </div>
                   <div
                     className="tp-caption"
@@ -202,13 +213,18 @@ const Home = () => {
                       Offrant les meilleurs services{" "}
                       <span className="color3">D'etude en france</span>
                     </h2>
-                    <h4>Agence de conseil en voyage base au cameroun.</h4>
+                    <h4>
+                      BOAZ-STUDY est une société française spécialisée dans
+                      l’accompagnement des étudiants en mobilité
+                      internationale..
+                    </h4>
                     <div className="text">
-                      L'accompagnement des étudiants est bien plus qu'un simple
-                      service, c'est une véritable passion pour notre
-                      entreprise. Nous croyons fermement que guider les
-                      étudiants avec professionnalisme et expertise est la clé
-                      de leur réussite en France.
+                      Elle accompagne les étudiants dans la réussite totale de
+                      leurs projets d’études supérieures en leur proposant des
+                      services d’accompagnement pour une meilleure orientation
+                      dans les universités françaises, logement étudiant,
+                      caution bancaire, achat de billet d’avion au prix le plus
+                      abordable.
                     </div>
                   </div>
                   <div className="row">
@@ -309,9 +325,10 @@ const Home = () => {
                       <h2>
                         Pourquoi <br />
                         choisir notre expertise pour vos études en France ?
+
                       </h2>
+                      <a href="#service" className="theme-btn btn-style-four small">Nos services</a>
                     </div>
-                   
                   </div>
                 </div>
                 {/* Colonne du contenu */}
@@ -394,7 +411,7 @@ const Home = () => {
 
         {/* End Training Section */}
         {/* Services Section */}
-        <section className="services-section">
+        <section className="services-section" id="service">
           <div className="auto-container">
             <div className="row">
               <div className="col-lg-6">
@@ -444,196 +461,54 @@ const Home = () => {
         </section>
         {/* End Services Section*/}
         {/* Countries Section */}
-        <section className="countries-section pt-0">
-          <div className="auto-container">
-            <div className="sec-title text-center">
-              <span className="sub-title">countries you can visit</span>
-              <h2>
-                Countries we’re supporting <br />
-                for the <span className="color3">immigration</span>
-              </h2>
-            </div>
-            <div className="carousel-outer">
-              {/* Countries Carousel */}
-              <div className="countries-carousel owl-carousel owl-theme">
-                {/* Country Block*/}
-                <div className="country-block">
-                  <div className="inner-box">
-                    <div className="flag">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-1.png`}
-                        alt=""
-                      />
-                    </div>
-                    <a href="page-country-details.html" className="theme-btn">
-                      Australia
-                    </a>
-                  </div>
-                </div>
-                {/* Country Block*/}
-                <div className="country-block">
-                  <div className="inner-box">
-                    <div className="flag">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-2.png`}
-                        alt=""
-                      />
-                    </div>
-                    <a href="page-country-details.html" className="theme-btn">
-                      Germany
-                    </a>
-                  </div>
-                </div>
-                {/* Country Block*/}
-                <div className="country-block">
-                  <div className="inner-box">
-                    <div className="flag">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-3.png`}
-                        alt=""
-                      />
-                    </div>
-                    <a href="page-country-details.html" className="theme-btn">
-                      Brazil
-                    </a>
-                  </div>
-                </div>
-                {/* Country Block*/}
-                <div className="country-block">
-                  <div className="inner-box">
-                    <div className="flag">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-4.png`}
-                        alt=""
-                      />
-                    </div>
-                    <a href="page-country-details.html" className="theme-btn">
-                      Russia
-                    </a>
-                  </div>
-                </div>
-                {/* Country Block*/}
-                <div className="country-block">
-                  <div className="inner-box">
-                    <div className="flag">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-5.png`}
-                        alt=""
-                      />
-                    </div>
-                    <a href="page-country-details.html" className="theme-btn">
-                      England
-                    </a>
-                  </div>
-                </div>
-                {/* Country Block*/}
-                <div className="country-block">
-                  <div className="inner-box">
-                    <div className="flag">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/site_kit/images/resource/flag-6.png`}
-                        alt=""
-                      />
-                    </div>
-                    <a href="page-country-details.html" className="theme-btn">
-                      India
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+  <section>
+		<div className="container">
+			<div className="row g-3">
+      <div className="sec-title text-center">
+				<span className="sub-title">Les pays que vous pouvez visitez</span>
+				<h2>Les pays que nous soutenons <br/> pour vos<span className="color3"> projets d'internationalisation</span></h2>
+			</div>
+				<div className="col-lg-3 col-md-6 col-sm-12" style={{marginRight: "8rem"}}>
+					
+					<div className="country-block">
+						<div className="inner-box">
+							<div className="flag"><img src={`${process.env.PUBLIC_URL}/site_kit/images/resource/france.png`} alt=""/></div>
+							<a href="#" className="theme-btn">France</a>
+						</div>                        
+					</div>
+				</div>
+				<div className="col-lg-3 col-md-6 col-sm-12" style={{marginRight: "8rem"}}>
+					
+					<div className="country-block">
+						<div className="inner-box">
+							<div className="flag"><img src={`${process.env.PUBLIC_URL}/site_kit/images/resource/canada.png`} alt=""/></div>
+							<a href="#" className="theme-btn">Canada</a>
+						</div>                        
+					</div>
+				</div>
+				<div className="col-lg-3 col-md-6 col-sm-12 ml--10" >
+					
+					<div className="country-block">
+						<div className="inner-box">
+							<div className="flag"><img src={`${process.env.PUBLIC_URL}/site_kit/images/resource/belgique.png`} alt=""/></div>
+							<a href="" className="theme-btn">Belgique</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
         {/*End Countries Section Two */}
         {/* Clients Section   */}
         <section className="clients-section">
-          <div className="auto-container">
-            {/* Sponsors Outer */}
-            <div className="sponsors-outer">
-              {/*clients carousel*/}
-              <ul className="clients-carousel owl-carousel owl-theme">
-                <li className="slide-item">
-                  {" "}
-                  <a href="#">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
-                      alt=""
-                    />
-                  </a>{" "}
-                </li>
-                <li className="slide-item">
-                  {" "}
-                  <a href="#">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
-                      alt=""
-                    />
-                  </a>{" "}
-                </li>
-                <li className="slide-item">
-                  {" "}
-                  <a href="#">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
-                      alt=""
-                    />
-                  </a>{" "}
-                </li>
-                <li className="slide-item">
-                  {" "}
-                  <a href="#">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
-                      alt=""
-                    />
-                  </a>{" "}
-                </li>
-                <li className="slide-item">
-                  {" "}
-                  <a href="#">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
-                      alt=""
-                    />
-                  </a>{" "}
-                </li>
-                <li className="slide-item">
-                  {" "}
-                  <a href="#">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
-                      alt=""
-                    />
-                  </a>{" "}
-                </li>
-                <li className="slide-item">
-                  {" "}
-                  <a href="#">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/site_kit/images/resource/client.png`}
-                      alt=""
-                    />
-                  </a>{" "}
-                </li>
-              </ul>
-            </div>
-          </div>
+          <PricingSection/>
         </section>
         {/*End Clients Section */}
         {/* Gallery Section */}
         <section className="gallery-section pt-0">
           <div className="large-container">
             <div className="carousel-outer">
-              <div className="title-box">
-                <div className="inner">
-                  <span className="sub-title">our testimonials</span>
-                  <h2 className="title">
-                    Checkout <br />
-                    our photo
-                    <br /> gallery
-                  </h2>
-                </div>
-              </div>
               {/*clients carousel*/}
               <ul className="gallery-carousel owl-carousel owl-theme wow fadeInUp">
                 <li className="gallery-item">
@@ -702,287 +577,70 @@ const Home = () => {
           </div>
           <div className="auto-container">
             <div className="sec-title text-center light">
-              <span className="sub-title">our testimonials</span>
+              <span className="sub-title">Nos temoiniages</span>
               <h2>
-                What they’re talking about
+                Que disent nos clients sur nous
                 <br />
-                the <span className="color3">consultancy</span>
+                 
               </h2>
             </div>
-            <div className="carousel-outer">
-              <div className="testimonial-carousel owl-carousel owl-theme">
-                {/* Testimonial Block */}
-                <div className="testimonial-block">
-                  <div className="inner-box">
-                    <div className="content-box">
-                      <span className="icon fa fa-quote-left" />
-                      <div className="rating">
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                      </div>
-                      <div className="text">
-                        I was very impresed by the remons service lorem ipsum is
-                        simply free text used by copy typing refreshing. Neque
-                        porro est qui dolorem ipsum quia.
-                      </div>
-                    </div>
-                    <div className="info-box">
-                      <figure className="thumb">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/testi-thumb-1.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <h6 className="name">Jessica Brown</h6>
-                      <span className="designation">Customer</span>
-                    </div>
-                  </div>
-                </div>
-                {/* Testimonial Block */}
-                <div className="testimonial-block">
-                  <div className="inner-box">
-                    <div className="content-box">
-                      <span className="icon fa fa-quote-left" />
-                      <div className="rating">
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                      </div>
-                      <div className="text">
-                        I was very impresed by the remons service lorem ipsum is
-                        simply free text used by copy typing refreshing. Neque
-                        porro est qui dolorem ipsum quia.
-                      </div>
-                    </div>
-                    <div className="info-box">
-                      <figure className="thumb">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/testi-thumb-2.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <h6 className="name">Kevin Martin</h6>
-                      <span className="designation">Customer</span>
-                    </div>
-                  </div>
-                </div>
-                {/* Testimonial Block */}
-                <div className="testimonial-block">
-                  <div className="inner-box">
-                    <div className="content-box">
-                      <span className="icon fa fa-quote-left" />
-                      <div className="rating">
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                      </div>
-                      <div className="text">
-                        I was very impresed by the remons service lorem ipsum is
-                        simply free text used by copy typing refreshing. Neque
-                        porro est qui dolorem ipsum quia.
-                      </div>
-                    </div>
-                    <div className="info-box">
-                      <figure className="thumb">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/testi-thumb-3.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <h6 className="name">Sarah Albert</h6>
-                      <span className="designation">Customer</span>
-                    </div>
-                  </div>
-                </div>
-                {/* Testimonial Block */}
-                <div className="testimonial-block">
-                  <div className="inner-box">
-                    <div className="content-box">
-                      <span className="icon fa fa-quote-left" />
-                      <div className="rating">
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                      </div>
-                      <div className="text">
-                        I was very impresed by the remons service lorem ipsum is
-                        simply free text used by copy typing refreshing. Neque
-                        porro est qui dolorem ipsum quia.
-                      </div>
-                    </div>
-                    <div className="info-box">
-                      <figure className="thumb">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/testi-thumb-1.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <h6 className="name">Jessica Brown</h6>
-                      <span className="designation">Customer</span>
-                    </div>
-                  </div>
-                </div>
-                {/* Testimonial Block */}
-                <div className="testimonial-block">
-                  <div className="inner-box">
-                    <div className="content-box">
-                      <span className="icon fa fa-quote-left" />
-                      <div className="rating">
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                      </div>
-                      <div className="text">
-                        I was very impresed by the remons service lorem ipsum is
-                        simply free text used by copy typing refreshing. Neque
-                        porro est qui dolorem ipsum quia.
-                      </div>
-                    </div>
-                    <div className="info-box">
-                      <figure className="thumb">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/testi-thumb-2.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <h6 className="name">Kevin Martin</h6>
-                      <span className="designation">Customer</span>
-                    </div>
-                  </div>
-                </div>
-                {/* Testimonial Block */}
-                <div className="testimonial-block">
-                  <div className="inner-box">
-                    <div className="content-box">
-                      <span className="icon fa fa-quote-left" />
-                      <div className="rating">
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                      </div>
-                      <div className="text">
-                        I was very impresed by the remons service lorem ipsum is
-                        simply free text used by copy typing refreshing. Neque
-                        porro est qui dolorem ipsum quia.
-                      </div>
-                    </div>
-                    <div className="info-box">
-                      <figure className="thumb">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/testi-thumb-3.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <h6 className="name">Sarah Albert</h6>
-                      <span className="designation">Customer</span>
-                    </div>
-                  </div>
-                </div>
-                {/* Testimonial Block */}
-                <div className="testimonial-block">
-                  <div className="inner-box">
-                    <div className="content-box">
-                      <span className="icon fa fa-quote-left" />
-                      <div className="rating">
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                      </div>
-                      <div className="text">
-                        I was very impresed by the remons service lorem ipsum is
-                        simply free text used by copy typing refreshing. Neque
-                        porro est qui dolorem ipsum quia.
-                      </div>
-                    </div>
-                    <div className="info-box">
-                      <figure className="thumb">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/testi-thumb-1.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <h6 className="name">Jessica Brown</h6>
-                      <span className="designation">Customer</span>
-                    </div>
-                  </div>
-                </div>
-                {/* Testimonial Block */}
-                <div className="testimonial-block">
-                  <div className="inner-box">
-                    <div className="content-box">
-                      <span className="icon fa fa-quote-left" />
-                      <div className="rating">
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                      </div>
-                      <div className="text">
-                        I was very impresed by the remons service lorem ipsum is
-                        simply free text used by copy typing refreshing. Neque
-                        porro est qui dolorem ipsum quia.
-                      </div>
-                    </div>
-                    <div className="info-box">
-                      <figure className="thumb">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/testi-thumb-2.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <h6 className="name">Kevin Martin</h6>
-                      <span className="designation">Customer</span>
-                    </div>
-                  </div>
-                </div>
-                {/* Testimonial Block */}
-                <div className="testimonial-block">
-                  <div className="inner-box">
-                    <div className="content-box">
-                      <span className="icon fa fa-quote-left" />
-                      <div className="rating">
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                        <i className="fa fa-star" />
-                      </div>
-                      <div className="text">
-                        I was very impresed by the remons service lorem ipsum is
-                        simply free text used by copy typing refreshing. Neque
-                        porro est qui dolorem ipsum quia.
-                      </div>
-                    </div>
-                    <div className="info-box">
-                      <figure className="thumb">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/testi-thumb-3.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <h6 className="name">Sarah Albert</h6>
-                      <span className="designation">Customer</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <section className="bg-silver-light">
+		<div className="container pb-90">
+			<div className="row">
+				<div className="col-lg-4 col-md-6 col-sm-12">
+				
+					<div className="testimonial-block mb-md-30">
+						<div className="inner-box">
+							<div className="content-box">
+								<span className="icon fa fa-quote-left"></span>
+								<div className="rating"><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i></div>
+								<div className="text">J'ai été satisfaite de BOAZ STUDY, je vous le recommande fortement, ils sont très professionnels et dans les temps. En arrivant en France tout s’est passé si vite que je ne me suis même pas rendu compte. Vraiment, ils sont les meilleurs..</div>
+							</div>
+							<div className="info-box">
+								<figure className="thumb"><img src="images/resource/testi-thumb-1.jpg" alt=""/></figure>
+								<h6 className="name text-black">Christine Bassahag</h6>
+								<span className="designation">Cliente</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="col-lg-4 col-md-6 col-sm-12">
+				
+					<div className="testimonial-block mb-md-30">
+						<div className="inner-box">
+							<div className="content-box">
+								<span className="icon fa fa-quote-left"></span>
+								<div className="rating"><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i></div>
+								<div className="text">Un grand merci à BOAZ STUDY, je vous le recommande fortement, car leur professionnalisme est sans équivoque. À mon arrivée en France, j'ai été accompagné aussi rapidement que j’en étais surpris. BIG UP à vous.</div>
+							</div>
+							<div className="info-box">
+								<figure className="thumb"><img src="images/resource/testi-thumb-3.jpg" alt=""/></figure>
+								<h6 className="name text-black">Louis FOKA</h6>
+								<span className="designation">Client</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="col-lg-4 col-md-6 col-sm-12">
+					<div className="testimonial-block">
+						<div className="inner-box">
+							<div className="content-box">
+								<span className="icon fa fa-quote-left"></span>
+								<div className="rating"><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i></div>
+								<div className="text">Que dire de BOAZ STUDY, à part le fait que ce sont les meilleurs, je vous le recommande à 100%. Mon arrivée en France s'est très bien déroulée et j'ai pu débuter mes études dans les meilleures conditions dans l'une des plus prestigieuses universités de France.</div>
+							</div>
+							<div className="info-box">
+								<figure className="thumb"><img src="images/resource/testi-thumb-2.jpg" alt=""/></figure>
+								<h6 className="name text-black">Minette NGAH</h6>
+								<span className="designation">Cliente</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
           </div>
         </section>
         {/* End Testimonial Section */}
@@ -996,13 +654,13 @@ const Home = () => {
                 <div className="title-column col-lg-7 col-md-12 wow fadeInLRight">
                   <div className="inner-column">
                     <div className="sec-title">
-                      <span className="sub-title">contact with us</span>
+                      <span className="sub-title">Nous contacter</span>
                       <h2>
-                        Book your <span className="color3">consultation</span>
+                        Prenez un <span className="color3">Rend des vous</span>
                       </h2>
                       <div className="text">
                         Vous avez des Questions sur comments etudier en
-                        France??? Contactez nous pour plus d'information
+                        France ? Contactez nous pour plus d'information
                       </div>
                     </div>
                     <ul className="list-style-two">
@@ -1046,7 +704,7 @@ const Home = () => {
                             <input
                               type="text"
                               name="full_name"
-                              placeholder="Your Name"
+                              placeholder="votre nom"
                               required=""
                             />
                           </div>
@@ -1054,14 +712,14 @@ const Home = () => {
                             <input
                               type="text"
                               name="Email"
-                              placeholder="Email Address"
+                              placeholder="Addresse Email"
                               required=""
                             />
                           </div>
                           <div className="form-group">
                             <textarea
                               name="message"
-                              placeholder="Write a Message"
+                              placeholder="ecrire un Message"
                               required=""
                               defaultValue={""}
                             />
@@ -1072,7 +730,7 @@ const Home = () => {
                               type="submit"
                               name="submit-form"
                             >
-                              <span className="btn-title">Send a Message</span>
+                              <span className="btn-title">envoyer un Message</span>
                             </button>
                           </div>
                         </form>
@@ -1090,9 +748,9 @@ const Home = () => {
         <section className="news-section">
           <div className="auto-container">
             <div className="sec-title text-center">
-              <span className="sub-title">Notre &amp; Blog</span>
+              <span className="sub-title">Notre Blog</span>
               <h2>
-                Latest news directly <br /> from the{" "}
+                Derniers mise a jour <br />de notre{" "}
                 <span className="color3">blog</span>
               </h2>
             </div>
@@ -1105,26 +763,26 @@ const Home = () => {
                       <a href="news-details.html">
                         <img
                           src={`${process.env.PUBLIC_URL}/site_kit/images/blog-1.jpg`}
-                          alt=""
+                          alt="" style={{width:'70%',height:'50%'}}
                         />
                       </a>
                     </figure>
                     <span className="date">
-                      12 <span className="month">April</span>
+                      12 <span className="month">Avril</span>
                     </span>
                   </div>
-                  <div className="lower-content">
+                  <div className="lower-content" style={{width:'100%'}}>
                     <ul className="post-info">
                       <li>
                         <i className="fa fa-user-circle" />
-                        Admin
+                        Administrateur
                       </li>
                       <li>
-                        <i className="fa fa-comments" /> 3 Comments
+                        <i className="fa fa-comments" /> 3 Commentaires
                       </li>
                     </ul>
                     <h4 className="title">
-                      <a href="news-details.html">
+                      <a href="/blog/entretien">
                         Comment réussir votre entretien Campus France ?
                       </a>
                     </h4>
@@ -1146,26 +804,26 @@ const Home = () => {
                       <a href="news-details.html">
                         <img
                           src={`${process.env.PUBLIC_URL}/site_kit/images/boaz-2.jpg`}
-                          alt=""
+                          alt="" style={{width:'70%'}}
                         />
                       </a>
                     </figure>
                     <span className="date">
-                      18 <span className="month">January</span>
+                      18 <span className="month">Janvier</span>
                     </span>
                   </div>
                   <div className="lower-content">
                     <ul className="post-info">
                       <li>
                         <i className="fa fa-user-circle" />
-                        Admin
+                        Administrateur
                       </li>
                       <li>
-                        <i className="fa fa-comments" /> 5 Comments
+                        <i className="fa fa-comments" /> 5 Commentaires
                       </li>
                     </ul>
                     <h4 className="title">
-                      <a href="news-details.html">
+                      <a href="/blog/lettre">
                         Lettre de motivation : comment s’y prendre ??
                       </a>
                     </h4>
@@ -1187,26 +845,26 @@ const Home = () => {
                       <a href="news-details.html">
                         <img
                           src={`${process.env.PUBLIC_URL}/site_kit/images/boaz-3.png`}
-                          alt=""
+                          alt="" style={{width:'100%'}}
                         />
                       </a>
                     </figure>
                     <span className="date">
-                      10 <span className="month">January</span>
+                      10 <span className="month">Janvier</span>
                     </span>
                   </div>
                   <div className="lower-content">
                     <ul className="post-info">
                       <li>
                         <i className="fa fa-user-circle" />
-                        Admin
+                        Adminnistrateur
                       </li>
                       <li>
-                        <i className="fa fa-comments" /> 4 Comments
+                        <i className="fa fa-comments" /> 4 Commentaires
                       </li>
                     </ul>
                     <h4 className="title">
-                      <a href="news-details.html">
+                      <a href="/blog/projet">
                         Comment rédiger son projet professionnel ?
                       </a>
                     </h4>

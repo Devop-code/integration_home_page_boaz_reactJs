@@ -14,7 +14,7 @@ export default function Footer() {
             <ul className="contact-info">
               <li>
                 <i className="icon fa fa-phone-square" />
-                <span className="title">Phone:</span>
+                <span className="title">telephone:</span>
                 <div className="text">
                   <a href="tel:+9288006830">
                     (+237) 656 186 936 / (+237) 676 726 905
@@ -25,18 +25,23 @@ export default function Footer() {
                 <i className="icon fa fa-envelope" />
                 <span className="title">Email:</span>
                 <div className="text">
-                  <a href="mailto:eziaro@company.com">info@boaz-study.com</a>
+                  <a href="info@boaz-study.com">info@boaz-study.com</a>
                 </div>
               </li>
               <li>
                 <i className="icon fa fa-map-marker" />
-                <span className="title">Address:</span>
+                <span className="title">Addresses:</span>
                 <div className="text">Douala, Bonapriso, 389 Rue Toyota</div>
+              </li>
+              <li>
+                <i className="icon fa fa-map-marker" />
+                <span className="title">Address:</span>
+                <div className="text">Yaoundé, Total Ecole de police, entre l’hôtel Florencia et CCA Bank</div>
               </li>
             </ul>
             <div className="btn-box">
-              <a href="page-contact.html" className="theme-btn btn-style-four">
-                <span className="btn-title">Book Consultation</span>
+              <a href="/services" className="theme-btn btn-style-four">
+                <span className="btn-title">Nos Services</span>
               </a>
             </div>
           </div>
@@ -49,62 +54,46 @@ export default function Footer() {
               <div className="footer-column col-xl-6 col-lg-8 col-md-12 mb-0">
                 <div className="row">
                   <div className="footer-widget col-lg-4 col-md-4 col-ms-12">
-                    <h6 className="widget-title">Links</h6>
+                    <h6 className="widget-title">Liens</h6>
                     <ul className="user-links">
                       <li>
-                        <a href="/about">About</a>
+                        <a href="/about">A propos</a>
                       </li>
                       <li>
-                        <a href="#">Meet Team</a>
+                        <a href="/services">service</a>
                       </li>
                       <li>
-                        <a href="#">News &amp; Media</a>
+                        <a href="#">Notre Blog</a>
                       </li>
                       <li>
-                        <a href="#">Our Projects</a>
+                        <a href="#">Nos prix</a>
                       </li>
                       <li>
                         <a href="/contact">Contact</a>
                       </li>
                     </ul>
                   </div>
-                  <div className="footer-widget col-lg-4 col-md-4 col-ms-12">
-                    <h6 className="widget-title">Visa</h6>
-                    <ul className="user-links">
-                      <li>
-                        <a href="#">Student Visa</a>
-                      </li>
-                      <li>
-                        <a href="#">Business Visa</a>
-                      </li>
-                      <li>
-                        <a href="#">Family Visa</a>
-                      </li>
-                      <li>
-                        <a href="#">Travel Visa</a>
-                      </li>
-                      <li>
-                        <a href="#">Work Visa</a>
-                      </li>
-                    </ul>
-                  </div>
+
                   <div className="footer-widget col-lg-4 col-md-4 col-ms-12">
                     <h6 className="widget-title">Services</h6>
                     <ul className="user-links">
                       <li>
-                        <a href="#">PR Applicants</a>
+                        <a href="#">AVI</a>
                       </li>
                       <li>
-                        <a href="#">Visa Consultancy</a>
+                        <a href="#">Recherche de logement</a>
                       </li>
                       <li>
-                        <a href="#">Travel Insurance</a>
+                        <a href="#">Service paiement france</a>
                       </li>
                       <li>
-                        <a href="#">Work Permits</a>
+                        <a href="#">Aide demarche administrative</a>
                       </li>
                       <li>
-                        <a href="#">Abrod Study</a>
+                        <a href="#">orientation et Accompagnement</a>
+                      </li>
+                      <li>
+                        <a href="#">financement</a>
                       </li>
                     </ul>
                   </div>
@@ -113,38 +102,42 @@ export default function Footer() {
               {/*Footer Column*/}
               <div className="footer-column col-xl-3 col-lg-4 col-md-6 col-sm-8">
                 <div className="footer-widget gallery-widget">
-                  <h6 className="widget-title">Gallery</h6>
+                  <h6 className="widget-title">Galeries</h6>
                   <div className="widget-content">
                     <div className="outer clearfix">
                       <figure className="image">
                         <a href="#">
                           <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/resource/project-thumb-1.jpg`}
+                            src={`${process.env.PUBLIC_URL}/site_kit/images/services/finance.jpg`}
                             alt=""
+                            style={{height:'78px',width:'77px'}}
                           />
                         </a>
                       </figure>
                       <figure className="image">
                         <a href="#">
                           <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/resource/project-thumb-2.jpg`}
+                            src={`${process.env.PUBLIC_URL}/site_kit/images/services/aide.jpg`}
                             alt=""
+                            style={{height:'78px',width:'77px'}}
                           />
                         </a>
                       </figure>
                       <figure className="image">
                         <a href="#">
                           <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/resource/project-thumb-3.jpg`}
+                            src={`${process.env.PUBLIC_URL}/site_kit/images/services/demarche.png`}
                             alt=""
+                            style={{height:'78px',width:'77px'}}
                           />
                         </a>
                       </figure>
                       <figure className="image">
                         <a href="#">
                           <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/resource/project-thumb-4.jpg`}
+                            src={`${process.env.PUBLIC_URL}/site_kit/images/services/avi.jpg`}
                             alt=""
+                            style={{height:'78px',width:'77px'}}
                           />
                         </a>
                       </figure>
@@ -153,14 +146,16 @@ export default function Footer() {
                           <img
                             src={`${process.env.PUBLIC_URL}/site_kit/images/resource/project-thumb-5.jpg`}
                             alt=""
+                            style={{height:'78px',width:'77px'}}
                           />
                         </a>
                       </figure>
                       <figure className="image">
                         <a href="#">
                           <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/resource/project-thumb-6.jpg`}
+                            src={`${process.env.PUBLIC_URL}/site_kit/images/services/logement.jpg`}
                             alt=""
+                            style={{height:'78px',width:'77px'}}
                           />
                         </a>
                       </figure>
@@ -174,7 +169,7 @@ export default function Footer() {
                   <h6 className="widget-title">Newsletter</h6>
                   <div className="subscribe-form">
                     <div className="text">
-                      Signup for our latest news &amp; articles.
+                      S'inscrire pour voir nos service &amp; articles.
                     </div>
                     <form method="post" action="#">
                       <div className="form-group">
@@ -183,7 +178,7 @@ export default function Footer() {
                           name="email"
                           className="email"
                           defaultValue=""
-                          placeholder="Email Address"
+                          placeholder=" Addresse email"
                           required=""
                         />
                         <button type="button" className="theme-btn">
@@ -194,22 +189,17 @@ export default function Footer() {
                   </div>
                   <ul className="social-icon-two">
                     <li>
-                      <a href="#">
+                      <a href="https://twitter.com/boazstudy">
                         <i className="fab fa-twitter" />
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://www.facebook.com/boazstudy">
                         <i className="fab fa-facebook" />
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="fab fa-pinterest" />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
+                      <a href="https://www.instagram.com/boazstudy/">
                         <i className="fab fa-instagram" />
                       </a>
                     </li>
