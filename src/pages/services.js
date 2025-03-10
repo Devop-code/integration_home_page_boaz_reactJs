@@ -3,6 +3,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import MainBox from "../components/mainBoxHeaderTop";
 import servicesData from "../data/servicesData";
+import NavOuter from "../components/navOuter";
 
 const Services = () => {
   return (
@@ -124,38 +125,7 @@ const Services = () => {
                   </a>
                 </div>
                 {/*Right Col*/}
-                <div className="nav-outer">
-                  {/* Main Menu */}
-                  <nav className="main-menu">
-                    <div className="navbar-collapse show collapse clearfix">
-                      <ul className="navigation clearfix">
-                        <li>
-                          <a href="/"> Home</a>
-                        </li>
-                        <li>
-                          <a href="/about">About</a>
-                        </li>
-                        <li>
-                          <a href="/contact">Contact</a>
-                        </li>
-                        <li>
-                          <a href="/services">Services</a>
-                        </li>
-                        <li>
-                          <a href="/connexion"> Connexion</a>
-                        </li>
-                        <li>
-                          <a href="/inscription">Inscription</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </nav>
-                  {/* Main Menu End*/}
-                  {/*Mobile Navigation Toggler*/}
-                  <div className="mobile-nav-toggler">
-                    <span className="icon lnr-icon-bars" />
-                  </div>
-                </div>
+                <NavOuter/>
               </div>
             </div>
           </div>

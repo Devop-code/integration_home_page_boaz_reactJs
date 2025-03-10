@@ -4,6 +4,7 @@ import React from "react";
 import MainBox from "../components/mainBoxHeaderTop";
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
+import NavOuter from "../components/navOuter";
 import PricingSection from "./PriceTest";
 
 const Home = () => {
@@ -40,41 +41,7 @@ const Home = () => {
                   </a>
                 </div>
                 {/*Right Col*/}
-                <div className="nav-outer">
-                  {/* Main Menu */}
-                  <nav className="main-menu">
-                    <div className="navbar-collapse show collapse clearfix">
-                      <ul className="navigation clearfix">
-                        <li>
-                          <a href="/"> Home</a>
-                        </li>
-                        <li>
-                          <a href="/about">About</a>
-                        </li>
-                        <li>
-                          <a href="/contact">Contact</a>
-                        </li>
-                        <li>
-                          <a href="/services">Services</a>
-                        </li>
-                        <li>
-                          <a href="/blog">Blog</a>
-                        </li>
-                        <li>
-                          <a href="/connexion"> Connexion</a>
-                        </li>
-                        <li>
-                          <a href="/inscription">Inscription</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </nav>
-                  {/* Main Menu End*/}
-                  {/*Mobile Navigation Toggler*/}
-                  <div className="mobile-nav-toggler">
-                    <span className="icon lnr-icon-bars" />
-                  </div>
-                </div>
+                  <NavOuter/>
               </div>
             </div>
           </div>
@@ -120,7 +87,7 @@ const Home = () => {
                     data-textalign="['top','top','top','top']"
                     data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
                   >
-                    <section className="section-about">
+                    
                     <div className='auto-container'>
                     <h3 className="fs-1 font-size-30 text-white responsive-text font-weight  fw-bolder mb-3 ">
                       Boaz-Study ,{" "}
@@ -131,29 +98,29 @@ const Home = () => {
                       </small>
                       <br />
                     </h3>
-                    <p className="letter-space-3  md-0 text-white responsive-text fw-normal text-md-center text-left font-size-15 text">
+                    <p className="letter-space-3  md-0 text-white responsive-text fw-normal text-md-center text-left font-size-15 text mb-3">
                       Découvrez nos services complets pour faciliter votre
                       installation et vos études en France. Confiez-nous votre
                       projet dès aujourd'hui
                     </p>
                     </div>
                     <div className="btn-box fs-3 responsive-text text-light">
-                      <a href="/services" className="theme-btn btn-style-one ">
+                      <a href="/services" className="theme-btn btn-style-one text-decoration-none">
                         <span className="btn-title letter-space-4 text-light">
                           Voir nos services
                         </span>
                       </a>
                       <a
                         href="/contact"
-                        className="theme-btn btn-style-two bg-transparent border border-light text-white"
+                        className="theme-btn btn-style-two bg-transparent border border-light text-white text-decoration-none"
                       >
                         <span className="btn-title letter-space-4 ">
                           Contacter Nous
                         </span>
                       </a>
                     </div>
-                    </section>
-                  </div>
+                    
+                    </div>
                   <div
                     className="tp-caption"
                     data-paddingbottom="[0,0,0,0]"
@@ -309,13 +276,8 @@ const Home = () => {
         </section>
         {/*Emd About Section */}
         {/* Why Choose US */}
-        <>
-          <section className="why-choose-us-two">
-            <div
-              className="bg bg-image"
-              style={{ backgroundImage: "url(./images/background/3.jpg)" }}
-            />
-            <div className="bg bg-pattern-5" />
+        
+          <section className="why-choose-us-two bg-img-cover bg-no-repeat" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/site_kit/images/background/about-1.jpg`,opacity:'1'}} >
             <div className="auto-container">
               <div className="row g-0">
                 {/* Colonne du titre */}
@@ -340,7 +302,7 @@ const Home = () => {
                         <i className="icon flaticon-interview" />
                         <i className="bg-icon flaticon-interview" />
                         <h6 className="title">
-                          <a href="page-about.html">
+                          <a href="">
                             Accompagnement personnalisé
                           </a>
                         </h6>
@@ -359,7 +321,7 @@ const Home = () => {
                         <i className="icon flaticon-low-cost" />
                         <i className="bg-icon flaticon-low-cost" />
                         <h6 className="title">
-                          <a href="page-about.html">Solutions abordables</a>
+                          <a href="">Solutions abordables</a>
                         </h6>
                         <div className="text">
                           Nos services sont conçus pour être accessibles à tous,
@@ -373,7 +335,7 @@ const Home = () => {
                         <i className="icon flaticon-loyalty" />
                         <i className="bg-icon flaticon-loyalty" />
                         <h6 className="title">
-                          <a href="page-about.html">Satisfaction garantie</a>
+                          <a href="">Satisfaction garantie</a>
                         </h6>
                         <div className="text">
                           Des centaines d'étudiants nous ont déjà fait confiance
@@ -390,7 +352,7 @@ const Home = () => {
                         <i className="icon flaticon-online-support" />
                         <i className="bg-icon flaticon-online-support" />
                         <h6 className="title">
-                          <a href="page-about.html">Assistance 24/7</a>
+                          <a href="">Assistance 24/7</a>
                         </h6>
                         <div className="text">
                           Nous restons disponibles à tout moment pour répondre à
@@ -404,7 +366,7 @@ const Home = () => {
             </div>
           </section>
           {/* Fin Pourquoi Nous Choisir */}
-        </>
+      
 
         {/*Emd Why Choose US */}
         {/* Training Section */}
@@ -450,7 +412,7 @@ const Home = () => {
                       </h6>
                       <div className="text">{service.description}</div>
                       <a href={service.readMoreLink} className="read-more">
-                        More <i className="fa fa-long-arrow-right" />
+                        Voir plus <i className="fa fa-long-arrow-right" />
                       </a>
                     </div>
                   </div>
@@ -597,8 +559,8 @@ const Home = () => {
 								<div className="text">J'ai été satisfaite de BOAZ STUDY, je vous le recommande fortement, ils sont très professionnels et dans les temps. En arrivant en France tout s’est passé si vite que je ne me suis même pas rendu compte. Vraiment, ils sont les meilleurs..</div>
 							</div>
 							<div className="info-box">
-								<figure className="thumb"><img src="images/resource/testi-thumb-1.jpg" alt=""/></figure>
-								<h6 className="name text-black">Christine Bassahag</h6>
+								<figure className="thumb"><img src={`${process.env.PUBLIC_URL}/site_kit/images/resource/christine.png`} alt=""/></figure>
+								<h6 className="name text-white">Christine Bassahag</h6>
 								<span className="designation">Cliente</span>
 							</div>
 						</div>
@@ -614,8 +576,8 @@ const Home = () => {
 								<div className="text">Un grand merci à BOAZ STUDY, je vous le recommande fortement, car leur professionnalisme est sans équivoque. À mon arrivée en France, j'ai été accompagné aussi rapidement que j’en étais surpris. BIG UP à vous.</div>
 							</div>
 							<div className="info-box">
-								<figure className="thumb"><img src="images/resource/testi-thumb-3.jpg" alt=""/></figure>
-								<h6 className="name text-black">Louis FOKA</h6>
+								<figure className="thumb"><img src={`${process.env.PUBLIC_URL}/site_kit/images/resource/louis.png`} alt=""/></figure>
+								<h6 className="name text-white">Louis FOKA</h6>
 								<span className="designation">Client</span>
 							</div>
 						</div>
@@ -630,8 +592,8 @@ const Home = () => {
 								<div className="text">Que dire de BOAZ STUDY, à part le fait que ce sont les meilleurs, je vous le recommande à 100%. Mon arrivée en France s'est très bien déroulée et j'ai pu débuter mes études dans les meilleures conditions dans l'une des plus prestigieuses universités de France.</div>
 							</div>
 							<div className="info-box">
-								<figure className="thumb"><img src="images/resource/testi-thumb-2.jpg" alt=""/></figure>
-								<h6 className="name text-black">Minette NGAH</h6>
+								<figure className="thumb"><img src={`${process.env.PUBLIC_URL}/site_kit/images/resource/minette.png`} alt=""/></figure>
+								<h6 className="name text-white">Minette NGAH</h6>
 								<span className="designation">Cliente</span>
 							</div>
 						</div>
@@ -667,17 +629,17 @@ const Home = () => {
                       <li>
                         <i className="fa fa-check-circle" />
                         Vous souhaitez savoir si vous ete admissible a pouvoir
-                        etudier en France ??
+                        etudier en France ?
                       </li>
                       <li>
                         <i className="fa fa-check-circle" />
                         vous avez des Questions sur le processus de voyage,et
-                        les delais de traitement???
+                        les delais de traitement ?
                       </li>
                       <li>
                         <i className="fa fa-check-circle" />
                         Vous chercher a Obtenir des conseils sur la maniere de
-                        preparer votre demande??
+                        preparer votre demande ?
                       </li>
                     </ul>
                     <div className="ceo-info">
@@ -772,15 +734,7 @@ const Home = () => {
                     </span>
                   </div>
                   <div className="lower-content" style={{width:'100%'}}>
-                    <ul className="post-info">
-                      <li>
-                        <i className="fa fa-user-circle" />
-                        Administrateur
-                      </li>
-                      <li>
-                        <i className="fa fa-comments" /> 3 Commentaires
-                      </li>
-                    </ul>
+                    
                     <h4 className="title">
                       <a href="/blog/entretien">
                         Comment réussir votre entretien Campus France ?
@@ -792,6 +746,9 @@ const Home = () => {
                       entretien avec Campus France, un organisme qui s’occupe de
                       la promotion de l’enseignement supérieur en France.
                       L’entretien est une étape importante pour...
+                      <a href={"/"} className="theme-btn btn-style-four small">
+                        Voir plus <i className="fa fa-long-arrow-right" />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -813,15 +770,7 @@ const Home = () => {
                     </span>
                   </div>
                   <div className="lower-content">
-                    <ul className="post-info">
-                      <li>
-                        <i className="fa fa-user-circle" />
-                        Administrateur
-                      </li>
-                      <li>
-                        <i className="fa fa-comments" /> 5 Commentaires
-                      </li>
-                    </ul>
+                    
                     <h4 className="title">
                       <a href="/blog/lettre">
                         Lettre de motivation : comment s’y prendre ??
@@ -833,6 +782,9 @@ const Home = () => {
                       d’une page maximum qui met en avant les compétences et les
                       qualités du candidat nécessaires à la réussite de son
                       projet professionnel. Elle a pour but de donner...
+                      <a href={"/"} className="theme-btn btn-style-four small">
+                        Voir plus <i className="fa fa-long-arrow-right" />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -854,15 +806,7 @@ const Home = () => {
                     </span>
                   </div>
                   <div className="lower-content">
-                    <ul className="post-info">
-                      <li>
-                        <i className="fa fa-user-circle" />
-                        Adminnistrateur
-                      </li>
-                      <li>
-                        <i className="fa fa-comments" /> 4 Commentaires
-                      </li>
-                    </ul>
+                    
                     <h4 className="title">
                       <a href="/blog/projet">
                         Comment rédiger son projet professionnel ?
@@ -873,8 +817,13 @@ const Home = () => {
                       au domaine dans lequel on souhaiterait travailler. Un
                       projet d’étude est le parcours académique que vous décidez
                       d’embrasser dans l’optique de la réussite de votre projet
-                      professionnel. Ce dernier est donc le...
+                      professionnel.
+                      <a href={"/"}className="theme-btn btn-style-four small">
+                        Voir plus <i className="fa fa-long-arrow-right" />
+                      </a>
+                      
                     </div>
+                    
                   </div>
                 </div>
               </div>

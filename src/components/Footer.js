@@ -16,8 +16,8 @@ export default function Footer() {
                 <i className="icon fa fa-phone-square" />
                 <span className="title">telephone:</span>
                 <div className="text">
-                  <a href="tel:+9288006830">
-                    (+237) 656 186 936 / (+237) 676 726 905
+                  <a href="tel:(+237) 676 726 905">
+                    (+237) 656 186 936 / (+237) 676 726 905 / (+33) 651 29 95 03
                   </a>
                 </div>
               </li>
@@ -36,14 +36,12 @@ export default function Footer() {
               <li>
                 <i className="icon fa fa-map-marker" />
                 <span className="title">Address:</span>
-                <div className="text">Yaoundé, Total Ecole de police, entre l’hôtel Florencia et CCA Bank</div>
+                <div className="text">
+                  Yaoundé, Total Ecole de police, entre l’hôtel Florencia et CCA
+                  Bank
+                </div>
               </li>
             </ul>
-            <div className="btn-box">
-              <a href="/services" className="theme-btn btn-style-four">
-                <span className="btn-title">Nos Services</span>
-              </a>
-            </div>
           </div>
         </div>
         {/*Widgets Section*/}
@@ -78,22 +76,22 @@ export default function Footer() {
                     <h6 className="widget-title">Services</h6>
                     <ul className="user-links">
                       <li>
-                        <a href="#">AVI</a>
+                        <a href="/services/avi">AVI</a>
                       </li>
                       <li>
-                        <a href="#">Recherche de logement</a>
+                        <a href="/services/aide-logement">Recherche de logement</a>
                       </li>
                       <li>
-                        <a href="#">Service paiement france</a>
+                        <a href="/services/financement-france">Service paiement france</a>
                       </li>
                       <li>
-                        <a href="#">Aide demarche administrative</a>
+                        <a href="/services/aide-administrative">Aide demarche administrative</a>
                       </li>
                       <li>
-                        <a href="#">orientation et Accompagnement</a>
+                        <a href="/services/orientation">orientation et Accompagnement</a>
                       </li>
                       <li>
-                        <a href="#">financement</a>
+                        <a href="/services/financement">financement</a>
                       </li>
                     </ul>
                   </div>
@@ -104,72 +102,49 @@ export default function Footer() {
                 <div className="footer-widget gallery-widget">
                   <h6 className="widget-title">Galeries</h6>
                   <div className="widget-content">
-                    <div className="outer clearfix">
-                      <figure className="image">
-                        <a href="#">
-                          <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/services/finance.jpg`}
-                            alt=""
-                            style={{height:'78px',width:'77px'}}
-                          />
-                        </a>
-                      </figure>
-                      <figure className="image">
-                        <a href="#">
-                          <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/services/aide.jpg`}
-                            alt=""
-                            style={{height:'78px',width:'77px'}}
-                          />
-                        </a>
-                      </figure>
-                      <figure className="image">
-                        <a href="#">
-                          <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/services/demarche.png`}
-                            alt=""
-                            style={{height:'78px',width:'77px'}}
-                          />
-                        </a>
-                      </figure>
-                      <figure className="image">
-                        <a href="#">
-                          <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/services/avi.jpg`}
-                            alt=""
-                            style={{height:'78px',width:'77px'}}
-                          />
-                        </a>
-                      </figure>
-                      <figure className="image">
-                        <a href="#">
-                          <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/resource/project-thumb-5.jpg`}
-                            alt=""
-                            style={{height:'78px',width:'77px'}}
-                          />
-                        </a>
-                      </figure>
-                      <figure className="image">
-                        <a href="#">
-                          <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/services/logement.jpg`}
-                            alt=""
-                            style={{height:'78px',width:'77px'}}
-                          />
-                        </a>
-                      </figure>
-                    </div>
+                  <div className="outer clearfix">
+  {[
+    "finance.jpg",
+    "aide.jpg",
+    "demarche.png",
+    "avi.jpg",
+    "aide-finance-france.jpg",
+    "logement.jpg",
+  ].map((image, index) => (
+    <figure className="image" key={index}>
+      <a href="#">
+        <img
+          src={`${process.env.PUBLIC_URL}/site_kit/images/services/${image}`}
+          alt=""
+          className="service-image"
+        />
+      </a>
+    </figure>
+  ))}
+</div>
+
+<style>
+  {`
+  .service-image {
+    width: 80px; /* Ajuste selon tes besoins */
+    height: 80px; 
+    object-fit: cover; /* Empêche l'étirement tout en remplissant la zone */
+    
+  }
+  `}
+</style>
+
                   </div>
                 </div>
               </div>
               {/*Footer Column*/}
               <div className="footer-column col-xl-3 col-lg-12 col-md-6">
                 <div className="footer-widget">
-                  <h6 className="widget-title">Newsletter</h6>
+                  <h6 className="widget-title">Abonnez-vous à la Newsletter</h6>
                   <div className="subscribe-form">
                     <div className="text">
-                      S'inscrire pour voir nos service &amp; articles.
+                      Abonnez-vous à notre newsletter pour recevoir des mises à
+                      jour académiques, des actualités et des événements.
                     </div>
                     <form method="post" action="#">
                       <div className="form-group">
@@ -214,7 +189,7 @@ export default function Footer() {
           <div className="auto-container">
             <div className="inner-container">
               <div className="copyright-text">
-                © Copyright 2025 by <a href="index.html">Boaz Study.com</a>
+                 Droit d'auteur 2025 par ©<a href="">Boaz Study.com</a>
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import MainBox from '../components/mainBoxHeaderTop'
 import Footer from '../components/Footer'
 import Form from '../components/Form'
+import NavOuter from '../components/navOuter'
 
 
 const Inscription = () => {
@@ -10,6 +11,24 @@ const Inscription = () => {
        <div className="page-wrapper">
         <div className=''></div>
         <Form/>
+        <div className="sticky-header">
+            <div className="auto-container">
+              <div className="inner-container">
+                {/*Logo*/}
+                <div className="logo">
+                  <a href="index.html" title="">
+                    <img
+                      src={`${process.env.PUBLIC_URL}/logo refais.png`}
+                      alt=""
+                      title=""
+                    />
+                  </a>
+                </div>
+                {/*Right Col*/}
+                <NavOuter/>
+              </div>
+            </div>
+          </div>
          <section className="contact-details">
           <div className="container ">
             <div className="row">
