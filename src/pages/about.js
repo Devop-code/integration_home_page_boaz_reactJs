@@ -121,7 +121,7 @@ const About = () => {
                   </a>
                 </div>
                 {/*Right Col*/}
-                <NavOuter/>
+                <NavOuter />
               </div>
             </div>
           </div>
@@ -132,20 +132,20 @@ const About = () => {
         <section
           className="page-title"
           style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL}/site_kit/images/background/page-title.jpg)`,
+            backgroundImage: `url(${process.env.PUBLIC_URL}/site_kit/images/background/about-2.jpg)`,
           }}
         >
           <div className="auto-container">
             <div className="title-outer">
-              <h1 className="title">About Us</h1>
+              <h1 className="title">A propos de Nous</h1>
               <ul className="page-breadcrumb">
                 <li>
-                  <a href="index.html">Home</a>
+                  <a href="/">Accueil</a>
                 </li>
+
                 <li>
-                  <a href="#">Pages</a>
+                  <a href="/about">A propos</a>
                 </li>
-                <li>About</li>
               </ul>
             </div>
           </div>
@@ -161,17 +161,25 @@ const About = () => {
               >
                 <div className="inner-column">
                   <div className="sec-title">
-                    <span className="sub-title">about the company</span>
+                    <span className="sub-title">
+                      À propos de l'étude chez Boaz-study
+                    </span>
                     <h2>
-                      Providing the best immigration{" "}
-                      <span className="color3">services</span>
+                      Offrant les meilleurs services{" "}
+                      <span className="color3">D'etude en france</span>
                     </h2>
-                    <h4>Canada based immigration consultant agency.</h4>
+                    <h4>
+                      BOAZ-STUDY est une société française spécialisée dans
+                      l’accompagnement des étudiants en mobilité
+                      internationale..
+                    </h4>
                     <div className="text">
-                      Web designing in a powerful way of just not an only
-                      professions, however, in a passion for our Company. We
-                      have to a tendency to believe the idea that smart looking
-                      of any website is the first impression on visitors.
+                      Elle accompagne les étudiants dans la réussite totale de
+                      leurs projets d’études supérieures en leur proposant des
+                      services d’accompagnement pour une meilleure orientation
+                      dans les universités françaises, logement étudiant,
+                      caution bancaire, achat de billet d’avion au prix le plus
+                      abordable.
                     </div>
                   </div>
                   <div className="row">
@@ -179,26 +187,27 @@ const About = () => {
                       <div className="inner">
                         <i className="icon flaticon-passport-16" />
                         <h6 className="title">
-                          Best Immigration
-                          <br /> Services
+                          meilleurs service
+                          <br /> d'etude
+                          <br /> en France
                         </h6>
                       </div>
                     </div>
                     <div className="text-block col-lg-6 col-md-6">
                       <div className="inner">
                         <div className="text">
-                          We have to a tendency to believe the idea that smart
-                          looking.
+                          Venez découvrir nos services et nos offres pour une
+                          mobilité internationale réussie.
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="btm-box">
                     <a
-                      href="page-about.html"
+                      href="http://www.boaz-study.com/register"
                       className="theme-btn btn-style-one"
                     >
-                      <span className="btn-title">Discover More</span>
+                      <span className="btn-title">Prendre rendez vous</span>
                     </a>
                   </div>
                 </div>
@@ -211,19 +220,19 @@ const About = () => {
                       <div className="image-box">
                         <figure className="map">
                           <img
-                            src={`${process.env.PUBLIC_URL}/images/icons/map.png`}
+                            src={`${process.env.PUBLIC_URL}/site_kit/images/icons/map.png`}
                             alt=""
                           />
                         </figure>
                         <figure className="image-1 overlay-anim wow fadeInUp">
                           <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/resource/about-1.jpg`}
+                            src={`${process.env.PUBLIC_URL}/site_kit/images/about/about-1.jpg`}
                             alt=""
                           />
                         </figure>
                         <figure className="image-2 overlay-anim wow fadeInRight">
                           <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/resource/about-2.jpg`}
+                            src={`${process.env.PUBLIC_URL}/site_kit/images/about/about-2.jpg`}
                             alt=""
                           />
                         </figure>
@@ -233,7 +242,7 @@ const About = () => {
                       <div className="image-box">
                         <figure className="image-3 overlay-anim wow fadeInLeft">
                           <img
-                            src={`${process.env.PUBLIC_URL}/site_kit/images/resource/about-3.jpg`}
+                            src={`${process.env.PUBLIC_URL}/site_kit/images/about/people-office-work-day.jpg`}
                             alt=""
                           />
                         </figure>
@@ -241,7 +250,7 @@ const About = () => {
                           <div className="inner">
                             <i className="icon flaticon-loyalty" />
                             <div className="text">
-                              <strong>3800</strong> Satisfied Clients
+                              <strong>3800</strong> clients satisfaits
                             </div>
                           </div>
                         </div>
@@ -253,441 +262,140 @@ const About = () => {
             </div>
           </div>
         </section>
+        <section className="contact-section">
+          <div className="outer-box">
+            <div className="bg bg-pattern-6" />
+            <div className="auto-container">
+              <div className="row">
+                {/* Title Column */}
+                <div className="title-column col-lg-7 col-md-12 wow fadeInLRight">
+                  <div className="inner-column">
+                    <div className="sec-title">
+                      <span className="sub-title">Nous contacter</span>
+                      <h2>
+                        Prenez un <span className="color3">Rend des vous</span>
+                      </h2>
+                      <div className="text">
+                        Vous avez des Questions sur comments etudier en
+                        France ? Contactez nous pour plus d'information
+                      </div>
+                    </div>
+                    <ul className="list-style-two" style={{marginRight:'3rem'}}>
+                      <li>
+                        <i className="fa fa-check-circle" />
+                        Vous souhaitez savoir si vous ete admissible a pouvoir
+                        etudier en France ?
+                      </li>
+                      <li>
+                        <i className="fa fa-check-circle" />
+                        vous avez des Questions sur le processus de voyage,et
+                        les delais de traitement ?
+                      </li>
+                      <li>
+                        <i className="fa fa-check-circle" />
+                        Vous chercher a Obtenir des conseils sur la maniere de
+                        preparer votre demande ?
+                      </li>
+                    </ul>
+                    <div className="ceo-info" style={{marginLeft:'5rem',marginTop:'10px'}}>
+                      <figure className="thumb"style={{marginLeft:'4rem'}}>
+                        <img
+                          src={`${process.env.PUBLIC_URL}/site_kit/images/pnk.png`}
+                          alt=""
+                        />
+                      </figure >
+                      <h6 className="name" style={{fontSize:'15px'}}>Pamela Nadette KOOH BISSECK</h6>
+                      <div className="designation">Country Manager Cameroun</div>
+                    </div>
+                  </div>
+                </div>
+                {/* Form Column */}
+                <div className="form-column col-lg-5 col-md-12 col-sm-12">
+                  <div className="inner-column">
+                    <div className="form-outer">
+                      {/* Contact Form */}
+                      <div className="contact-form wow fadeInLeft">
+                        {/*Contact Form*/}
+                        <form method="post" action="get" id="contact-form">
+                          <div className="form-group">
+                            <input
+                              type="text"
+                              name="full_name"
+                              placeholder="votre nom"
+                              required=""
+                            />
+                          </div>
+                          <div className="form-group">
+                            <input
+                              type="text"
+                              name="Email"
+                              placeholder="Addresse Email"
+                              required=""
+                            />
+                          </div>
+                          <div className="form-group">
+                            <textarea
+                              name="message"
+                              placeholder="ecrire un Message"
+                              required=""
+                              defaultValue={""}
+                            />
+                          </div>
+                          <div className="form-group">
+                            <button
+                              className="theme-btn btn-style-three"
+                              type="submit"
+                              name="submit-form"
+                            >
+                              <span className="btn-title">envoyer un Message</span>
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                      {/*End Contact Form */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section  
+  style={{
+    width: '90%', /* Réduit légèrement la largeur pour mieux centrer */
+    margin: 'auto', /* Centre horizontalement */
+    marginBottom: '5rem',
+    height: '500px', /* Ajoute une hauteur fixe */
+    display: 'flex', /* Active le centrage */
+    justifyContent: 'center', /* Centre horizontalement */
+    alignItems: 'center' /* Centre verticalement */
+  }}
+>
+  <iframe
+    className="map"
+    width="100%"
+    height="100%"
+    style={{
+      border: "0",
+      borderRadius: "10px" /* Optionnel : arrondir les bords pour un meilleur rendu */
+    }}
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+    src="https://maps.google.com/maps?q=4%20Pl.%20de%20la%20Défense,%2094974%20Paris,%20France&hl=fr&z=15&ie=UTF8&iwloc=&output=embed"
+  ></iframe>
+</section>
+
         {/*Emd About Section */}
         {/* Why Choose US */}
-        <section className="why-choose-us pt-0">
-          <div className="bg bg-pattern-1" />
-          <div className="auto-container">
-            <div className="sec-title text-center">
-              <span className="sub-title">countries you can visit</span>
-              <h2>
-                Few reasons to choose <br />
-                our visa <span className="color3">company</span>
-              </h2>
-            </div>
-            <div className="row">
-              {/* Features Block */}
-              <div className="feature-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
-                <div className="inner-box">
-                  <i className="icon flaticon-interview" />
-                  <span className="cat">The eget mattis</span>
-                  <h6 className="title">
-                    <a href="page-about.html">Direct Interviews</a>
-                  </h6>
-                </div>
-              </div>
-              {/* Features Block */}
-              <div
-                className="feature-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="300ms"
-              >
-                <div className="inner-box">
-                  <div className="content">
-                    <i className="icon flaticon-low-cost" />
-                    <span className="cat">The eget mattis</span>
-                    <h6 className="title">
-                      <a href="page-about.html">Cost Effective</a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-              {/* Features Block */}
-              <div
-                className="feature-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="600ms"
-              >
-                <div className="inner-box">
-                  <div className="content">
-                    <i className="icon flaticon-loyalty" />
-                    <span className="cat">The eget mattis</span>
-                    <h6 className="title">
-                      <a href="page-about.html">Trusted Customers</a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-              {/* Features Block */}
-              <div
-                className="feature-block col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="900ms"
-              >
-                <div className="inner-box">
-                  <div className="content">
-                    <i className="icon flaticon-online-support" />
-                    <span className="cat">The eget mattis</span>
-                    <h6 className="title">
-                      <a href="page-about.html">Support Team</a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="bottom-text">
-              Top rated by customers &amp; immigration firms with 100% success
-              rate.{" "}
-              <a href="page-service.html" className="theme-btn btn-style-two">
-                Discover More
-              </a>
-            </div>
-          </div>
-        </section>
-        {/*Emd Why Choose US */}
-        {/* Training Section */}
-        <section className="training-section">
-          <div className="bg bg-pattern-2" />
-          <div
-            className="bg bg-image"
-            style={{
-              backgroundImage: `url(${process.env.PUBLIC_URL}/site_kit/images/resource/image-1.jpg)`,
-            }}
-          />
-          <div className="auto-container">
-            <div className="sec-title">
-              <span className="sub-title">Training &amp; Certification</span>
-              <h2>
-                Get the Immigration <br /> Trainings you{" "}
-                <span className="color3">Deserve</span>
-              </h2>
-              <a href="#" className="theme-btn btn-style-two">
-                Discover More
-              </a>
-            </div>
-            <div className="carousel-outer">
-              <div className="training-carousel owl-carousel owl-theme">
-                {/* Training Block */}
-                <div className="training-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <figure className="image">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/training-1.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <div className="overlay">
-                        <a href="" className="read-more">
-                          <i className="fa fa-long-arrow-alt-right" />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="lower-content">
-                      <a href="page-course-details.html" className="read-more">
-                        <i className="fa fa-long-arrow-alt-right" />
-                      </a>
-                      <h5 className="title">
-                        <a href="page-course-details.html">Citizenship Test</a>
-                      </h5>
-                      <div className="text">
-                        There are many variations of passages of available, but
-                        the majority have suffered freedom alteration.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Training Block */}
-                <div className="training-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <figure className="image">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/training-2.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <div className="overlay">
-                        <a
-                          href="page-course-details.html"
-                          className="read-more"
-                        >
-                          <i className="fa fa-long-arrow-alt-right" />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="lower-content">
-                      <a href="page-course-details.html" className="read-more">
-                        <i className="fa fa-long-arrow-alt-right" />
-                      </a>
-                      <h5 className="title">
-                        <a href="page-course-details.html">Take IELTS</a>
-                      </h5>
-                      <div className="text">
-                        There are many variations of passages of available, but
-                        the majority have suffered freedom alteration.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Training Block */}
-                <div className="training-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <figure className="image">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/training-3.jpg `}
-                          alt=""
-                        />
-                      </figure>
-                      <div className="overlay">
-                        <a
-                          href="page-course-details.html"
-                          className="read-more"
-                        >
-                          <i className="fa fa-long-arrow-alt-right" />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="lower-content">
-                      <a href="page-course-details.html" className="read-more">
-                        <i className="fa fa-long-arrow-alt-right" />
-                      </a>
-                      <h5 className="title">
-                        <a href="page-course-details.html">PTE Coaching</a>
-                      </h5>
-                      <div className="text">
-                        There are many variations of passages of available, but
-                        the majority have suffered freedom alteration.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* Training Block */}
-                <div className="training-block">
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <figure className="image">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/training-1.jpg`}
-                          alt=""
-                        />
-                      </figure>
-                      <div className="overlay">
-                        <a
-                          href="page-course-details.html"
-                          className="read-more"
-                        >
-                          <i className="fa fa-long-arrow-alt-right" />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="lower-content">
-                      <a href="page-course-details.html" className="read-more">
-                        <i className="fa fa-long-arrow-alt-right" />
-                      </a>
-                      <h5 className="title">
-                        <a href="page-course-details.html">Citizenship Test</a>
-                      </h5>
-                      <div className="text">
-                        There are many variations of passages of available, but
-                        the majority have suffered freedom alteration.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* End Training Section */}
-        {/* Services Section */}
-        <section className="services-section">
-          <div className="auto-container">
-            <div className="row">
-              <div className="col-lg-6">
-                <div className="sec-title">
-                  <span className="sub-title">What do we offer</span>
-                  <h2>
-                    Outstanding immigration visa{" "}
-                    <span className="color3">services.</span>
-                  </h2>
-                  <div className="text">
-                    Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                    Aenean sollicitudin, lorem is simply free text quis
-                    bibendum.
-                  </div>
-                </div>
-              </div>
-              {/* Service Block */}
-              <div className="service-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                <div className="inner-box">
-                  <div className="image-box">
-                    <figure className="image">
-                      <a href="page-service-details.html">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/service-1.jpg`}
-                          alt=""
-                        />
-                      </a>
-                    </figure>
-                    <i className="icon fa fa-graduation-cap" />
-                    <h6 className="title">Student Visa</h6>
-                  </div>
-                  <div className="content-box">
-                    <h6 className="title">
-                      <a href="page-service-details.html">Student Visa</a>
-                    </h6>
-                    <div className="text">
-                      We have to a tendency to believe the idea that smart
-                      looking of any website.
-                    </div>
-                    <a href="page-service-details.html" className="read-more">
-                      More <i className="fa fa-long-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* Service Block */}
-              <div
-                className="service-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="200ms"
-              >
-                <div className="inner-box">
-                  <div className="image-box">
-                    <figure className="image">
-                      <a href="page-service-details.html">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/service-2.jpg`}
-                          alt=""
-                        />
-                      </a>
-                    </figure>
-                    <i className="icon fa fa-briefcase" />
-                    <h6 className="title">Business Visa</h6>
-                  </div>
-                  <div className="content-box">
-                    <h6 className="title">
-                      <a href="page-service-details.html">Business Visa</a>
-                    </h6>
-                    <div className="text">
-                      We have to a tendency to believe the idea that smart
-                      looking of any website.
-                    </div>
-                    <a href="page-service-details.html" className="read-more">
-                      More <i className="fa fa-long-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* Service Block */}
-              <div className="service-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                <div className="inner-box">
-                  <div className="image-box">
-                    <figure className="image">
-                      <a href="page-service-details.html">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/service-3.jpg`}
-                          alt=""
-                        />
-                      </a>
-                    </figure>
-                    <i className="icon fa fa-family" />
-                    <h6 className="title">Family Visa</h6>
-                  </div>
-                  <div className="content-box">
-                    <h6 className="title">
-                      <a href="page-service-details.html">Family Visa</a>
-                    </h6>
-                    <div className="text">
-                      We have to a tendency to believe the idea that smart
-                      looking of any website.
-                    </div>
-                    <a href="page-service-details.html" className="read-more">
-                      More <i className="fa fa-long-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* Service Block */}
-              <div
-                className="service-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="200ms"
-              >
-                <div className="inner-box">
-                  <div className="image-box">
-                    <figure className="image">
-                      <a href="page-service-details.html">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/service-4.jpg `}
-                          alt=""
-                        />
-                      </a>
-                    </figure>
-                    <i className="icon fa fa-camera" />
-                    <h6 className="title">Tourist Visa</h6>
-                  </div>
-                  <div className="content-box">
-                    <h6 className="title">
-                      <a href="page-service-details.html">Tourist Visa</a>
-                    </h6>
-                    <div className="text">
-                      We have to a tendency to believe the idea that smart
-                      looking of any website.
-                    </div>
-                    <a href="page-service-details.html" className="read-more">
-                      More <i className="fa fa-long-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* Service Block */}
-              <div
-                className="service-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="400ms"
-              >
-                <div className="inner-box">
-                  <div className="image-box">
-                    <figure className="image">
-                      <a href="page-service-details.html">
-                        <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/service-5.jpg `}
-                          alt=""
-                        />
-                      </a>
-                    </figure>
-                    <i className="icon fa fa-home" />
-                    <h6 className="title">Residence Visa</h6>
-                  </div>
-                  <div className="content-box">
-                    <h6 className="title">
-                      <a href="page-service-details.html">Residence Visa</a>
-                    </h6>
-                    <div className="text">
-                      We have to a tendency to believe the idea that smart
-                      looking of any website.
-                    </div>
-                    <a href="page-service-details.html" className="read-more">
-                      More <i className="fa fa-long-arrow-right" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              {/* CTA Block */}
-              <div
-                className="cta-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
-                data-wow-delay="600ms"
-              >
-                <div className="inner-box">
-                  <h4 className="title">
-                    <a href="page-service.html">
-                      Get visa with 100% success rate
-                    </a>
-                  </h4>
-                  <a
-                    href="page-service.html"
-                    className="theme-btn btn-style-three small"
-                  >
-                    Apply Now
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
         {/* End Services Section*/}
         {/* Main Footer */}
         <Footer />
         {/*End Main Footer */}
       </div>
       {/* End Page Wrapper */}
+
       {/* Scroll To Top */}
       <div className="scroll-to-top scroll-to-target" data-target="html">
         <a href="#">

@@ -30,12 +30,17 @@ export default function Footer() {
               </li>
               <li>
                 <i className="icon fa fa-map-marker" />
-                <span className="title">Addresses:</span>
+                <span className="title">Adresse:</span>
                 <div className="text">Douala, Bonapriso, 389 Rue Toyota</div>
               </li>
               <li>
                 <i className="icon fa fa-map-marker" />
-                <span className="title">Address:</span>
+                <span className="title">Adresse:</span>
+                <div className="text"> 4 Pl. de la Défense, 94974 Paris, France</div>
+              </li>
+              <li>
+                <i className="icon fa fa-map-marker" />
+                <span className="title">Adresse:</span>
                 <div className="text">
                   Yaoundé, Total Ecole de police, entre l’hôtel Florencia et CCA
                   Bank
