@@ -125,7 +125,7 @@ const Services = () => {
                   </a>
                 </div>
                 {/*Right Col*/}
-                <NavOuter/>
+                <NavOuter />
               </div>
             </div>
           </div>
@@ -136,50 +136,95 @@ const Services = () => {
         <section
           className="page-title"
           style={{
-            backgroundImage: `url(${process.env.PUBLIC_URL}/site_kit/images/background/page-title.jpg)`,
+            backgroundImage: `url(${process.env.PUBLIC_URL}/site_kit/images/services/demarche.png)`,
           }}
         >
           <div className="auto-container">
             <div className="title-outer">
-              <h1 className="title">Visa Grid</h1>
+              <h1 className="title">Nos services</h1>
               <ul className="page-breadcrumb">
                 <li>
-                  <a href="index.html">Home</a>
+                  <a href="/">Accueil</a>
                 </li>
                 <li>
-                  <a href="#">Pages</a>
+                  <a href="/services">service</a>
                 </li>
-                <li>Services</li>
               </ul>
             </div>
           </div>
         </section>
         {/* end main-content */}
         {/* Services Section */}
-        <section className="">
-          <div className="container pb-90">
+        <section
+          className="bg-silver-light"
+          style={{ width: "100%", padding: "0px" }}
+        >
+          <div className="container pb-100">
             <div className="row">
               {servicesData.map((service) => (
-                <div className="service-block col-lg-4 col-md-6 col-sm-12" key={service.id}>
-                  <div className="inner-box">
-                    <div className="image-box">
-                      <figure className="image">
-                        <a href={service.readMoreLink}>
-                          <img src={service.image} alt={`${service.title} icon`} width={"6720px"} height={"4480px"}/>
-                        </a>
-                      </figure>
-                      <i className={`icon ${service.icon}`} />
-                      <h6 className="title">{service.title}</h6>
-                    </div>
-                    <div className="content-box">
-                      <h6 className="title">
-                        <a href={service.readMoreLink}>{service.title}</a>
-                      </h6>
-                      <div className="text">{service.description}</div>
-                      <a href={service.readMoreLink} className="read-more">
-                        More <i className="fa fa-long-arrow-right" />
-                      </a>
-                    </div>
+                <div key={service.id} className="col-lg-4 col-md-6 col-sm-12">
+                  <div className="training-block mb-4">
+                    <a href={service.readMoreLink}>
+                      <div className="inner-box">
+                        <div className="image-box">
+                          <figure className="image">
+                            <img src={service.image} alt={service.title} />
+                          </figure>
+                          <div className="overlay">
+                            <a
+                              href={service.readMoreLink}
+                              className="read-more rounded-1"
+                              style={{
+                                width: "100px",
+                                backgroundColor: "#fa8714",
+                              }}
+                            >
+                              <button
+                                className="theme-btn rounded-1"
+                                style={{
+                                  backgroundColor: "#fa8714",
+                                  color: "#fff",
+                                }}
+                              >
+                                Voir plus
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+                        <div className="lower-content">
+                          <h5 className="title">
+                            <a href={service.readMoreLink}>{service.title}</a>
+                          </h5>
+                          <div className="text">{service.description}</div>
+                          <div style={{ display: "flex" }}>
+                            <a
+                              href="http://www.boaz-study.com/register"
+                              className=""
+                            >
+                              <button className="theme-btn btn-style-one">
+                                Prendre le service
+                              </button>
+                            </a>
+                            <a href={service.readMoreLink} className="ml--0">
+                              <button
+                                className="theme-btn outline-btn"
+                                style={{
+                                  padding: "10px",
+                                  marginLeft: "7px",
+                                  width: "100px",
+                                  background: "transparent",
+                                  border: "2px solid #007bff",
+                                  color: "#007bff",
+                                  borderRadius:'30px 30px 30px 30px'
+                                }}
+                              >
+                                Voir plus
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
               ))}

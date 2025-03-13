@@ -1,8 +1,70 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import MainBox from "../components/mainBoxHeaderTop";
 import Footer from "../components/Footer";
 import NavOuter from "../components/navOuter";
+import PhoneInput from "react-phone-input-2";
+import Select from "react-select";
+import "react-phone-input-2/lib/style.css";
+import axios from "axios";
+import { parsePhoneNumberFromString } from "libphonenumber-js";
+const getFlagUrl = (code) => `https://flagcdn.com/w40/${code.toLowerCase()}.png`;
+
+
 const Contact = () => {
+  const [countries, setCountries] = useState([]); // Liste dynamique des pays
+  const [selectedCountry, setSelectedCountry] = useState(null);
+  const [phone, setPhone] = useState("");
+  const [error, setError] = useState("");
+
+  // 🔹 Récupérer la liste des pays via API
+  useEffect(() => {
+    axios
+      .get("https://restcountries.com/v3.1/all")
+      .then((response) => {
+        const countryData = response.data
+          .map((country) => ({
+            label: country.name.common,
+            value: country.cca2, // Code pays (ex: FR, US)
+            code: country.idd.root
+              ? country.idd.root + (country.idd.suffixes ? country.idd.suffixes[0] : "")
+              : "",
+            flag: getFlagUrl(country.cca2),
+          }))
+          .filter((c) => c.code !== ""); // Supprime les pays sans code téléphonique
+
+        setCountries(countryData);
+
+        // 🔹 Récupérer l'adresse IP de l'utilisateur pour définir son pays
+        axios.get("https://ipapi.co/json/")
+          .then((res) => {
+            const userCountryCode = res.data.country_code.toUpperCase();
+            const detectedCountry = countryData.find((c) => c.value === userCountryCode);
+            if (detectedCountry) {
+              setSelectedCountry(detectedCountry);
+            }
+          })
+          .catch((error) => console.error("Impossible de récupérer l'IP :", error));
+      })
+      .catch((error) => console.error("Erreur lors de la récupération des pays :", error));
+  }, []);
+
+  // Gérer la sélection du pays
+  const handleCountryChange = (selectedOption) => {
+    setSelectedCountry(selectedOption);
+    setPhone(""); // Réinitialiser le numéro
+    setError("");
+  };
+
+  // Gérer la saisie du numéro de téléphone
+  const handlePhoneChange = (value) => {
+    if (selectedCountry && value.startsWith(selectedCountry.code)) {
+      setError(`Ne pas inclure le code du pays (${selectedCountry.code})`);
+    } else {
+      setError("");
+    }
+    setPhone(value);
+  };
+
   return (
     <>
       <div className="page-wrapper">
@@ -21,7 +83,11 @@ const Contact = () => {
               <div className="upper-box">
                 <div className="nav-logo">
                   <a href="index.html">
-                    <img src={`${process.env.PUBLIC_URL}/logo refais.png`} alt="" title="" />
+                    <img
+                      src={`${process.env.PUBLIC_URL}/logo refais.png`}
+                      alt=""
+                      title=""
+                    />
                   </a>
                 </div>
                 <div className="close-btn">
@@ -113,11 +179,15 @@ const Contact = () => {
                 {/*Logo*/}
                 <div className="logo">
                   <a href="index.html" title="">
-                    <img src={`${process.env.PUBLIC_URL}/logo refais.png`} alt="" title="" />
+                    <img
+                      src={`${process.env.PUBLIC_URL}/logo refais.png`}
+                      alt=""
+                      title=""
+                    />
                   </a>
                 </div>
                 {/*Right Col*/}
-                <NavOuter/>
+                <NavOuter />
               </div>
             </div>
           </div>
@@ -127,14 +197,16 @@ const Contact = () => {
         {/* Start main-content */}
         <section
           className="page-title"
-          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/site_kit/images/background/page-title.jpg)` }}
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL}/site_kit/images/background/about-1.jpg)`,
+          }}
         >
           <div className="auto-container">
             <div className="title-outer">
-              <h1 className="title">Contact Us</h1>
+              <h1 className="title" style={{fontSize:'40px'}}>Contactez-nous</h1>
               <ul className="page-breadcrumb">
                 <li>
-                  <a href="index.html">Home</a>
+                  <a href="/">Accueil</a>
                 </li>
                 <li>Contact</li>
               </ul>
@@ -148,99 +220,102 @@ const Contact = () => {
             <div className="row">
               <div className="col-xl-7 col-lg-6">
                 <div className="sec-title">
-                  <span className="sub-title">Send us email</span>
-                  <h2>Feel free to write</h2>
+                  <span className="sub-title">Envoyer nous un mail</span>
+                  <h2>Laisser un message</h2>
                 </div>
                 {/* Contact Form */}
-                <form
-                  id="contact_form"
-                  name="contact_form"
-                  className=""
-                  action="includes/sendmail.php"
-                  method="post"
-                >
-                  <div className="row">
-                    <div className="col-sm-6">
-                      <div className="mb-3">
-                        <input
-                          name="form_name"
-                          className="form-control"
-                          type="text"
-                          placeholder="Enter Name"
-                        />
-                      </div>
+                <form id="contact_form" name="contact_form" action="includes/sendmail.php" method="post">
+        <div className="row">
+          <div className="col-sm-6">
+            <div className="mb-3">
+              <input name="form_name" className="form-control" type="text" placeholder="Entrer votre nom" />
+            </div>
+          </div>
+          <div className="col-sm-6">
+            <div className="mb-3">
+              <input name="form_email" className="form-control required email" type="email" placeholder="Entrer votre email" />
+            </div>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-sm-6">
+            <div className="mb-3">
+              <input name="form_subject" className="form-control required" type="text" placeholder="Entrer votre sujet" />
+            </div>
+          </div>
+
+          {/* Sélection dynamique du pays */}
+          <div className="col-sm-6">
+            <div className="mb-3">
+              {countries.length > 0 ? (
+                <Select
+                  options={countries}
+                  value={selectedCountry}
+                  onChange={handleCountryChange}
+                  getOptionLabel={(e) => (
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <img src={e.flag} alt={e.label} style={{ width: 24, height: 16, marginRight: 10 }} />
+                      {e.label} ({e.code})
                     </div>
-                    <div className="col-sm-6">
-                      <div className="mb-3">
-                        <input
-                          name="form_email"
-                          className="form-control required email"
-                          type="email"
-                          placeholder="Enter Email"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-sm-6">
-                      <div className="mb-3">
-                        <input
-                          name="form_subject"
-                          className="form-control required"
-                          type="text"
-                          placeholder="Enter Subject"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-sm-6">
-                      <div className="mb-3">
-                        <input
-                          name="form_phone"
-                          className="form-control"
-                          type="text"
-                          placeholder="Enter Phone"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mb-3">
-                    <textarea
-                      name="form_message"
-                      className="form-control required"
-                      rows={7}
-                      placeholder="Enter Message"
-                      defaultValue={""}
-                    />
-                  </div>
-                  <div className="mb-3">
-                    <input
-                      name="form_botcheck"
-                      className="form-control"
-                      type="hidden"
-                      defaultValue=""
-                    />
-                    <button
-                      type="submit"
-                      className="theme-btn btn-style-one"
-                      data-loading-text="Please wait..."
-                    >
-                      <span className="btn-title">Send message</span>
-                    </button>
-                    <button
-                      type="reset"
-                      className="theme-btn btn-style-one bg-theme-color5"
-                    >
-                      <span className="btn-title">Reset</span>
-                    </button>
-                  </div>
-                </form>
+                  )}
+                  placeholder="Chargement du pays..."
+                />
+              ) : (
+                <p>Chargement des pays...</p>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Champ téléphone */}
+        <div className="row">
+          <div className="col-sm-12">
+            <div className="mb-3">
+              <PhoneInput
+                country={selectedCountry ? selectedCountry.value.toLowerCase() : ""}
+                value={phone}
+                onChange={handlePhoneChange}
+                inputProps={{
+                  name: "form_phone",
+                  className: "form-control",
+                  required: true,
+                }}
+                enableSearch={true}
+                disableDropdown={true}
+              />
+            </div>
+            {error && <p style={{ color: "red", fontSize: "14px" }}>{error}</p>}
+          </div>
+        </div>
+
+        <div className="mb-3">
+          <textarea name="form_message" className="form-control required" rows={7} placeholder="Entrer le message" />
+        </div>
+
+        <div className="mb-3">
+          <button type="submit" className="theme-btn btn-style-one">
+            <span className="btn-title">Envoyer le message</span>
+          </button>
+          <button
+            type="reset"
+            className="theme-btn btn-style-one bg-theme-color5"
+            onClick={() => {
+              setPhone("");
+              setError("");
+            }}
+          >
+            <span className="btn-title">Effacer</span>
+          </button>
+        </div>
+      </form>
                 {/* Contact Form Validation*/}
               </div>
               <div className="col-xl-5 col-lg-6">
                 <div className="contact-details__right">
                   <div className="sec-title">
-                    <span className="sub-title">Need any help?</span>
-                    <h2>Get in touch with us</h2>
+                    <span className="sub-title">Besoin d'aide?</span>
+                    <h2>Prenez contact avec nous</h2>
                     <div className="text">
                       Vous avez en projet la poursuite de votre cursus
                       académique en France ? Nos équipes au Cameroun, en France
@@ -253,10 +328,12 @@ const Contact = () => {
                         <span className="lnr-icon-phone-plus" />
                       </div>
                       <div className="text">
-                        <h6>Have any question?</h6>
-                        <a href="tel:980089850">
-                          <span>Free</span>(+237) 656 186 936 / (+237) 676 726 905
-                        </a>
+                        <h6>Pour toute question ?</h6>
+                        <a href="tel:656 186 936">(+237) 656 186 936</a>
+                        <br />
+                        <a href="tel:676 726 905">/ (+237) 676 726 905</a>
+                        <br />
+                        <a href="tel:651 29 95 03">/ (+33) 651 29 95 03</a>
                       </div>
                     </li>
                     <li>
@@ -264,21 +341,69 @@ const Contact = () => {
                         <span className="lnr-icon-envelope1" />
                       </div>
                       <div className="text">
-                        <h6>Write email</h6>
-                        <a href="mailto:needhelp@company.com">
-                        info@boaz-study.com
-                        </a>
+                        <h6>Envoyer un mail</h6>
+                        <a href="mailto:info@boaz-study.com">info@boaz-study.com</a>
                       </div>
                     </li>
                     <li>
-                      <div className="icon">
-                        <span className="lnr-icon-location" />
+                      <div
+                        className="icon"
+                        style={{
+                          marginRight: "5rem",
+                          padding: "0",
+                          top: "-10%",
+                        }}
+                      >
+                        <span
+                          className="lnr-icon-location"
+                          style={{ marginLeft: " 2rem", marginRight: "1rem" }}
+                        />
                       </div>
-                      <div className="text">
-                        <h6>Visit anytime</h6>
-                        <span>Douala, Bonapriso, 389 Rue Toyota</span><br/>
-                        <span>Yaoundé, Total Ecole de police, 
-                          entre l’hôtel Florencia et CCA Bank</span>
+                      <div className="text" style={{ margin: "0" }}>
+                        <h6>Visitez a tout moment</h6>
+                        <span>Douala, Bonapriso, 389 Rue Toyota</span>
+                        <br />
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        className="icon"
+                        style={{
+                          marginRight: "5rem",
+                          padding: "0",
+                          top: "-10%",
+                        }}
+                      >
+                        <span
+                          className="lnr-icon-location"
+                          style={{ marginLeft: " 2rem", marginRight: "1rem" }}
+                        />
+                      </div>
+                      <div className="text" style={{ margin: "0" }}>
+                        <h6>Visitez a tout moment</h6>
+                        <span>
+                          Yaoundé, Total Ecole de police, entre l’hôtel
+                          Florencia et CCA Bank
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div
+                        className="icon"
+                        style={{
+                          marginRight: "5rem",
+                          padding: "0",
+                          top: "-10%",
+                        }}
+                      >
+                        <span
+                          className="lnr-icon-location"
+                          style={{ marginLeft: " 2rem", marginRight: "1rem" }}
+                        />
+                      </div>
+                      <div className="text" style={{ margin: "0" }}>
+                        <h6>Visitez a tout moment</h6>
+                        <span>4 Pl. de la Défense, 94974 Paris, France</span>
                       </div>
                     </li>
                   </ul>
@@ -294,7 +419,7 @@ const Contact = () => {
             <div className="row">
               {/* Google Map HTML Codes */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.843149788316!2d144.9537131159042!3d-37.81714274201087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sbn!2sbd!4v1583760510840!5m2!1sbn!2sbd"
+                src="https://maps.google.com/maps?q=4%20Pl.%20de%20la%20Défense,%2094974%20Paris,%20France&hl=fr&z=15&ie=UTF8&iwloc=&output=embed"
                 data-tm-width="100%"
                 height={500}
                 frameBorder={0}

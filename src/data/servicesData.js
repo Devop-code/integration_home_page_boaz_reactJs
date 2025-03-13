@@ -47,6 +47,30 @@ const servicesData = [
     image: `${process.env.PUBLIC_URL}/site_kit/images/services/finance.jpg`,
     description: "Accédez à des solutions de financement adaptées à vos études ou à votre projet : facilités de paiement, bourses, prêts étudiants…",
     readMoreLink: "/services/financement"
+  },
+  {
+    id:7,
+    title:"Prise en charge complet",
+    icon:"fa-regular fa-sack-dollar",
+    image: `${process.env.PUBLIC_URL}/site_kit/images/services/service.png`,
+    description:'Profitez d’un accompagnement global et clé en main, couvrant toutes vos démarches avant et après votre départ, avec suivi visa inclus, pour un parcours sans encombre',
+    readMoreLink:'/services/complet'
+  },
+  {
+    id:8,
+    title:"Assistance Admission Écoles",
+    icon:"fa-regular fa-sack-dollar",
+    image: `${process.env.PUBLIC_URL}/site_kit/images/services/ecole.png`,
+    description:'Optimisez vos chances d’admission grâce à notre accompagnement expert pour constituer un dossier d’admission complet et conforme aux exigences des établissements.',
+    readMoreLink:'/services/ecole',
+  },
+  {
+    id:8,
+    title:" Assurance Voyage ",
+    icon:"fa-regular fa-sack-dollar",
+    image: `${process.env.PUBLIC_URL}/site_kit/images/services/assurance1.png`,
+    description:'Voyagez en toute sérénité grâce à notre assurance voyage, qui vous offre une     protection complète contre les annulations et tous les imprévus pendant votre séjour à l’étranger. ',
+    readMoreLink:'/services/assurance',
   }
 ];
 

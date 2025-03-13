@@ -142,7 +142,7 @@ const MainBox = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-decoration-none">
+                    <a href="/blog" className="text-decoration-none">
                       {translations[language].blog}
                     </a>
                   </li>
