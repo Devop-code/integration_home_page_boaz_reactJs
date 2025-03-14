@@ -47,7 +47,7 @@ export const ServiceDetails = () => {
         <section className="page-title" style={{ backgroundImage: `url(${bannerImage})` }}>
           <div className="auto-container">
             <div className="title-outer">
-              <h1 className="title">{selectedService.title}</h1>
+              <h1 className="title" style={{fontSize:'34px'}}>{selectedService.title}</h1>
               <ul className="page-breadcrumb">
                 <li><a href="/">Accueil</a></li>
                 <li><a href="/services">Services</a></li>
