@@ -618,7 +618,7 @@ const Home = () => {
                     <div className="sec-title">
                       <span className="sub-title">Nous contacter</span>
                       <h2>
-                        Prenez un <span className="color3">Rend des vous</span>
+                        Prenez un <span className="color3">Rendez-vous</span>
                       </h2>
                       <div className="text">
                         Vous avez des Questions sur comments etudier en
@@ -642,15 +642,15 @@ const Home = () => {
                         preparer votre demande ?
                       </li>
                     </ul>
-                    <div className="ceo-info">
-                      <figure className="thumb">
+                    <div className="ceo-info" style={{marginLeft:'5rem',marginTop:'10px'}}>
+                      <figure className="thumb"style={{marginLeft:'4rem'}}>
                         <img
-                          src={`${process.env.PUBLIC_URL}/site_kit/images/resource/ceo-thumb.jpg`}
+                          src={`${process.env.PUBLIC_URL}/site_kit/images/pnk.png`}
                           alt=""
                         />
-                      </figure>
-                      <h6 className="name">Aleesha Brown</h6>
-                      <div className="designation">CEO &amp; CO Founder</div>
+                      </figure >
+                      <h6 className="name" style={{fontSize:'15px'}}>Pamela Nadette KOOH BISSECK</h6>
+                      <div className="designation">Country Manager Cameroun</div>
                     </div>
                   </div>
                 </div>

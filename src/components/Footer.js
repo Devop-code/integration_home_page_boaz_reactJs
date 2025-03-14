@@ -36,7 +36,10 @@ export default function Footer() {
               <li>
                 <i className="icon fa fa-map-marker" />
                 <span className="title">Adresse:</span>
-                <div className="text"> 4 Pl. de la Défense, 94974 Paris, France</div>
+                <div className="text">
+                  {" "}
+                  4 Pl. de la Défense, 94974 Paris, France
+                </div>
               </li>
               <li>
                 <i className="icon fa fa-map-marker" />
@@ -84,16 +87,24 @@ export default function Footer() {
                         <a href="/services/avi">AVI</a>
                       </li>
                       <li>
-                        <a href="/services/aide-logement">Recherche de logement</a>
+                        <a href="/services/aide-logement">
+                          Recherche de logement
+                        </a>
                       </li>
                       <li>
-                        <a href="/services/financement-france">Service paiement france</a>
+                        <a href="/services/financement-france">
+                          Service paiement france
+                        </a>
                       </li>
                       <li>
-                        <a href="/services/aide-administrative">Aide demarche administrative</a>
+                        <a href="/services/aide-administrative">
+                          Aide demarche administrative
+                        </a>
                       </li>
                       <li>
-                        <a href="/services/orientation">orientation et Accompagnement</a>
+                        <a href="/services/orientation">
+                          orientation et Accompagnement
+                        </a>
                       </li>
                       <li>
                         <a href="/services/financement">financement</a>
@@ -107,29 +118,29 @@ export default function Footer() {
                 <div className="footer-widget gallery-widget">
                   <h6 className="widget-title">Galeries</h6>
                   <div className="widget-content">
-                  <div className="outer clearfix">
-  {[
-    "finance.jpg",
-    "aide.jpg",
-    "demarche.png",
-    "avi.jpg",
-    "aide-finance-france.jpg",
-    "logement.jpg",
-  ].map((image, index) => (
-    <figure className="image" key={index}>
-      <a href="#">
-        <img
-          src={`${process.env.PUBLIC_URL}/site_kit/images/services/${image}`}
-          alt=""
-          className="service-image"
-        />
-      </a>
-    </figure>
-  ))}
-</div>
+                    <div className="outer clearfix">
+                      {[
+                        "finance.jpg",
+                        "aide.jpg",
+                        "demarche.png",
+                        "avi.jpg",
+                        "aide-finance-france.jpg",
+                        "logement.jpg",
+                      ].map((image, index) => (
+                        <figure className="image" key={index}>
+                          <a href="#">
+                            <img
+                              src={`${process.env.PUBLIC_URL}/site_kit/images/services/${image}`}
+                              alt=""
+                              className="service-image"
+                            />
+                          </a>
+                        </figure>
+                      ))}
+                    </div>
 
-<style>
-  {`
+                    <style>
+                      {`
   .service-image {
     width: 80px; /* Ajuste selon tes besoins */
     height: 80px; 
@@ -137,8 +148,7 @@ export default function Footer() {
     
   }
   `}
-</style>
-
+                    </style>
                   </div>
                 </div>
               </div>
@@ -194,7 +204,7 @@ export default function Footer() {
           <div className="auto-container">
             <div className="inner-container">
               <div className="copyright-text">
-                 Droit d'auteur 2025 par ©<a href="">Boaz Study.com</a>
+                Droit d'auteur 2025 par ©<a href="">Boaz Study.com</a>
               </div>
             </div>
           </div>

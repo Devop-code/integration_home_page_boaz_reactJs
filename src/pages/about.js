@@ -273,7 +273,7 @@ const About = () => {
                     <div className="sec-title">
                       <span className="sub-title">Nous contacter</span>
                       <h2>
-                        Prenez un <span className="color3">Rend des vous</span>
+                        Prenez un <span className="color3">Rendez-vous</span>
                       </h2>
                       <div className="text">
                         Vous avez des Questions sur comments etudier en

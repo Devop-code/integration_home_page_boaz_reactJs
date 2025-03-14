@@ -16,6 +16,7 @@ import ServiceFinance from "./pages/services/servicefinance"
 import { Blog } from "./pages/blog";
 import Test from "./pages/Test";
 import PricingSection from "./pages/PriceTest";
+import ServiceDetails from "./pages/ServiceDetail"
 function App() {
   // useEffect(()=>{
   //   const script = document.createElement('script')
@@ -54,6 +55,7 @@ function App() {
         <Route path="*" element={<HomePage />} />
         <Route path="/test" element={<Test/>} />
         <Route path="/price" element={<PricingSection/>} />
+        <Route path="/services/:id" element={<ServiceDetails/>}/>
       </Routes>
     </BrowserRouter>
  

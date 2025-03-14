@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 // filepath: /c:/Users/HP/integration_home_page_boaz_reactJs/src/pages/services.js
 import React from "react";
 import Footer from "../components/Footer";
@@ -164,7 +165,7 @@ const Services = () => {
               {servicesData.map((service) => (
                 <div key={service.id} className="col-lg-4 col-md-6 col-sm-12">
                   <div className="training-block mb-4">
-                    <a href={service.readMoreLink}>
+                    <a href={`/services/${service.id}`}>
                       <div className="inner-box">
                         <div className="image-box">
                           <figure className="image">
@@ -179,6 +180,7 @@ const Services = () => {
                                 backgroundColor: "#fa8714",
                               }}
                             >
+                              <Link to={`/services/${service.id}`} >
                               <button
                                 className="theme-btn rounded-1"
                                 style={{
@@ -188,6 +190,7 @@ const Services = () => {
                               >
                                 Voir plus
                               </button>
+                              </Link>
                             </a>
                           </div>
                         </div>
@@ -206,6 +209,7 @@ const Services = () => {
                               </button>
                             </a>
                             <a href={service.readMoreLink} className="ml--0">
+                              <Link to={`/services/${service.id}`}>
                               <button
                                 className="theme-btn outline-btn"
                                 style={{
@@ -220,6 +224,7 @@ const Services = () => {
                               >
                                 Voir plus
                               </button>
+                              </Link>
                             </a>
                           </div>
                         </div>
